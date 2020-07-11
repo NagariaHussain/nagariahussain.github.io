@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Mohammad Hussain</title>
+    <link>https://nagariahussain.github.io/blog/</link>
+    <description>Recent content in Blog on Mohammad Hussain</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate>
+    
+	<atom:link href="https://nagariahussain.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Job - My first Blog!</title>
+      <link>https://nagariahussain.github.io/blog/first-job/</link>
+      <pubDate>Sat, 11 Jul 2020 23:20:09 +0530</pubDate>
+      
+      <guid>https://nagariahussain.github.io/blog/first-job/</guid>
+      <description>Well, Hello! After a lot of thinking for the topic of my first blog, finally, I have a conclusion&amp;hellip;
+Fruits  Apple Orange Banana  Vegies  Cucumber Tomato Brinjal  </description>
+    </item>
+    
+    <item>
+      <title>My new job!</title>
+      <link>https://nagariahussain.github.io/blog/first-blog/</link>
+      <pubDate>Tue, 31 Dec 2019 12:14:34 +0600</pubDate>
+      
+      <guid>https://nagariahussain.github.io/blog/first-blog/</guid>
+      <description>For a long time this website has had a couple of links to contact me, but those days are over.
+Now I have a brand new Hugo website with a custom written theme complete with
+ A homepage with more social links, and description of my skills An about page with description of who I am A portfolio page to showcase all my projects A blog  Why Hugo? The first question is why a site builder?</description>
+    </item>
+    
+  </channel>
+</rss>
