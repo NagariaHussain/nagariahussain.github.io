@@ -1,0 +1,180 @@
+/* IMPORT FONTS */
+/* OpenSans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #252525;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* GLOBAL STYLES */
+a {
+    text-decoration: none;
+}
+
+#logo {
+    letter-spacing: 4px;
+    transition: letter-spacing 200ms ease-in-out;
+    font-size: 1.2em;
+}
+
+#logo:hover {
+    letter-spacing: 1px;
+}
+
+/* Hide Desktop Navigation: Mobile Size */
+.desktop-nav {
+    display: none;
+}
+
+/* NAVIGATION STYLES */
+nav > a {
+    color: #ffffff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 4%;
+    border: 2px solid transparent;
+    align-self: flex-end;
+    transition: border 200ms ease-in;
+}
+
+nav ul li a {
+    color: rgb(221, 221, 221);
+    letter-spacing: 1px;
+    font-size: 1.1em;
+}
+
+
+/* Desktop navigation specific */
+.desktop-nav {
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.desktop-nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/* Highlight active links */
+.active-link {
+    background-color: rgb(152, 255, 143);
+}
+
+.active-link a {
+    color: rgb(43, 43, 43) !important;
+}
+
+/* Highlight non-active links on hover */
+nav ul li:hover:not(.active-link) {
+    border-bottom: 2px solid rgb(152, 255, 143);
+    border-top: 2px solid rgb(152, 255, 143);
+}
+
+nav ul li:hover:not(.active-link) a{
+    color: rgb(255, 255, 255);
+}
+
+/* Mobile Navigation Specific */
+.mobile-nav {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(63, 63, 63, 0.383);
+}
+
+.mobile-nav ul {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 20px;
+}
+
+.mobile-nav ul li a {
+    font-size: 1.3em;
+}
+
+.nav-button {
+    z-index: 9;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fff !important;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.show-nav {
+    display: block;
+}
+
+/* ========================= */
+/* MEDIA QUERIES */
+/* ========================= */
+
+/* TABLET SIZE */
+@media (min-width: 768px) {
+    /* FOR TESTING ONLY */
+    /* body {
+        background-color: #555;
+    } */
+
+    /* Hide Mobile Navigation */
+    .mobile-nav,.nav-button {
+        display: none !important;
+    }
+
+    /* Show desktop Navigation */
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+/* DESKTOP SIZE */
+@media (min-width: 1224px) {
+     /* FOR TESTING ONLY */
+     /* body {
+        background-color: #222;
+    } */
+
+
+
+}
+
+
+
