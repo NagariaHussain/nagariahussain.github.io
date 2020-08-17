@@ -19,11 +19,19 @@ body {
     box-sizing: inherit;
 }
 
+
+h1, h2, h3, p {
+    color: white;
+}
+
+/* ========================= */
 /* GLOBAL STYLES */
+/* ========================= */
 a {
     text-decoration: none;
 }
 
+/* LOGO STYLE AND ANIMATION */
 #logo {
     letter-spacing: 4px;
     transition: letter-spacing 200ms ease-in-out;
@@ -105,7 +113,7 @@ nav ul li:hover:not(.active-link) a{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(63, 63, 63, 0.383);
+    background-color: rgba(19, 19, 19, 0.9);
 }
 
 .mobile-nav ul {
@@ -142,6 +150,36 @@ nav ul li:hover:not(.active-link) a{
 .show-nav {
     display: block;
 }
+
+/* SECTION TITLE */
+.section-title {
+    width: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title h2 {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.border-bottom {
+    border-bottom: 2px solid rgb(152, 255, 143);
+    width: 40%;
+}
+
+
+section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
 
 /* ========================= */
 /* MEDIA QUERIES */
