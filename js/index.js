@@ -1,10 +1,9 @@
 // Automatically highlighting the active
 // navigation link
-const navLinks = Array.from(document.querySelectorAll("nav li a"));
+const navLinks = Array.from(document.querySelectorAll("nav ul li a"));
 
 for (let link of navLinks) {
-    console.log(link.href);
-    console.log(location.href);
+    console.log(link);
     if (link.href === location.href) {
         link.parentElement.classList.add("active-link");
         link.href = "#";

@@ -1,7 +1,10 @@
 /* IMPORT FONTS */
 /* OpenSans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
+/* COLOR TRAILS */
+/* Greenish: rgb(152, 255, 143) */
 html {
     box-sizing: border-box;
     margin: 0;
@@ -22,6 +25,7 @@ body {
 
 h1, h2, h3, p {
     color: white;
+    margin: 0;
 }
 
 /* ========================= */
@@ -88,17 +92,17 @@ nav ul li a {
 
 /* Highlight active links */
 .active-link {
-    background-color: rgb(152, 255, 143);
+    background-color:  #03719C;
 }
 
 .active-link a {
-    color: rgb(43, 43, 43) !important;
+    color: rgb(34, 34, 34) !important;
 }
 
 /* Highlight non-active links on hover */
 nav ul li:hover:not(.active-link) {
-    border-bottom: 2px solid rgb(152, 255, 143);
-    border-top: 2px solid rgb(152, 255, 143);
+    border-bottom: 2px solid #03719C;
+    border-top: 2px solid #03719C;
 }
 
 nav ul li:hover:not(.active-link) a{
@@ -169,15 +173,31 @@ nav ul li:hover:not(.active-link) a{
 }
 
 .border-bottom {
-    border-bottom: 2px solid rgb(152, 255, 143);
+    border-bottom: 2px solid #03719C;
     width: 40%;
 }
-
 
 section {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    /* TODO: FOR TESTING ONLY */
+    min-height: 200px;
+}
+
+.hero-title,
+.hero-subtitle {
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero-title {
+    font-weight: 300;
+}
+
+.hero-subtitle {
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    margin-top: 10px;
 }
 
 
@@ -200,6 +220,23 @@ section {
     /* Show desktop Navigation */
     .desktop-nav {
         display: flex;
+    }
+
+    /* Hero Section */
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 50px 20%;
+        margin-bottom: 3em;
+        background-color: rgb(32, 32, 32);
+        align-items: center;
+    }
+
+    .hero-image {
+        order: 2;
+        flex-basis: 50%;
+        height: 40vh;
     }
 }
 
