@@ -50,8 +50,6 @@
         <div>
             <h1 class="hero-title">Title goes here</h1>
             <p class="hero-subtitle">Subtitle goes here.</p>
-            <button class="btn mt-2">Click here</button>
-            <button class="btn btn-filled mt-2">Or here</button>
         </div>
     </header>
 
@@ -126,6 +124,23 @@
             <h2>Contact Us</h2>
             <div class="border-bottom"></div>
         </div>
+        <!-- Contact Form -->
+        <form action="#" method="POST" class="contact-form">
+            <!-- NAME -->
+            <label for="nameInput">Name</label>
+            <input type="text" name="nameInput" id="nameInput" autocomplete="given-name">
+            
+            <!-- EMAIL -->
+            <label for="emailInput">Email</label>
+            <input type="email" name="emailInput" id="emailInput" autocomplete="email">
+            
+            <!-- SUBSCRIBE TO UPDATES -->
+            <input type="checkbox" name="signUp" id="signUp">
+            <label for="signUp">Sign Up for updates</label>
+
+            <!-- SUBMIT BUTTON -->
+            <input type="submit" value="Send" class="btn btn-filled">
+        </form>
     </section>
 
     <footer>
