@@ -22,5 +22,4 @@ navButton.addEventListener('click', function() {
 
     // Change button icon
     navButton.classList.toggle("is-active");
-
 });
