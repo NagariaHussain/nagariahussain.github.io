@@ -125,7 +125,7 @@
             <div class="border-bottom"></div>
         </div>
         <!-- Contact Form -->
-        <form action="#" method="POST" class="contact-form">
+        <form class="contact-form">
             <!-- NAME -->
             <label for="nameInput">Name</label>
             <input type="text" name="nameInput" id="nameInput" autocomplete="given-name">
@@ -135,8 +135,10 @@
             <input type="email" name="emailInput" id="emailInput" autocomplete="email">
             
             <!-- SUBSCRIBE TO UPDATES -->
-            <input type="checkbox" name="signUp" id="signUp">
-            <label for="signUp">Sign Up for updates</label>
+            <div class="form-group">
+                <input type="checkbox" name="signUp" id="signUp">
+                <label for="signUp">Sign Up for updates</label>
+            </div>
 
             <!-- SUBMIT BUTTON -->
             <input type="submit" value="Send" class="btn btn-filled">
