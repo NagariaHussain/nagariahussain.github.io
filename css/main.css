@@ -58,10 +58,10 @@ header .hero-image {
 header .hero-title {
     margin-top: 50px;
 }
+
 /* ================== */
 /* BUTTON STYLES */
 /* ================== */
-
 .btn {
     background-color: transparent;
     padding: 0.9em;
@@ -109,6 +109,7 @@ header .hero-title {
     letter-spacing: 4px;
     transition: letter-spacing 200ms ease-in-out;
     font-size: 1.2em;
+    color: rgb(221, 221, 221);
 }
 
 #logo:hover {
@@ -445,6 +446,11 @@ section {
 .form-group {
     margin: 20px 0;
 }
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
 
 /* ========================== */
 /* UTILS */

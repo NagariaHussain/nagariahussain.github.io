@@ -13,37 +13,8 @@
 </head>
 
 <body>
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="desktop-nav">
-        <a href="/" id="logo">CHORD</a>
-        <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="pages/shorts.html">SHORTS</a></li>
-            <li><a href="pages/programming.html">PROGRAMMING</a></li>
-            <li><a href="pages/food.html">FOOD</a></li>
-            <li><a href="pages/travel.html">TRAVEL</a></li>
-        </ul>
-    </nav>
-
-    <!-- MOBILE NAVIGATION BUTTON -->
-    <button class="nav-button hamburger hamburger--elastic" aria-label="Menu" aria-controls="navigation"
-        aria-expanded="false">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <!-- MOBILE NAVIGATION -->
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="pages/shorts.html">SHORTS</a></li>
-            <li><a href="pages/programming.html">PROGRAMMING</a></li>
-            <li><a href="pages/food.html">FOOD</a></li>
-            <li><a href="pages/travel.html">TRAVEL</a></li>
-        </ul>
-    </nav>
-
+    <div id="navigation"></div>
+    <!-- HERO BANNER HEADER -->
     <header>
         <img class="hero-image" src="./assets/illustrations/undraw_publish_article_icso.svg"
             alt="Hero Image: Man working on board">
@@ -53,6 +24,7 @@
         </div>
     </header>
 
+    <!-- CATEGORIES SECTION -->
     <section>
         <div class="section-title">
             <h2>Categories</h2>
@@ -64,6 +36,7 @@
         </div>
     </section>
 
+    <!-- OUR STAFF SECTION -->
     <section>
         <div class="section-title">
             <h2>Our Staff</h2>
@@ -90,6 +63,7 @@
         </div>
     </section>
 
+    <!-- FEATURED ARTICLE SECTION -->
     <section>
         <div class="section-title">
             <h2>Article of the month</h2>
@@ -119,6 +93,7 @@
         </article>
     </section>
 
+    <!-- CONTACT US SECTION -->
     <section>
         <div class="section-title">
             <h2>Contact Us</h2>
@@ -129,11 +104,11 @@
             <!-- NAME -->
             <label for="nameInput">Name</label>
             <input type="text" name="nameInput" id="nameInput" autocomplete="given-name">
-            
+
             <!-- EMAIL -->
             <label for="emailInput">Email</label>
             <input type="email" name="emailInput" id="emailInput" autocomplete="email">
-            
+
             <!-- SUBSCRIBE TO UPDATES -->
             <div class="form-group">
                 <input type="checkbox" name="signUp" id="signUp">
@@ -145,9 +120,54 @@
         </form>
     </section>
 
+    <!-- SITE FOOTER -->
     <footer>
+        <div class="social-media-list">
+            <div class="social-media">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </div>
+            <div class="social-media">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </div>
+            <div class="social-media">
+                <i class="fab fa-pinterest"></i>
+                <span>Pinterest</span>
+            </div>
+            <div class="social-media">
+                <i class="fab fa-youtube"></i>
+                <span>Youtube</span>
+            </div>
+            <div class="social-media">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </div>
+        </div>
 
+        <!-- LOGO -->
+        <a href="/" id="logo">CHORD</a>
+
+        <!-- SITEMAP -->
+        <div class="site-map">
+            <a href="#">subscribe</a>
+            <a href="#">advertise</a>
+            <a href="#">rss</a>
+            <a href="#">press center</a>
+            <a href="#">customer case</a>
+            <a href="#">jobs</a>
+            <a href="#">accessibility</a>
+            <a href="#">help</a>
+            <a href="#">franchise</a>
+            <a href="#">merchendise</a>
+            <a href="#">sponsor</a>
+            <a href="#">events</a>
+        </div>
+
+        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
+            of them!</p>
     </footer>
+
     <!--  HANDLEBARS.JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
         integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
