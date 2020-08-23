@@ -194,7 +194,7 @@ nav ul li:hover:not(.active-link) a{
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-right: 10px;
 }
 
@@ -203,7 +203,7 @@ nav ul li:hover:not(.active-link) a{
 }
 
 .mobile-nav ul li a {
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 .nav-button {
@@ -487,7 +487,6 @@ section {
 
     .hero-image {
         order: 2;
-        /* width: 20vw; */
         height: 40vh;
         flex-basis: 20%;
     }

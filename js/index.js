@@ -1,9 +1,9 @@
-// Automatic insertion of year in copyright info
-// const copyrightYearSpan = document.getElementById("copy-year-span");
-// // Get current year
-// const currentYear = new Date().getFullYear();
-// // Update span text
-// copyrightYearSpan.innerText = currentYear;
+// Automatic insertion of current year in copyright info
+const copyrightYearSpan = document.getElementById("copy-year-span");
+// Get current year
+const currentYear = new Date().getFullYear();
+// Update span text
+copyrightYearSpan.innerText = currentYear;
 
 // NAVIGATION BAR/PAGE TEMPLATE
 const source = `
@@ -43,6 +43,7 @@ const navTemplate = Handlebars.compile(source);
 const navHTML = navTemplate();
 const navDiv = document.getElementById('navigation');
 
+// Insert in HTML
 navDiv.innerHTML = navHTML;
 
 
@@ -61,7 +62,7 @@ navButton.addEventListener('click', function() {
 });
 
 
-// Automatically highlighting the active
+// Automatically highlight the active
 // navigation link
 const navLinks = Array.from(document.querySelectorAll("nav ul li a"));
 
