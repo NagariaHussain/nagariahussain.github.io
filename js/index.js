@@ -5,6 +5,7 @@ const currentYear = new Date().getFullYear();
 // Update span text
 copyrightYearSpan.innerText = currentYear;
 
+
 // NAVIGATION BAR/PAGE TEMPLATE
 const source = `
 <!-- DESKTOP NAVIGATION -->
@@ -53,10 +54,9 @@ const navButton = document.getElementsByClassName("nav-button")[0];
 const mobileNavPage = document.getElementsByClassName("mobile-nav")[0];
 
 // Handle Nav Button click
-navButton.addEventListener('click', function() {
+navButton.addEventListener('click', function () {
     // Toggle Show/Hide Navigation Page
     mobileNavPage.classList.toggle('show-nav');
-
     // Change button icon
     navButton.classList.toggle("is-active");
 });
