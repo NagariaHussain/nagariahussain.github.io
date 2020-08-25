@@ -343,7 +343,7 @@ section {
 .card-list i {
     color: white;
     font-size: 1.4em;
-    margin-bottom: 17px;
+    margin: 17px 0;
 }
 
 .category-card > p {
@@ -485,7 +485,65 @@ section {
 /* ========================= */
 /* FOOTER */
 /* ========================= */
+footer {
+    background-color: #f0f0f0;
+    padding: 2em 1em;
+    display: grid;
+}
 
+footer i {
+    color: rgb(94, 94, 94);
+    cursor: pointer;
+    transition: transform 300ms ease-in;
+    width: 20px;
+}
+
+footer i:hover {
+    color: salmon;
+    transform: scale(1.2);
+}
+
+footer #logo {
+    color: rgb(0, 0, 0);
+    margin-bottom: 1.5em;
+}
+
+.social-media-list {
+    margin-bottom: 20px;
+}
+
+.site-map {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.site-map a {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    color: rgb(34, 34, 34);
+    text-transform: uppercase;
+    box-sizing: border-box !important;
+    transition: border 200ms ease-in;
+    border-left: 3px solid transparent;
+}
+
+.site-map a:hover {
+    border-left: 3px solid salmon;
+}
+
+.copyright {
+    text-align: center;
+    color: #f5f5f5;
+    background-color: salmon;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 300;
+}
 
 /* ========================== */
 /* UTILS */
