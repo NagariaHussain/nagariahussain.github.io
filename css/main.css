@@ -4,8 +4,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
 /* COLOR TRAILS */
-/* Greenish: rgb(152, 255, 143) */
+/* Greenish: var(--primary-color) */
 /* Bluish: #03719C */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(152, 255, 143, 0.651);
+    overflow: auto;
+    text-align: center;
+    height: 100%;    
+    width: 100%;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+
+.modal-content {
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    animation-delay: 30ms;
+    animation-duration: 300ms;
+}
+
+/* ================ */
+/* GLOBAL VARIABLES */
+/* ================ */
+:root {
+    --primary-color: rgb(152, 255, 143);
+}
 
 html {
     box-sizing: border-box;
@@ -45,6 +77,15 @@ a {
     text-decoration: none;
 }
 
+
+.section-body-text {
+    color: #969696;
+}
+
+.close {
+    cursor: pointer;
+}
+
 /* ================== */
 /* HERO HEADER */
 /* ================== */
@@ -73,18 +114,18 @@ header .hero-title {
     font-size: 1.1em;
     border-radius: 5px;
     cursor: pointer;
-    border: 2px solid rgb(152, 255, 143);
+    border: 2px solid var(--primary-color);
     transition: background-color, color 250ms ease-in;
 }
 
 .btn:hover {
-    background-color: rgb(152, 255, 143);
+    background-color: var(--primary-color);
     color: rgb(32, 32, 32);
 }
 
 .btn-filled {
     color: rgb(32, 32, 32);
-    background-color: rgb(152, 255, 143);
+    background-color: var(--primary-color);
 }
 
 .btn-filled:hover {
@@ -92,7 +133,7 @@ header .hero-title {
 }
 
 .primary {
-    background-color: rgb(152, 255, 143);
+    background-color: var(--primary-color);
 }
 
 .secondary {
@@ -167,7 +208,7 @@ nav ul li a {
 
 /* Highlight active links */
 .active-link {
-    background-color:  rgb(152, 255, 143);
+    background-color:  var(--primary-color);
 }
 
 .active-link a {
@@ -176,8 +217,8 @@ nav ul li a {
 
 /* Highlight non-active links on hover */
 nav ul li:hover:not(.active-link) {
-    border-bottom: 2px solid rgb(152, 255, 143);
-    border-top: 2px solid rgb(152, 255, 143);
+    border-bottom: 2px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
 }
 
 nav ul li:hover:not(.active-link) a{
@@ -266,7 +307,7 @@ nav ul li:hover:not(.active-link) a{
 }
 
 .border-bottom {
-    border-bottom: 2px solid rgb(152, 255, 143);
+    border-bottom: 2px solid var(--primary-color);
     width: 40%;
 }
 
@@ -314,14 +355,14 @@ section {
 .circle-avatar {
     margin: 10%;
     width: 80%;
-    border: 2px dashed rgb(152, 255, 143);
+    border: 2px dashed var(--primary-color);
     cursor: pointer;
     transition: transform 300ms ease-in-out;
 }
 
 .circle-avatar:hover {
     transform: scale(1.1);
-    border: 2px solid rgb(152, 255, 143);
+    border: 2px solid var(--primary-color);
 }
 
 /* ==================== */
@@ -349,7 +390,7 @@ section {
 }
 
 .categories > :nth-child(3) {
-    background-color: #728639;
+    background-color: #338d5c;
 }
 
 .categories > :nth-child(4) {
@@ -514,9 +555,13 @@ footer i {
     width: 20px;
 }
 
-footer i:hover {
+.social-media {
+    transition: color 300ms ease-in;
+    cursor: pointer;
+}
+
+.social-media:hover{
     color: salmon;
-    transform: scale(1.2);
 }
 
 footer #logo {
