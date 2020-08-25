@@ -114,6 +114,7 @@ header .hero-title {
     transition: letter-spacing 200ms ease-in-out;
     font-size: 1.2em;
     color: rgb(221, 221, 221);
+    width: fit-content;
 }
 
 #logo:hover {
@@ -333,11 +334,26 @@ section {
 }
 
 .categories > * {
-    background-color: #016795;
     padding: 10px;
     margin: 15px;
     border-radius: 10px;
     text-align: center;
+}
+
+.categories > :nth-child(1) {
+    background-color: #FF6163;
+}
+
+.categories > :nth-child(2) {
+    background-color: #9900FA;
+}
+
+.categories > :nth-child(3) {
+    background-color: #728639;
+}
+
+.categories > :nth-child(4) {
+    background-color: #3E82FC;
 }
 
 .card-list i {
@@ -652,6 +668,24 @@ footer #logo {
     .article-details {
         margin-left: 20px;
         align-items: flex-start;
+    }
+
+    /* FOOTER */
+    footer {
+        /* 3 Equal width columns */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .copyright {
+        /* Take full width */
+        grid-column: 1/4;
+    }
+
+    .social-media-list {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding-bottom: 8em;
     }
 }
 
