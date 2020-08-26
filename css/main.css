@@ -31,8 +31,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
-    animation-delay: 30ms;
-    animation-duration: 300ms;
+    animation-duration: 500ms;
 }
 
 .modal-content * {
@@ -56,6 +55,34 @@
 .close:hover {
     background-color: #222;
     color: #fff;
+}
+
+/* MODAL OPEN ANIMATION */
+@keyframes showModal {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+        transform: scale(1);
+    }
+}
+/* MODAL CLOSE ANIMATION */
+@keyframes hideModal {
+    0% {
+        opacity: 1;
+        display: block;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
 }
 
 /* ================ */

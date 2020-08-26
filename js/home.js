@@ -64,12 +64,15 @@ for (let avatar of staffAvatars) {
         };
 
         modalContent.innerHTML = template(currentStaffData);
+        document.querySelector(".modal-content").style.animationName = "showModal";
         modalDiv.style.display = "block";
         
         // CLOSE MODAL EVENT
         let closeButton = document.getElementsByClassName("close")[0];
         closeButton.addEventListener('click', function () {
-            modalDiv.style.display = "none";
+            document.querySelector(".modal-content").style.animationName = "hideModal";
+            setTimeout(() => modalDiv.style.display = "none", 200);
+            ;
         });
     });
 }
