@@ -66,10 +66,31 @@
         </div>
         <p class="section-body-text">Click photo to view more</p>
         <div class="modal">
+            <script id="staff-modal-template" type="text/x-handlebars-template">
+                <i class="close far fa-times-circle"></i>
+                <img src="{{img_url}}" alt="Staff Bust">
+                <h2>{{name}}</h2>
+                <h3>{{role}}</h3>
+                <p class="bio">
+                    {{Bio}}
+                </p>
+                <div>
+                    <i class="fab fa-twitter"></i>
+                    <span>/ {{twitter}}</span>
+                </div>
+            </script>
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <h1>Modal Heading</h1>
-                <p>This is some content in the modal...<a href="somekj.com/hello.pdf">here</a> and not <a href="somekj.com/hello.html">here</a> </p>
+                <i class="close far fa-times-circle"></i>
+                <img src="./assets/images/staff/01.jpg" alt="Staff Bust">
+                <h2>Staff Name</h2>
+                <h3>Staff Role</h3>
+                <p class="bio">
+                    Staff Bio
+                </p>
+                <div>
+                    <i class="fab fa-twitter"></i>
+                    <span>/ Staff Twitter</span>
+                </div>
             </div>
         </div>
 

@@ -73,9 +73,10 @@ for (let link of navLinks) {
     }
 }
 
+// EXPERIMENTAL
 // Theming each page differently
 // by changing the CSS Variable: --primary-color
-window.addEventListener("load", function() {
+// window.addEventListener("load", function() {
     // Getting access to the global root scope (pseudo element)
     let root = document.documentElement;
 
@@ -84,13 +85,13 @@ window.addEventListener("load", function() {
         root.style.setProperty('--primary-color', "#ffc93c");
     }
     else if (location.pathname === "/pages/programming.html") {
-        root.style.setProperty('--primary-color', "#ffc1f3");
+        root.style.setProperty('--primary-color', "#a3d2ca");
     } 
     else if (location.pathname === "/pages/travel.html") {
-        root.style.setProperty('--primary-color', "#a3d2ca");
+        root.style.setProperty('--primary-color', "#ffc1f3");
     }
     else if (location.pathname === "/pages/food.html") {
         root.style.setProperty('--primary-color', "#ee6f57");
     }
-});
+// });
 
