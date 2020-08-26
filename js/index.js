@@ -67,9 +67,30 @@ navButton.addEventListener('click', function () {
 const navLinks = Array.from(document.querySelectorAll("nav ul li a"));
 
 for (let link of navLinks) {
-    console.log(link);
     if (link.href === location.href) {
         link.parentElement.classList.add("active-link");
         link.href = "#";
     }
 }
+
+// Theming each page differently
+// by changing the CSS Variable: --primary-color
+window.addEventListener("load", function() {
+    // Getting access to the global root scope (pseudo element)
+    let root = document.documentElement;
+
+    // Change primary theme color based on window location
+    if (location.pathname === "/pages/shorts.html") {
+        root.style.setProperty('--primary-color', "#ffc93c");
+    }
+    else if (location.pathname === "/pages/programming.html") {
+        root.style.setProperty('--primary-color', "#ffc1f3");
+    } 
+    else if (location.pathname === "/pages/travel.html") {
+        root.style.setProperty('--primary-color', "#a3d2ca");
+    }
+    else if (location.pathname === "/pages/food.html") {
+        root.style.setProperty('--primary-color', "#ee6f57");
+    }
+});
+

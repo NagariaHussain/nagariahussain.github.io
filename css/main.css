@@ -6,6 +6,7 @@
 /* COLOR TRAILS */
 /* Greenish: var(--primary-color) */
 /* Bluish: #03719C */
+/* Yellowish: #ffc93c */
 .modal {
     display: none;
     position: fixed;
@@ -24,7 +25,7 @@
 .modal-content {
     border-radius: 10px;
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: 10% auto; /* 10% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
@@ -32,11 +33,16 @@
     animation-duration: 300ms;
 }
 
+.modal-content * {
+    color: #252525;
+}
+
 /* ================ */
 /* GLOBAL VARIABLES */
 /* ================ */
 :root {
     --primary-color: rgb(152, 255, 143);
+    --secondary-color: #03719C;
 }
 
 html {
@@ -68,6 +74,20 @@ h4,
 p {
     color: white;
     margin: 0;
+}
+
+/* Show a pdf icon for any link */
+/* that points to a pdf file */
+a[href$=".pdf"] {
+    position: relative;
+    margin-right: 15px;
+    color: #FF6163;
+}
+a[href$=".pdf"]::after {
+    /* position: absolute; */
+    content: " (.pdf)";
+    /* content: url(../assets/icons/pdf-icon.svg); */
+    width: 15px;
 }
 
 /* ========================= */
@@ -561,7 +581,7 @@ footer i {
 }
 
 .social-media:hover{
-    color: salmon;
+    color: var(--secondary-color);
 }
 
 footer #logo {
@@ -593,13 +613,13 @@ footer #logo {
 }
 
 .site-map a:hover {
-    border-left: 3px solid salmon;
+    border-left: 3px solid var(--secondary-color);
 }
 
 .copyright {
     text-align: center;
     color: #f5f5f5;
-    background-color: salmon;
+    background-color: var(--secondary-color);
     padding: 5px;
     border-radius: 5px;
     font-family: 'Open Sans' sans-serif;
