@@ -63,6 +63,7 @@ for (let avatar of staffAvatars) {
             "img_url": this.src,
         };
 
+        // Generate HTML Markup
         modalContent.innerHTML = template(currentStaffData);
         document.querySelector(".modal-content").style.animationName = "showModal";
         modalDiv.style.display = "block";
