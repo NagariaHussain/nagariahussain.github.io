@@ -45,11 +45,11 @@ const shorts = [
 ];
 
 // Getting random post
-function getRandomPost(allShorts) {
+function getRandomIndex(allShorts) {
     // A random number between 0 and len(allShorts)
     let rIndex = Math.floor(Math.random() * allShorts.length);
     // returning post at random index
-    return allShorts[rIndex];
+    return rIndex;
 }
 
 // Getting shorts of category
@@ -58,4 +58,56 @@ function getShortsOfCategory(allShorts, category) {
     return allShorts.filter(
         (post) => post.getCategory() === category
     );
+}
+
+// Random card Generation
+let cardDataSource = document.getElementById("post-card-template").innerHTML;
+const cardTemplate = Handlebars.compile(cardDataSource);
+const randomPostDiv= document.getElementById("random-post");
+const randomPostIndex = getRandomIndex(shorts);
+const randomPost = shorts[randomPostIndex];
+
+randomPostDiv.innerHTML = cardTemplate({
+    index: randomPostIndex,
+    title: randomPost.title,
+    author: randomPost.author,
+    body: randomPost.body,
+    imageUrl: randomPost.imageUrl
+});
+
+// Displaying through Handlebars
+// Modal Div
+const modalDiv = document.querySelector(".modal");
+
+// Modal Div Template
+let dataSource = document.getElementById("modal-template").innerHTML;
+const template = Handlebars.compile(dataSource);
+
+// Attaching event listeners to buttons
+const readMoreButtons = document.querySelectorAll("article button");
+for (let button of readMoreButtons) {
+    button.addEventListener('click', function () {
+        // Getting the index of post
+        let index = Number(this.id.slice(5));
+        let currentPost = shorts[index];
+
+        let modalContent = template({
+            "title": currentPost.heading,
+            "author": currentPost.author,
+            "date": currentPost.creationDate,
+            "body": currentPost.body
+        });
+
+        modalDiv.innerHTML = modalContent;
+        document.querySelector(".modal-content").style.animationName = "showModal";
+        modalDiv.style.display = "block";
+
+        // CLOSE MODAL EVENT
+        let closeButton = document.getElementsByClassName("close")[0];
+        closeButton.addEventListener('click', function () {
+            document.querySelector(".modal-content").style.animationName = "hideModal";
+            setTimeout(() => modalDiv.style.display = "none", 200);
+            ;
+        });
+    });
 }

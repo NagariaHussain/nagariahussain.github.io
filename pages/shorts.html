@@ -15,8 +15,32 @@
 
 <body>
     <!-- Will be injected via JavaScript (Handlebars) -->
-    <div id="navigation">
-    </div>
+    <div id="navigation"></div>
+
+    <!-- Shorts Reading Modal -->
+
+    <!-- Templates (used by Handlebars.js)-->
+    <script id="modal-template" type="text/x-handlebars-template">
+        <div class="modal-content">
+            <i class="close far fa-times-circle"></i>
+            <h2>{{title}}</h2>
+            <h3>{{author}}</h3>
+            <p>{{date}}</p>
+            <p>{{body}}</p>
+        </div>
+    </script>
+
+    <script id="post-card-template" type="text/x-handlebars-template">
+        <article>
+            <img src="{{imgUrl}}" alt="Representive image for post by {{author}}">
+            <h3>{{ title }}</h3>
+            <p>{{ body }}</p>
+            <button id="shorts{{index}}">Read more</button>
+        </article>
+    </script>
+
+    <!-- Injected through JS -->
+    <div class="modal"></div>
 
     <!-- HERO BANNER HEADER -->
     <header>
@@ -35,12 +59,8 @@
             <div class="border-bottom"></div>
         </div>
 
-        <article>
-            <img src="" alt="">
-            <h3>How to make $118K by writing?</h3>
-            <p>Post by someone who makes the same amount by doing the same thing.</p>
-            <button>Read more</button>
-        </article>
+        <!-- Injected through Handlebars -->
+        <div id="random-post"></div>
     </section>
 
     <!-- BUSSINESS SHORTS SECTION -->
@@ -90,13 +110,13 @@
                 <img src="" alt="">
                 <h3>Title</h3>
                 <p>Some body</p>
-                <button>read</button>
+                <button id="short0">read</button>
             </article>
             <article>
                 <img src="" alt="">
                 <h3>Title</h3>
                 <p>Some body</p>
-                <button>read</button>
+                <button id="short3">read</button>
             </article>
             <article>
                 <img src="" alt="">
@@ -112,7 +132,6 @@
             </article>
         </div>
     </section>
-
 
     <!-- TECHNOLOGY SHORTS SECTION -->
     <section>
