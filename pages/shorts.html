@@ -18,6 +18,8 @@
     <div id="navigation"></div>
 
     <!-- Shorts Reading Modal -->
+    <!-- Injected through JS -->
+    <div class="modal"></div>
 
     <!-- Templates (used by Handlebars.js)-->
     <script id="modal-template" type="text/x-handlebars-template">
@@ -39,9 +41,6 @@
         </article>
     </script>
 
-    <!-- Injected through JS -->
-    <div class="modal"></div>
-
     <!-- HERO BANNER HEADER -->
     <header>
         <img class="hero-image" src="../assets/illustrations/undraw_online_posts_h475.svg"
@@ -55,7 +54,7 @@
     <!-- RANDOM SHORT SECTION -->
     <section>
         <div class="section-title">
-            <h2>Random Fun</h2>
+            <h2>Random Read</h2>
             <div class="border-bottom"></div>
         </div>
 
@@ -63,109 +62,23 @@
         <div id="random-post"></div>
     </section>
 
-    <!-- BUSSINESS SHORTS SECTION -->
+    <!-- SHORTS MAIN SECTION -->
     <section>
         <div class="section-title">
-            <h2>Bussiness</h2>
+            <h2>SHORTS</h2>
             <div class="border-bottom"></div>
         </div>
 
-        <div class="card-list">
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-        </div>
-    </section>
+        <!-- Select box for category -->
+        <select name="category-select" id="category-selector">
+            <option value="ALL" selected>All</option>
+            <option value="TECHNOLOGY">Technology</option>
+            <option value="BUSSINESS">Bussiness</option>
+            <option value="WORLD">World</option>
+        </select>
 
-    <!-- TECHNOLOGY SHORTS SECTION -->
-    <section>
-        <div class="section-title">
-            <h2>Technology</h2>
-            <div class="border-bottom"></div>
-        </div>
-
-        <div class="card-list">
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button id="short0">read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button id="short3">read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-        </div>
-    </section>
-
-    <!-- TECHNOLOGY SHORTS SECTION -->
-    <section>
-        <div class="section-title">
-            <h2>Around the world</h2>
-            <div class="border-bottom"></div>
-        </div>
-
-        <div class="card-list">
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h3>Title</h3>
-                <p>Some body</p>
-                <button>read</button>
-            </article>
-        </div>
+        <!-- Injected through JavaScript -->
+        <div id="shorts-list"></div>
     </section>
 
     <!-- SITE FOOTER -->

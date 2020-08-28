@@ -139,9 +139,12 @@ function getShortsOfCategory(allShorts, category) {
 let cardDataSource = document.getElementById("post-card-template").innerHTML;
 const cardTemplate = Handlebars.compile(cardDataSource);
 const randomPostDiv = document.getElementById("random-post");
+
+// Picking a random post from all posts
 const randomPostIndex = getRandomIndex(shorts);
 const randomPost = shorts[randomPostIndex];
 
+// Updating HTML for random post
 randomPostDiv.innerHTML = cardTemplate({
     index: randomPostIndex,
     title: randomPost.title,
@@ -149,6 +152,40 @@ randomPostDiv.innerHTML = cardTemplate({
     body: randomPost.body,
     imageUrl: randomPost.imageUrl
 });
+
+
+// Render Posts to page 
+// Show all posts if no category is provided
+function showPosts(category) {
+    const shortsList = document.getElementById("shorts-list");
+    // Clear the list
+    shortsList.innerHTML = "";
+
+    // Posts to render
+    let toRender = shorts;
+
+    // If a particular category is to be rendered
+    if (category != null) {
+        toRender = getShortsOfCategory(shorts, category);
+    }
+
+    // Append post to the list
+    for (let i = 0; i < toRender.length; i++) {
+        let post = toRender[i];
+        let postHTML = `<li>${cardTemplate({
+            index: i,
+            title: post.title,
+            author: post.author,
+            body: post.body,
+            imageUrl: post.imageUrl
+        })}</li>`;
+
+        // Appending post to the DOM
+        shortsList.insertAdjacentHTML('beforeend', postHTML);
+    }
+}
+
+showPosts('TECHNOLOGY');
 
 // Displaying through Handlebars
 // Modal Div
@@ -160,12 +197,18 @@ const template = Handlebars.compile(dataSource);
 
 // Attaching event listeners to buttons
 const readMoreButtons = document.querySelectorAll("article button");
+
+// Attaching event to every "Read more" button
+// inside the shorts.html page
 for (let button of readMoreButtons) {
     button.addEventListener('click', function () {
         // Getting the index of post
-        let index = Number(this.id.slice(5));
+        // from the id of the button
+        let index = Number(this.id.slice(6));
         let currentPost = shorts[index];
 
+        console.log(this.id.slice(6));
+        // Generating modal content
         let modalContent = template({
             "title": currentPost.heading,
             "author": currentPost.author,
@@ -173,16 +216,29 @@ for (let button of readMoreButtons) {
             "body": currentPost.body
         });
 
+        // Updating modal content
         modalDiv.innerHTML = modalContent;
+
+        // Displaying the modal
         document.querySelector(".modal-content").style.animationName = "showModal";
         modalDiv.style.display = "block";
 
-        // CLOSE MODAL EVENT
+        // Handeling modal close
         let closeButton = document.getElementsByClassName("close")[0];
         closeButton.addEventListener('click', function () {
+            // Hiding the modal after an animation
             document.querySelector(".modal-content").style.animationName = "hideModal";
+            // Adding delay to enable hiding animation
             setTimeout(() => modalDiv.style.display = "none", 200);
-            ;
         });
     });
 }
+
+const categorySelect = document.getElementById("category-selector");
+
+categorySelect.addEventListener('input', function () {
+    if (this.value === "ALL")
+        showPosts();
+    else 
+        showPosts(this.value);
+});
