@@ -1,3 +1,20 @@
+// Global variables to enable search
+let filteredListElements = [];
+let currentListElements = [];
+
+// Notes
+// let searchPattern = new RegExp("software", "gi");
+// searchPattern.test(TestString); (true or false)
+// let newString = testString.replace(myreg, 
+// (match, p1, p2, p3, offset, string) => `<span class="highlight">${match}</span>`);
+
+
+// Highlights the search pattern
+// inside the HTML
+function replacer(match) {
+    return `<span class="highlight">${match}</span>`;
+}
+
 // (ES6 Class) Modal for Post object
 class Post {
     constructor(heading, author, creationDate, body, category, imageUrl) {
@@ -160,6 +177,7 @@ function showPosts(category) {
     const shortsList = document.getElementById("shorts-list");
     // Clear the list
     shortsList.innerHTML = "";
+    currentListElements = [];
 
     // Posts to render
     let toRender = shorts;
@@ -174,18 +192,53 @@ function showPosts(category) {
         let post = toRender[i];
         let postHTML = `<li>${cardTemplate({
             index: i,
-            title: post.title,
+            title: post.heading,
             author: post.author,
             body: post.body,
             imageUrl: post.imageUrl
         })}</li>`;
+
+        // Appending post to current posts array
+        currentListElements.push(postHTML);
 
         // Appending post to the DOM
         shortsList.insertAdjacentHTML('beforeend', postHTML);
     }
 }
 
-showPosts('TECHNOLOGY');
+function filterPosts(filterString) {
+    if (filterString === "") {
+        if (categorySelect.value === "ALL")
+        showPosts();
+    else
+        showPosts(categorySelect.value);
+    }
+    else {
+        // Create Regular Expression object
+        let searchPattern = new RegExp(filterString, "gi");
+
+        // Filter posts based on search strings
+        let filteredElements = currentListElements.filter((html) => {
+            // Returns `true` if post contains the search strings
+            return searchPattern.test(html);
+        });
+
+        // Render the filtered posts
+        const shortsList = document.getElementById("shorts-list");
+        // Clear the list
+        shortsList.innerHTML = "";
+
+        for (let i = 0; i < filteredElements.length; i++) {
+            // Highlight the search strings in HTML 
+            // of filtered posts
+            let postHTML = filteredElements[i].replace(searchPattern, replacer);
+            // Appending post to the DOM
+            shortsList.insertAdjacentHTML('beforeend', postHTML);
+        }
+    }
+}
+
+showPosts();
 
 // Displaying through Handlebars
 // Modal Div
@@ -239,6 +292,14 @@ const categorySelect = document.getElementById("category-selector");
 categorySelect.addEventListener('input', function () {
     if (this.value === "ALL")
         showPosts();
-    else 
+    else
         showPosts(this.value);
+});
+
+
+const postSearchInput = document.getElementById('post-search-input');
+
+postSearchInput.addEventListener('input', function () {
+    // Filter the posts based on input
+    filterPosts(this.value);
 });

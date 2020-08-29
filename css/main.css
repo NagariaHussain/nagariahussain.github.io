@@ -126,6 +126,7 @@ p {
 
 /* Show a pdf icon for any link */
 /* that points to a pdf file */
+
 a[href$=".pdf"] {
     position: relative;
     margin-right: 15px;
@@ -150,6 +151,9 @@ a {
     color: #969696;
 }
 
+.highlight {
+    background-color: rgb(53, 208, 255);
+}
 
 /* ================== */
 /* HERO HEADER */
