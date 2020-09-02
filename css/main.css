@@ -675,6 +675,13 @@ footer #logo {
     font-weight: 300;
 }
 
+/* ========================== */
+/* SHORTS PAGE */
+/* ========================== */
+#shorts-list {
+    color: #fff;
+    margin-top: 30px;
+}
 
 /* ========================== */
 /* TRAVEL PAGE */

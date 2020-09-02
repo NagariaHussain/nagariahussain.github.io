@@ -1,17 +1,9 @@
-// Global variables to enable search
-let filteredListElements = [];
+// Global variable to enable search
 let currentListElements = [];
-
-// Notes
-// let searchPattern = new RegExp("software", "gi");
-// searchPattern.test(TestString); (true or false)
-// let newString = testString.replace(myreg, 
-// (match, p1, p2, p3, offset, string) => `<span class="highlight">${match}</span>`);
-
 
 // Highlights the search pattern
 // inside the HTML
-function replacer(match) {
+function highlightText(match) {
     return `<span class="highlight">${match}</span>`;
 }
 
@@ -26,13 +18,14 @@ class Post {
         this.imageUrl = imageUrl;
     }
 
+    // return the category of the post
     getCategory() {
         return this.category;
     }
 }
 
 // Posts from bussinessnewsdaily.com and fonearena.com
-// unless otherwise stated
+// unless otherwise stated.
 // Can come as JSON from a backend
 const shorts = [
     new Post(
@@ -174,7 +167,9 @@ randomPostDiv.innerHTML = cardTemplate({
 // Render Posts to page 
 // Show all posts if no category is provided
 function showPosts(category) {
+    // Container of the list
     const shortsList = document.getElementById("shorts-list");
+    
     // Clear the list
     shortsList.innerHTML = "";
     currentListElements = [];
@@ -189,7 +184,10 @@ function showPosts(category) {
 
     // Append post to the list
     for (let i = 0; i < toRender.length; i++) {
+        // Getting the current post
         let post = toRender[i];
+
+        // Generating HTML using handlebars template
         let postHTML = `<li>${cardTemplate({
             index: i,
             title: post.heading,
@@ -206,12 +204,13 @@ function showPosts(category) {
     }
 }
 
+// Filter the posts based on search string
 function filterPosts(filterString) {
     if (filterString === "") {
         if (categorySelect.value === "ALL")
-        showPosts();
-    else
-        showPosts(categorySelect.value);
+            showPosts();
+        else
+            showPosts(categorySelect.value);
     }
     else {
         // Create Regular Expression object
@@ -223,21 +222,29 @@ function filterPosts(filterString) {
             return searchPattern.test(html);
         });
 
+
         // Render the filtered posts
         const shortsList = document.getElementById("shorts-list");
         // Clear the list
         shortsList.innerHTML = "";
 
+        // If no results for query string
+        if (filteredElements.length == 0) {
+            shortsList.innerText = "NO MATCHING RESULTS";
+            return;
+        }
+
         for (let i = 0; i < filteredElements.length; i++) {
             // Highlight the search strings in HTML 
             // of filtered posts
-            let postHTML = filteredElements[i].replace(searchPattern, replacer);
+            let postHTML = filteredElements[i].replace(searchPattern, highlightText);
             // Appending post to the DOM
             shortsList.insertAdjacentHTML('beforeend', postHTML);
         }
     }
 }
 
+// Show All posts initially
 showPosts();
 
 // Displaying through Handlebars
@@ -287,8 +294,11 @@ for (let button of readMoreButtons) {
     });
 }
 
+
+// Dropdown for category selection
 const categorySelect = document.getElementById("category-selector");
 
+// Listening to category change event
 categorySelect.addEventListener('input', function () {
     if (this.value === "ALL")
         showPosts();
@@ -297,8 +307,10 @@ categorySelect.addEventListener('input', function () {
 });
 
 
+// Search box
 const postSearchInput = document.getElementById('post-search-input');
 
+// Listening to search string change
 postSearchInput.addEventListener('input', function () {
     // Filter the posts based on input
     filterPosts(this.value);
