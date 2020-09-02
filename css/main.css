@@ -15,7 +15,7 @@
     z-index: 10;
     top: 0;
     left: 0;
-    background-color: rgba(152, 255, 143, 0.651);
+    background-color: var(--primary-backdrop-color);
     overflow: auto;
     text-align: center;
     height: 100%;    
@@ -90,6 +90,7 @@
 /* ================ */
 :root {
     --primary-color: rgb(152, 255, 143);
+    --primary-backdrop-color: rgba(152, 255, 143, 0.6);
     --secondary-color: #03719C;
 }
 
@@ -686,6 +687,17 @@ footer #logo {
 /* ========================== */
 /* TRAVEL PAGE */
 /* ========================== */
+
+.travel-guide img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+
+.travel-guide figcaption {
+    background-color: #fff;
+    padding: 20px;
+}
+
 .gallery-grid div {
     width: 80vw;
     height: 300px;
