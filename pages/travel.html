@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel</title>
+
+    <!-- External Library for lightbox: https://lokeshdhakar.com/projects/lightbox2/ -->
+    <link rel="stylesheet" href="../css/lightbox.min.css">
+
     <link rel="stylesheet" href="../css/main.css">
 
     <!-- Font Awesome 5 Free Icons -->
     <link rel="stylesheet" href="../assets/icons/all.css">
+
     <!-- Johnsuh's Animated Hamburger Icons: https://github.com/jonsuh/hamburgers -->
     <link rel="stylesheet" href="../assets/icons/hamburgers.min.css">
 </head>
@@ -59,13 +64,33 @@
             <h2>Gallery</h2>
             <div class="border-bottom"></div>
         </div>
+        <p class="section-body-text">Click photo to view full image</p>
         <div class="gallery-grid">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <a href="../assets/images/travel_page/photo1.jpg" data-lightbox="image-1">
+                <div
+                    aria-label="Fruits and vegetables in a cycle basket. Cycle standing on a lane with lots of parked cars">
+                </div>
+            </a>
+            <a href="../assets/images/travel_page/photo2.jpg" data-lightbox="image-2">
+                <div aria-label="Night photo of a street with lots of cars stopped near the zebra crossing">
+                </div>
+            </a>
+            <a href="../assets/images/travel_page/photo3.jpg" data-lightbox="image-3">
+                <div aria-label="Sky view of a high tech city with lots of tall buildings"></div>
+            </a>
+            <a href="../assets/images/travel_page/photo4.jpg" data-lightbox="image-4">
+                <div aria-label="Far away view of a city with blurred buildings"></div>
+            </a>
+            <a href="../assets/images/travel_page/photo5.jpg" data-lightbox="image-5">
+                <div
+                    aria-label="View showing a top-side view of a street and some tall buildings. Also, people walking on the footpath.">
+                </div>
+            </a>
+            <a href="../assets/images/travel_page/photo6.jpg" data-lightbox="image-6">
+                <div
+                    aria-label="Far away view of a city near a water reservior with a number of buildings containing reflective materials.">
+                </div>
+            </a>
         </div>
     </section>
 
@@ -76,10 +101,14 @@
             <div class="border-bottom"></div>
         </div>
         <div class="photographers-grid">
-            <img src="../assets/images/travel_page/photographers/01.jpg" alt="Bust of a lady photographer">
-            <img src="../assets/images/travel_page/photographers/02.jpg" alt="Bust of a male photographer">
-            <img src="../assets/images/travel_page/photographers/03.jpg" alt="Bust of a lady photographer">
-            <img src="../assets/images/travel_page/photographers/04.jpg" alt="Bust of a male photographer">
+            <img class="circular" src="../assets/images/travel_page/photographers/01.jpg"
+                alt="Bust of a lady photographer">
+            <img class="circular" src="../assets/images/travel_page/photographers/02.jpg"
+                alt="Bust of a male photographer">
+            <img class="circular" src="../assets/images/travel_page/photographers/03.jpg"
+                alt="Bust of a lady photographer">
+            <img class="circular" src="../assets/images/travel_page/photographers/04.jpg"
+                alt="Bust of a male photographer">
         </div>
     </section>
 
@@ -91,14 +120,20 @@
         </div>
         <!-- From WikiPedia -->
         <p>
-            The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ-/;[4] lit. 'Crown of the Palace' is an ivory-white marble mausoleum on the southern bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan (reigned from 1628 to 1658) to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.
+            The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ-/;[4] lit. 'Crown of the Palace' is an ivory-white marble mausoleum on
+            the southern bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal
+            emperor Shah Jahan (reigned from 1628 to 1658) to house the tomb of his favourite wife, Mumtaz Mahal; it
+            also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex,
+            which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a
+            crenellated wall.
         </p>
         <!-- Video taken from: -->
         <!-- https://www.videvo.net/video/side-view-of-the-taj-mahal/6968/ -->
         <!-- Author: Videvo -->
-        <video src="../assets/video/taj_mahel_agra.mp4" type="video/mp4" poster="../assets/images/travel_page/taj-mahal.jpg" controls></video>
+        <video src="../assets/video/taj_mahel_agra.mp4" type="video/mp4"
+            poster="../assets/images/travel_page/taj-mahal.jpg" controls></video>
     </section>
-    
+
     <!-- SITE FOOTER -->
     <footer>
         <div class="social-media-list">
@@ -152,6 +187,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
         integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
         crossorigin="anonymous"></script>
+    <script src="../js/lightbox-plus-jquery.js"></script>
     <script src="../js/index.js"></script>
 </body>
 
