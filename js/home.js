@@ -67,7 +67,7 @@ for (let avatar of staffAvatars) {
         modalContent.innerHTML = template(currentStaffData);
         document.querySelector(".modal-content").style.animationName = "showModal";
         modalDiv.style.display = "block";
-        
+
         // CLOSE MODAL EVENT
         let closeButton = document.getElementsByClassName("close")[0];
         closeButton.addEventListener('click', function () {
@@ -79,11 +79,57 @@ for (let avatar of staffAvatars) {
 }
 
 
+// Animate category cards on scroll
+let options = {
+    threshold: 1.0,
+    root: null,
+    rootMargin: "100px"
+};
 
-// // TODO: Theming each page differently
-// window.addEventListener("load", function() {
-//     let root = document.documentElement;
-//     root.style.setProperty('--primary-color', "rgba(152, 255, 143)");
-//     console.log(root);
-// });
+let observer = new IntersectionObserver(callback, options);
+let categoriesShown = false;
+let target = document.querySelector('#cat-section');
+
+let cards = document.getElementsByClassName("category-card");
+for (let card of cards) {
+    observer.observe(card);
+}
+
+
+function callback(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (entry.intersectionRatio >= 0.80) {
+                entry.target.style.opacity = 1;
+            }
+        }
+        else {
+            entry.target.style.opacity = 0;
+        }
+    });
+};
+
+// Animate avatar image on scroll
+let avatarObserver = new IntersectionObserver(showAvatar, options);
+let avatars = document.getElementsByClassName("circular");
+
+// Observe every avatar for intersection
+for (let avatar of avatars) {
+    avatarObserver.observe(avatar);
+}
+
+// Show avatar on scrool
+function showAvatar(entries) {
+    entries.forEach(entry => {
+        // If intersecting with window area
+        if (entry.isIntersecting && !entry.target.getAttribute("shown")) {
+            if (entry.intersectionRatio >= 0.50) {
+                // If more than 50% of the container is visible
+                entry.target.style.opacity = 1;
+                entry.target.setAttribute("shown", true);
+            }
+        }
+    });
+}
+
 
