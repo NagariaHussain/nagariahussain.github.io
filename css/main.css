@@ -220,7 +220,7 @@ header .hero-title {
 
 
 /* LOGO STYLE AND ANIMATION */
-#logo {
+.logo {
     letter-spacing: 4px;
     transition: letter-spacing 200ms ease-in-out;
     font-size: 1.2em;
@@ -228,7 +228,7 @@ header .hero-title {
     width: fit-content;
 }
 
-#logo:hover {
+.logo:hover {
     letter-spacing: 1px;
 }
 
@@ -452,7 +452,7 @@ section {
 }
 
 .categories > :nth-child(1) {
-    background-color: #FF6163;
+    background-color: #ff4e50;
 }
 
 .categories > :nth-child(2) {
@@ -478,8 +478,7 @@ section {
 }
 
 .category-card p {
-    font-weight: 300;
-    color: #ccc;
+    color: rgb(252, 252, 252);
 }
 /* ==================== */
 /* FEATURED ARTICLE SECTION */
@@ -634,7 +633,7 @@ footer i {
     color: var(--secondary-color);
 }
 
-footer #logo {
+footer .logo {
     color: rgb(0, 0, 0);
     margin-bottom: 1.5em;
 }

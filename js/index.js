@@ -10,7 +10,7 @@ copyrightYearSpan.innerText = currentYear;
 const source = `
 <!-- DESKTOP NAVIGATION -->
     <nav class="desktop-nav">
-        <a href="/" id="logo">CHORD</a>
+        <a href="/" class="logo">CHORD</a>
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/pages/shorts.html">SHORTS</a></li>
