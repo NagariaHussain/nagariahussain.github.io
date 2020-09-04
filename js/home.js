@@ -111,14 +111,14 @@ function callback(entries) {
 
 // Animate avatar image on scroll
 let avatarObserver = new IntersectionObserver(showAvatar, options);
-let avatars = document.getElementsByClassName("circular");
+let avatars = document.getElementsByClassName("circle-avatar");
 
 // Observe every avatar for intersection
 for (let avatar of avatars) {
     avatarObserver.observe(avatar);
 }
 
-// Show avatar on scrool
+// Show avatar on scroll
 function showAvatar(entries) {
     entries.forEach(entry => {
         // If intersecting with window area

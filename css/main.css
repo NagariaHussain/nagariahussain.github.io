@@ -421,12 +421,12 @@ section {
 
 .circular {
     border-radius: 50%;
-    opacity: 0;
 }
 
 .circle-avatar {
     margin: 10%;
     width: 80%;
+    opacity: 0;
     border: 2px dashed var(--primary-color);
     cursor: pointer;
     transition: all 300ms ease-in-out;
