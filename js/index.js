@@ -77,28 +77,27 @@ for (let link of navLinks) {
 // Theming each page differently
 // by changing the CSS Variable: --primary-color
 // window.addEventListener("load", function() {
-    // Getting access to the global root scope (pseudo element)
-    let root = document.documentElement;
+// Getting access to the global root scope (pseudo element)
+let root = document.documentElement;
 
-    // Change primary theme color based on window location
-    if (location.pathname === "/pages/shorts.html") {
-        root.style.setProperty('--primary-color', "#ffc93c");
-        root.style.setProperty('--primary-backdrop-color', "rgba(255, 201, 60, 0.6)");
-    }
-    else if (location.pathname === "/pages/programming.html") {
-        root.style.setProperty('--primary-color', "#a3d2ca");
-        root.style.setProperty('--primary-backdrop-color', "rgba(163, 210, 202, 0.6)");
+// Change primary theme color based on window location
+if (location.pathname === "/pages/shorts.html") {
+    root.style.setProperty('--primary-color', "#ffc93c");
+    root.style.setProperty('--primary-backdrop-color', "rgba(255, 201, 60, 0.6)");
+}
+else if (location.pathname === "/pages/programming.html") {
+    root.style.setProperty('--primary-color', "#a3d2ca");
+    root.style.setProperty('--primary-backdrop-color', "rgba(163, 210, 202, 0.6)");
 
-    } 
-    else if (location.pathname === "/pages/travel.html") {
-        root.style.setProperty('--primary-color', "#ffc1f3");
-        root.style.setProperty('--primary-backdrop-color', "rgba(255, 193, 243, 0.6)");
+}
+else if (location.pathname === "/pages/travel.html") {
+    root.style.setProperty('--primary-color', "#ffc1f3");
+    root.style.setProperty('--primary-backdrop-color', "rgba(255, 193, 243, 0.6)");
 
-    }
-    else if (location.pathname === "/pages/food.html") {
-        root.style.setProperty('--primary-color', "#ee6f57");
-        root.style.setProperty('--primary-backdrop-color', "rgba(238, 111, 87, 0.6)");
+}
+else if (location.pathname === "/pages/food.html") {
+    root.style.setProperty('--primary-color', "#ee6f57");
+    root.style.setProperty('--primary-backdrop-color', "rgba(238, 111, 87, 0.6)");
 
-    }
+}
 // });
-
