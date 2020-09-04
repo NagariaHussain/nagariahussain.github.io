@@ -715,10 +715,16 @@ footer .logo {
     cursor: pointer;
 }
 
+.gallery-grid {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .gallery-grid div {
     height: 300px;
     border-radius: 0.5em;
     margin: 20px 0;
+    width: 80vw;
 }
 
 .gallery-grid a:nth-child(1) div { 
@@ -936,6 +942,23 @@ footer .logo {
         grid-column: 1 / 4;
         grid-row: 4 / 5;
     }
+
+    .photographers-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        
+    }
+    
+    .photographers-grid img {
+        grid-row: 2 / 3;
+    }
+
+    /* Placing one image on the top */
+    .photographers-grid img:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }   
 }
 
 /* DESKTOP SIZE */
