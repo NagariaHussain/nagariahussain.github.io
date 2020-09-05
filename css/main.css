@@ -1,14 +1,25 @@
 /* =================== */
+
+
 /* IMPORT FONTS */
+
+
 /* =================== */
 
+
 /* OpenSans */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
 /* =================== */
+
+
 /* MODAL WINDOW STYLES */
+
+
 /* =================== */
+
 .modal {
     display: none;
     position: fixed;
@@ -18,7 +29,7 @@
     background-color: var(--primary-backdrop-color);
     overflow: auto;
     text-align: center;
-    height: 100%;    
+    height: 100%;
     width: 100%;
     animation-duration: 300ms;
     animation-timing-function: ease-in-out;
@@ -27,10 +38,11 @@
 .modal-content {
     border-radius: 10px;
     background-color: #fefefe;
-    margin: 10% auto; /* 10% from the top and centered */
+    margin: 10% auto;
+    /* 10% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 80%;
     animation-duration: 500ms;
 }
 
@@ -57,37 +69,45 @@
     color: #fff;
 }
 
+
 /* MODAL OPEN ANIMATION */
+
 @keyframes showModal {
     0% {
         opacity: 0;
         transform: scale(0);
     }
-
     100% {
         opacity: 1;
         display: block;
         transform: scale(1);
     }
 }
+
+
 /* MODAL CLOSE ANIMATION */
+
 @keyframes hideModal {
     0% {
         opacity: 1;
         display: block;
         transform: scale(1);
     }
-
     100% {
         opacity: 0;
         transform: scale(0);
     }
-
 }
 
+
 /* ================ */
+
+
 /* GLOBAL VARIABLES */
+
+
 /* ================ */
+
 :root {
     --primary-color: rgb(152, 255, 143);
     --primary-backdrop-color: rgba(152, 255, 143, 0.6);
@@ -116,16 +136,19 @@ video {
     margin-top: 20px;
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
+h1,
+h2,
+h3,
+h4,
 p {
     color: white;
     margin: 0;
 }
 
+
 /* Show a pdf icon for any link */
+
+
 /* that points to a pdf file */
 
 a[href$=".pdf"] {
@@ -133,6 +156,7 @@ a[href$=".pdf"] {
     margin-right: 15px;
     color: #FF6163;
 }
+
 a[href$=".pdf"]::after {
     /* position: absolute; */
     content: " (.pdf)";
@@ -140,13 +164,18 @@ a[href$=".pdf"]::after {
     width: 15px;
 }
 
+
 /* ========================= */
+
+
 /* GLOBAL STYLES */
+
+
 /* ========================= */
+
 a {
     text-decoration: none;
 }
-
 
 .section-body-text {
     color: #969696;
@@ -156,9 +185,15 @@ a {
     background-color: rgb(53, 208, 255);
 }
 
+
 /* ================== */
+
+
 /* HERO HEADER */
+
+
 /* ================== */
+
 header {
     display: flex;
     flex-flow: column nowrap;
@@ -174,9 +209,15 @@ header .hero-title {
     margin-top: 50px;
 }
 
+
 /* ================== */
+
+
 /* BUTTON STYLES */
+
+
 /* ================== */
+
 .btn {
     background-color: transparent;
     padding: 0.9em;
@@ -214,12 +255,18 @@ header .hero-title {
     border: 2px solid #fff;
 }
 
+
 /* ================= */
+
+
 /* END BUTTON STYLES */
+
+
 /* ================= */
 
 
 /* LOGO STYLE AND ANIMATION */
+
 .logo {
     letter-spacing: 4px;
     transition: letter-spacing 200ms ease-in-out;
@@ -232,13 +279,17 @@ header .hero-title {
     letter-spacing: 1px;
 }
 
+
 /* Hide Desktop Navigation: Mobile Size */
+
 .desktop-nav {
     display: none;
 }
 
+
 /* NAVIGATION STYLES */
-nav > a {
+
+nav>a {
     color: #ffffff;
     padding: 20px;
 }
@@ -264,6 +315,7 @@ nav ul li a {
 
 
 /* Desktop navigation specific */
+
 .desktop-nav {
     width: 100%;
     justify-content: space-between;
@@ -276,26 +328,32 @@ nav ul li a {
     justify-content: center;
 }
 
+
 /* Highlight active links */
+
 .active-link {
-    background-color:  var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 .active-link a {
     color: rgb(34, 34, 34) !important;
 }
 
+
 /* Highlight non-active links on hover */
+
 nav ul li:hover:not(.active-link) {
     border-bottom: 2px solid var(--primary-color);
     border-top: 2px solid var(--primary-color);
 }
 
-nav ul li:hover:not(.active-link) a{
+nav ul li:hover:not(.active-link) a {
     color: rgb(255, 255, 255);
 }
 
+
 /* Mobile Navigation Specific */
+
 .mobile-nav {
     display: none;
     height: 100vh;
@@ -338,7 +396,9 @@ nav ul li:hover:not(.active-link) a{
     text-align: center;
 }
 
+
 /* NAVIGATION ANIMATION */
+
 .show-nav {
     animation-name: showIn;
     animation-timing-function: ease-in-out;
@@ -351,14 +411,15 @@ nav ul li:hover:not(.active-link) a{
         opacity: 0;
         transform: translateY(100%);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+
 /* SECTION TITLE */
+
 .section-title {
     margin-bottom: 30px;
     width: fit-content;
@@ -412,8 +473,13 @@ p.dim {
 
 
 /* ==================== */
+
+
 /* HOME PAGE SPECIFIC STYLES */
+
+
 /* ==================== */
+
 .avatar-grid {
     display: flex;
     flex-flow: column nowrap;
@@ -421,7 +487,7 @@ p.dim {
     height: 100%;
 }
 
-.avatar-grid > * {
+.avatar-grid>* {
     margin-bottom: 20px;
 }
 
@@ -443,16 +509,22 @@ p.dim {
     border: 2px solid var(--primary-color);
 }
 
+
 /* ==================== */
+
+
 /* CATEGORIES LIST SECTION */
+
+
 /* ==================== */
+
 .card-list {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 }
 
-.categories > * {
+.categories>* {
     padding: 10px;
     margin: 15px;
     border-radius: 10px;
@@ -464,19 +536,19 @@ p.dim {
     transition: opacity 300ms ease-in;
 }
 
-.categories > :nth-child(1) {
+.categories> :nth-child(1) {
     background-color: #ff4e50;
 }
 
-.categories > :nth-child(2) {
+.categories> :nth-child(2) {
     background-color: #9900FA;
 }
 
-.categories > :nth-child(3) {
+.categories> :nth-child(3) {
     background-color: #338d5c;
 }
 
-.categories > :nth-child(4) {
+.categories> :nth-child(4) {
     background-color: #3E82FC;
 }
 
@@ -486,7 +558,7 @@ p.dim {
     margin: 17px 0;
 }
 
-.category-card > p {
+.category-card>p {
     font-size: 0.8em;
 }
 
@@ -494,9 +566,15 @@ p.dim {
     color: rgb(252, 252, 252);
 }
 
+
 /* ==================== */
+
+
 /* FEATURED ARTICLE SECTION */
+
+
 /* ==================== */
+
 .featured-article {
     width: 98%;
     margin: 1%;
@@ -524,7 +602,7 @@ p.dim {
     letter-spacing: 1px;
 }
 
-.article-title  {
+.article-title {
     text-align: center;
     font-size: 1.3em;
 }
@@ -550,7 +628,7 @@ p.dim {
     margin: 15px 4%;
 }
 
-.author-line > * {
+.author-line>* {
     margin: 0;
 }
 
@@ -577,7 +655,9 @@ p.dim {
     color: rgb(230, 230, 230);
 }
 
+
 /* View Count (EYE ICON + COUNT) */
+
 .featured-article .view-count * {
     color: #ccc;
     font-size: 0.95em;
@@ -591,8 +671,13 @@ p.dim {
 
 
 /* ==================== */
+
+
 /* CONTACT US SECTION */
+
+
 /* ==================== */
+
 .contact-form {
     display: flex;
     flex-flow: column nowrap;
@@ -604,7 +689,6 @@ p.dim {
     color: rgb(230, 230, 230);
     margin: 10px 0;
 }
-
 
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
@@ -622,9 +706,15 @@ p.dim {
     margin: 20px 0;
 }
 
+
 /* ========================= */
+
+
 /* FOOTER */
+
+
 /* ========================= */
+
 footer {
     background-color: #f0f0f0;
     padding: 2em 1em;
@@ -643,7 +733,7 @@ footer i {
     cursor: pointer;
 }
 
-.social-media:hover{
+.social-media:hover {
     color: var(--secondary-color);
 }
 
@@ -689,16 +779,27 @@ footer .logo {
     font-weight: 300;
 }
 
+
 /* ========================== */
+
+
 /* SHORTS PAGE */
+
+
 /* ========================== */
+
 #shorts-list {
     color: #fff;
     margin-top: 30px;
 }
 
+
 /* ========================== */
+
+
 /* TRAVEL PAGE */
+
+
 /* ========================== */
 
 .travel-guide img {
@@ -733,41 +834,43 @@ footer .logo {
     width: 80vw;
 }
 
-.gallery-grid a:nth-child(1) div { 
+.gallery-grid a:nth-child(1) div {
     background: url("../assets/images/travel_page/photo1.jpg");
     background-size: cover;
     background-position-x: center;
 }
 
-.gallery-grid a:nth-child(2) div { 
+.gallery-grid a:nth-child(2) div {
     background: url("../assets/images/travel_page/photo2.jpg");
     background-size: cover;
     background-position-y: bottom;
 }
 
-.gallery-grid a:nth-child(3) div { 
+.gallery-grid a:nth-child(3) div {
     background: url("../assets/images/travel_page/photo3.jpg");
     background-size: cover;
     background-position-y: bottom;
 }
 
-.gallery-grid a:nth-child(4) div { 
+.gallery-grid a:nth-child(4) div {
     background: url("../assets/images/travel_page/photo4.jpg");
     background-size: cover;
 }
 
-.gallery-grid a:nth-child(5) div { 
+.gallery-grid a:nth-child(5) div {
     background: url("../assets/images/travel_page/photo5.jpg");
     background-size: cover;
 }
 
-.gallery-grid a:nth-child(6) div { 
+.gallery-grid a:nth-child(6) div {
     background: url("../assets/images/travel_page/photo6.jpg");
     background-size: cover;
     background-position-y: bottom;
 }
 
+
 /* Style Photographers Grid */
+
 .photographers-grid {
     display: flex;
     flex-flow: column nowrap;
@@ -785,27 +888,114 @@ footer .logo {
     transform: scale(1.1);
 }
 
+
+/* ========================== */
+
+
+/* PROGRAMMING PAGE */
+
+
+/* ========================== */
+
+
+/* Tutorials Section */
+
+.prog-tutorials article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(224, 224, 224);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    min-width: 220px;
+}
+
+.prog-tutorials h2 {
+    color: #414141;
+    padding: 20px;
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 300;
+}
+
+.prog-tutorials a {
+    display: block;
+    background-color: #414141;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* Inspiration Gallery */
+
+.main-carousel {
+    width: 80%;
+}
+
+.carousel-cell {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-cell img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.carousel-cell h3 {
+    margin-top: 80px;
+    color: #252525;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+
+.carousel-cell h4,
+.carousel-cell i {
+    color: #4b4b4b;
+}
+
+.carousel-cell i {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+
 /* UTILS */
+
 .mt-2 {
     margin-top: 2em;
 }
 
+
 /* ========================= */
+
+
 /* MEDIA QUERIES */
+
+
 /* ========================= */
+
 
 /* TABLET SIZE */
+
 @media (min-width: 768px) {
     /* Hide Mobile Navigation */
-    .mobile-nav,.nav-button {
+    .mobile-nav,
+    .nav-button {
         display: none !important;
     }
-
     /* Show desktop Navigation */
     .desktop-nav {
         display: flex;
     }
-
     /* Hero Section */
     header {
         margin: 0;
@@ -816,101 +1006,83 @@ footer .logo {
         background-color: rgb(32, 32, 32);
         align-items: center;
     }
-
     .hero-image {
         order: 2;
         height: 40vh;
     }
-
     .hero-title,
     .hero-subtitle {
         text-align: left;
     }
-
     /* HOME PAGE */
     /* CATEGORIES LIST */
     .card-list {
         flex-flow: row wrap;
     }
-
-    .card-list > * {
+    .card-list>* {
         flex-basis: 20%;
     }
-
     /* OUR STAFF SECTION */
     .avatar-grid {
         flex-flow: row wrap;
         margin: 4% 0;
         justify-content: center;
     }
-
-    .avatar-grid > * {
+    .avatar-grid>* {
         margin: 30px 20px;
         flex-basis: 22%;
         width: 100%;
         height: 100%;
     }
-
     /* FEATURED ARTICLE SECTION */
     .featured-article {
         flex-flow: row nowrap;
     }
-    
     .featured-article .article-title {
         font-size: 2em;
     }
-
     .author-line button {
         margin: 0;
         flex-basis: auto;
     }
-
     .author-line figure {
         margin: 0;
     }
-
     .author-line {
         align-items: center;
         justify-content: space-between;
         margin-top: 50px;
     }
-
     .article-title,
     .article-subtitle,
     .article-body {
         order: 0;
         text-align: left;
     }
-
     .article-banner-img {
         flex-basis: 30%;
         border-radius: 5px;
         width: 30%;
     }
-
     .article-details {
         margin-left: 20px;
         align-items: flex-start;
     }
-
     /* FOOTER */
     footer {
         /* 3 Equal width columns */
         grid-template-columns: repeat(3, 1fr);
     }
-
     .copyright {
         /* Take full width */
         grid-column: 1/4;
     }
-
     .social-media-list {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
         padding-bottom: 8em;
     }
-
     /* =========== */
     /* TRAVEL PAGE */
     /* =========== */
@@ -922,44 +1094,36 @@ footer .logo {
         row-gap: 10px;
         column-gap: 30px;
     }
-
     .gallery-grid a div {
         width: 100%;
         height: 100%;
         margin: 20px;
     }
-
     /* Place children on the Gallery Grid */
     .gallery-grid a:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 4;
     }
-
     .gallery-grid a:nth-child(2) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
-
     .gallery-grid a:nth-child(3) {
         grid-column: 2 / 3;
         grid-row: 2 / 4;
     }
-
     .gallery-grid a:nth-child(4) {
         grid-column: 3 / 4;
         grid-row: 3 / 4;
     }
-
     .gallery-grid a:nth-child(5) {
         grid-column: 3 / 4;
         grid-row: 1 / 3;
     }
-
     .gallery-grid a:nth-child(6) {
         grid-column: 1 / 4;
         grid-row: 4 / 5;
     }
-
     /* Create a 3-column grid */
     .photographers-grid {
         display: grid;
@@ -967,45 +1131,39 @@ footer .logo {
         gap: 20px;
         width: auto;
     }
-    
     /* Place all the images on the second row */
     .photographers-grid img {
         grid-row: 2 / 3;
     }
-
     /* Placing one image on the top row */
     /* and center column */
     .photographers-grid img:nth-child(1) {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
-    }   
+    }
+    /* PROGRAMMING PAGE */
+    /* Inspiration Gallery */
 }
 
+
 /* DESKTOP SIZE */
+
 @media (min-width: 1224px) {
-    
     /* GLOBALS */
     section {
         padding: 0 20%;
     }
-
     /* HOME PAGE */
     /* OUR STAFF SECTION */
-    .avatar-grid > * {
+    .avatar-grid>* {
         margin: 30px 20px;
         flex-basis: 20%;
         width: 100%;
     }
-
     header div {
         flex-basis: 40%;
     }
-
     header {
         padding: 50px 5%;
     }
-    
 }
-
-
-
