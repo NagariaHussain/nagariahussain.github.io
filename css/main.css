@@ -988,6 +988,8 @@ footer .logo {
     background-color: #fff;
     margin-right: 20px;
     cursor: pointer;
+    transition: border 300ms ease-out;
+    border: 4px solid white;
 }
 
 .recipe-list img {
@@ -1010,6 +1012,38 @@ footer .logo {
 
 .recipe-list .selected {
     border: 4px solid var(--primary-color);
+}
+
+#recipe-view {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+.recipe-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.recipe-title {
+    color: #666;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.body-heading {
+    color: #313131;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-decoration: underline;
+}
+
+#recipe-view p {
+    color: #4b4b4b;
 }
 
 

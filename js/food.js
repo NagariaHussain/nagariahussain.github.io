@@ -1,3 +1,5 @@
+// Stores all recipes as an Object 
+// (May come from backend as JSON)
 const recipes = [{
         title: "Chicken Wing",
         min_req: 15,
@@ -36,15 +38,18 @@ const recipes = [{
     }
 ];
 
-
-// Initial Rendering the selected recipe
+// Initially render the first recipe
 let currentRecipeIndex = 0;
+
+// Get template source string 
+// And compile using handlebars
 const recipeSource = document.getElementById('recipe-template').innerHTML;
 const recipeTemplate = Handlebars.compile(recipeSource);
 
-// Listening to clicks 
+// Selecting all recipe cards
 const recipeCards = document.getElementsByClassName("recipe-list")[0].children;
 
+// Listening to clicks on all recipe cards
 for (let card of recipeCards) {
     card.addEventListener('click', function() {
         // Updating current recipe index
@@ -56,12 +61,12 @@ for (let card of recipeCards) {
         // Unhighlight all the recipe
         for (let c of recipeCards) {
             c.classList.remove("selected");
-            // Toggle icon
+            // Toggle icon to down
             c.children[2].classList.remove("fa-chevron-up");
             c.children[2].classList.add("fa-chevron-down");
         }
 
-        // Toggle icon
+        // Toggle icon of selected card to up
         this.children[2].classList.remove("fa-chevron-down");
         this.children[2].classList.add("fa-chevron-up");
 
@@ -70,10 +75,10 @@ for (let card of recipeCards) {
     })
 }
 
+// Initial Render
+renderRecipe(recipes);
 
-
+// Function to render recipe to the DOM
 function renderRecipe(recipes) {
     document.getElementById("recipe-view").innerHTML = recipeTemplate(recipes[currentRecipeIndex]);
 }
-
-renderRecipe(recipes);
