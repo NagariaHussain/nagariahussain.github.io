@@ -987,6 +987,7 @@ footer .logo {
     align-items: center;
     background-color: #fff;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .recipe-list img {

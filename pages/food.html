@@ -35,19 +35,19 @@
         </div>
 
         <div class="card-list recipe-list">
-            <figure class="selected">
+            <figure class="selected" id="recipe0">
                 <img src="../assets/images/food_page/chicken-chilli.jpg" alt="Photo of chicken wing on a plate">
                 <figcaption>Chicken Wing</figcaption>
                 <i class="fas fa-chevron-up"></i>
             </figure>
 
-            <figure>
+            <figure id="recipe1">
                 <img src="../assets/images/food_page/paratha.jpg" alt="Photo of chapati and curry in a plate">
                 <figcaption>Aloo Paratha</figcaption>
                 <i class="fas fa-chevron-down"></i>
             </figure>
 
-            <figure>
+            <figure id="recipe2">
                 <img src="../assets/images/food_page/paneer.jpg" alt="Representative image of paneer chilli">
                 <figcaption>Paneer 65</figcaption>
                 <i class="fas fa-chevron-down"></i>
@@ -56,39 +56,36 @@
         </div>
 
         <!-- Will eventually be rendered through JS -->
-        <div id="recipe-view">
+        <script id="recipe-template" type="text/x-handlebars-template">
             <div class="recipe-header">
-                <h2 class="recipe-title">Chicken Wing</h2>
+                <h2 class="recipe-title">{{title}}</h2>
                 <div class="recipe-time">
                     <i class="fas fa-clock"></i>
-                    <span>15 Min</span>
+                    <span>{{min_req}} Min</span>
                 </div>
             </div>
             <div class="recipe-body">
                 <div class="body-section">
                     <h2 class="body-heading">Ingredients</h2>
                     <ol>
-                        <li>Chicken</li>
-                        <li>Hot Sauce</li>
-                        <li>Butter</li>
-                        <li>Garlic</li>
-                        <li>Soya Sauce</li>
-                        <li>Olive Oil</li>
-                        <li>Salt</li>
-                        <li>Pepper</li>
+                        <!-- Render each ingredient as li -->
+                        {{#each ingredients}}
+                        <li>{{this}}</li>
+                        {{/each}}
                     </ol>
                 </div>
 
                 <div class="body-section">
                     <h2 class="body-heading">Procedure</h2>
                     <p>
-                        The magic ingredient to crispy wings without a lot of oil is aluminium free baking powder. It may sounds unappealing, but coating chicken wings in seasoned baking powder is what makes the skin super crispy. You won’t taste it in the end results, so long
-                        as you use aluminium-free. To be clear, make sure you use baking powder, NOT baking soda, because there is a big difference! After your chicken wings are coated, place aluminium foil on your baking sheet to catch any drippings,
-                        then arrange a wire rack over the top. Place your wings in an even layer to allow the heat to be evenly distributed. Serve your buffalo wings with blue cheese dip, ranch dipping sauce or a creamy garlic mayo. Don’t forget the celery
-                        and/or carrot sticks on the side! Game day has never looked so easy and so good!
+                        {{procedure}}
                     </p>
                 </div>
             </div>
+        </script>
+
+        <div id="recipe-view">
+
         </div>
     </section>
 
@@ -191,6 +188,7 @@
     <!--  HANDLEBARS.JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw==" crossorigin="anonymous"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/food.js"></script>
 </body>
 
 </html>
