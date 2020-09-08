@@ -1224,6 +1224,9 @@ footer .logo {
     .recipe-list figure {
         flex-basis: 25%;
     }
+    .show-info {
+        margin-right: 20px;
+    }
 }
 
 
