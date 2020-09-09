@@ -54,7 +54,7 @@ const modalContent = document.getElementsByClassName("modal-content")[0];
 
 // SHOW MODAL EVENT
 for (let avatar of staffAvatars) {
-    avatar.addEventListener('click', function () {
+    avatar.addEventListener('click', function() {
         let currentStaffData = {
             "name": this.alt,
             "role": staff[this.alt]["role"],
@@ -70,10 +70,9 @@ for (let avatar of staffAvatars) {
 
         // CLOSE MODAL EVENT
         let closeButton = document.getElementsByClassName("close")[0];
-        closeButton.addEventListener('click', function () {
+        closeButton.addEventListener('click', function() {
             document.querySelector(".modal-content").style.animationName = "hideModal";
-            setTimeout(() => modalDiv.style.display = "none", 200);
-            ;
+            setTimeout(() => modalDiv.style.display = "none", 200);;
         });
     });
 }
@@ -102,8 +101,7 @@ function callback(entries) {
             if (entry.intersectionRatio >= 0.80) {
                 entry.target.style.opacity = 1;
             }
-        }
-        else {
+        } else {
             entry.target.style.opacity = 0;
         }
     });
@@ -131,5 +129,3 @@ function showAvatar(entries) {
         }
     });
 }
-
-

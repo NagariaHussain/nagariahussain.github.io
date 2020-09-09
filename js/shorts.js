@@ -169,7 +169,7 @@ randomPostDiv.innerHTML = cardTemplate({
 function showPosts(category) {
     // Container of the list
     const shortsList = document.getElementById("shorts-list");
-    
+
     // Clear the list
     shortsList.innerHTML = "";
     currentListElements = [];
@@ -211,8 +211,7 @@ function filterPosts(filterString) {
             showPosts();
         else
             showPosts(categorySelect.value);
-    }
-    else {
+    } else {
         // Create Regular Expression object
         let searchPattern = new RegExp(filterString, "gi");
 
@@ -261,7 +260,7 @@ const readMoreButtons = document.querySelectorAll("article button");
 // Attaching event to every "Read more" button
 // inside the shorts.html page
 for (let button of readMoreButtons) {
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function() {
         // Getting the index of post
         // from the id of the button
         let index = Number(this.id.slice(6));
@@ -285,7 +284,7 @@ for (let button of readMoreButtons) {
 
         // Handeling modal close
         let closeButton = document.getElementsByClassName("close")[0];
-        closeButton.addEventListener('click', function () {
+        closeButton.addEventListener('click', function() {
             // Hiding the modal after an animation
             document.querySelector(".modal-content").style.animationName = "hideModal";
             // Adding delay to enable hiding animation
@@ -299,7 +298,7 @@ for (let button of readMoreButtons) {
 const categorySelect = document.getElementById("category-selector");
 
 // Listening to category change event
-categorySelect.addEventListener('input', function () {
+categorySelect.addEventListener('input', function() {
     if (this.value === "ALL")
         showPosts();
     else
@@ -311,7 +310,7 @@ categorySelect.addEventListener('input', function () {
 const postSearchInput = document.getElementById('post-search-input');
 
 // Listening to search string change
-postSearchInput.addEventListener('input', function () {
+postSearchInput.addEventListener('input', function() {
     // Filter the posts based on input
     filterPosts(this.value);
 });

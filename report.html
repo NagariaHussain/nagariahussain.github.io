@@ -21,7 +21,7 @@
 
         <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
             <h2>Introduction</h2>
-            The main purpose of the website is to provide the user with <mark>Articles and Tutorials</mark> on the following topics:
+            The main purpose of the <a href="/" target="_blank">website</a> is to provide the user with <mark>Articles and Tutorials</mark> on the following topics:
             <ol class="mt-2">
                 <li>Technology and Programming</li>
                 <li>Travel and Tourism</li>
@@ -131,6 +131,30 @@
                 <li class="mb-2">
                     <strong>Carousel Slider: </strong> <a target="_blank" href="https://css-tricks.com/creating-responsive-touch-friendly-carousels-with-flickity/">CSS
                         Tricks tutorial</a> and <a target="_blank" href="https://flickity.metafizzy.co/">Flickity</a>
+                </li>
+
+                <li class="mb-2">
+                    <strong>Date Object: </strong> The JavaScript <code>Date</code> object gives us access to many functions and data related to date and time. I used the <mark>MDN reference</mark> to learn about the different methods available on the
+                    Date object. I have used the Date object to get the current year and some DOM manipulation to set the copyright year to the current year. This way, we <mark>don't have to manually update the year next to the &copy; icon</mark> every
+                    year:
+                    <br>
+                    <br>
+                    <code>
+                        // Get current year
+                        <br>
+                        const currentYear = new Date().getFullYear();
+                        <br>
+                        // Update span text
+                        <br>
+                        copyrightYearSpan.innerText = currentYear;
+                        <br>
+                    </code>
+
+                </li>
+                <li class="mb-2">
+                    <strong>Intersection Observer API: </strong> I have seen this cool effect on many websites, where, <mark>some elements animate into the view as we scroll the page</mark>. I wanted to implement this in my website. I looked for possible
+                    methods to do the same. Although, there are<mark> many external JS Libraries available for this task</mark> but using the <code>IntersectionObserver</code> API is native and hence <mark>I decided to implement the effect without the use of any external library</mark>.
+                    This effect can be seen on the home page: the category <code>div</code>s and avatars animate as you scroll to their position.
                 </li>
             </ol>
         </div>
