@@ -10,7 +10,7 @@ copyrightYearSpan.innerText = currentYear;
 const source = `
 <!-- DESKTOP NAVIGATION -->
     <nav class="desktop-nav">
-        <a href="/" class="logo">CHORD</a>
+        <a href="../report.html" target="_blank" class="logo">CHORD</a>
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/pages/shorts.html">SHORTS</a></li>
@@ -54,7 +54,7 @@ const navButton = document.getElementsByClassName("nav-button")[0];
 const mobileNavPage = document.getElementsByClassName("mobile-nav")[0];
 
 // Handle Nav Button click
-navButton.addEventListener('click', function () {
+navButton.addEventListener('click', function() {
     // Toggle Show/Hide Navigation Page
     mobileNavPage.classList.toggle('show-nav');
     // Change button icon
@@ -84,18 +84,15 @@ let root = document.documentElement;
 if (location.pathname === "/pages/shorts.html") {
     root.style.setProperty('--primary-color', "#ffc93c");
     root.style.setProperty('--primary-backdrop-color', "rgba(255, 201, 60, 0.6)");
-}
-else if (location.pathname === "/pages/programming.html") {
+} else if (location.pathname === "/pages/programming.html") {
     root.style.setProperty('--primary-color', "#a3d2ca");
     root.style.setProperty('--primary-backdrop-color', "rgba(163, 210, 202, 0.6)");
 
-}
-else if (location.pathname === "/pages/travel.html") {
+} else if (location.pathname === "/pages/travel.html") {
     root.style.setProperty('--primary-color', "#ffc1f3");
     root.style.setProperty('--primary-backdrop-color', "rgba(255, 193, 243, 0.6)");
 
-}
-else if (location.pathname === "/pages/food.html") {
+} else if (location.pathname === "/pages/food.html") {
     root.style.setProperty('--primary-color', "#ee6f57");
     root.style.setProperty('--primary-backdrop-color', "rgba(238, 111, 87, 0.6)");
 

@@ -1,0 +1,243 @@
+<!-- =========================== -->
+<!-- WD FINAL REPORT -->
+<!-- =========================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Report: Md.Hussain Nagaria</title>
+
+    <!-- Bootstrap 5 Alpha -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-2 text-center mt-3">Report <small class="text-muted">(Large Coursework)</small></h1>
+        <h2 class="display-6 text-center">Mohammad Hussain Nagaria</h2>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>Introduction</h2>
+            The main purpose of the <a href="/" target="_blank">website</a> is to provide the user with <mark>Articles and Tutorials</mark> on the following topics:
+            <ol class="mt-2">
+                <li>Technology and Programming</li>
+                <li>Travel and Tourism</li>
+                <li>Food</li>
+                <li>News: Short Articles</li>
+            </ol>
+            I chose to implement it as <mark>5 page website</mark> which has a home page and one page for each of the above topics. The goal was to create a responsive website that provides its user with information in an organized and beautiful manner.
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>3 things that have inspired me when creating my website</h2>
+            <ol class="mt-3">
+                <li class="mb-2">
+                    <strong>Dribble:</strong> Before I started to create wireframes, I used dribble to get some <mark>design inspiration</mark>. I searched for magazine website designs and found many stunning designs there. My navigation and footer are
+                    highly inspired by <a target="_blank" href="https://dribbble.com/shots/5567293-Wired-com-Article?utm_source=Clipboard_Shot&utm_campaign=jonathanvuijk&utm_content=Wired.com%20Article&utm_medium=Social_Share">this</a> dribble shot.
+                </li>
+                <li class="mb-2">
+                    <strong>W3Schools:</strong>
+
+                </li>
+                <li>
+
+                </li>
+            </ol>
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>3 ways in which my site is accessible</h2>
+            <ol class="mt-3">
+                <li class="mb-2">The <code> alt </code> tags of all the image elements contain a description of the image to
+                    <mark>help
+                        users with disability to visualize</mark> the image.
+                </li>
+                <li class="mb-2">
+                    I have used <mark>proper semantic and element tags</mark> to make the different parts of the website more accessible. For instance, use of <code>article</code> and <code>figure</code> tags are used instead of plan
+                    <code>div</code> tags.
+                </li>
+                <li>
+                    Use of <code>aria</code> labels to make mobile navigation more accessible.
+                    <br>
+                    <code>
+                        "class="nav-button hamburger hamburger--elastic" aria-label="Menu" aria-controls="navigation"
+        aria-expanded="false"
+                    </code>
+                </li>
+            </ol>
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>3 ways in which I have considered usability in my site</h2>
+            <ol class="mt-3">
+                <li class="mb-2">
+                    <strong>Mobile Hamburger Navigation:</strong>
+                    <br>
+                    <img src="./assets/images/mobile_nav.png" alt="Mobile Navigation Screenshot" class="img-fluid mt-5 mb-5"><br> Desktop Naviagtion:
+                    <img src="./assets/images/desktop_nav.png" alt="Mobile Navigation Screenshot" class="img-fluid">
+                </li>
+                <li class="mb-2">
+                    <strong>Touch enabled carousel slider:</strong><br>
+                    <img src="./assets/images/slider.png" alt="Slider Screenshot" class="img-fluid">
+                </li>
+                <li>
+
+                </li>
+            </ol>
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>3 things I had to learn/find out by myself when creating my site, and describe how I did that</h2>
+            <ol class="mt-3">
+                <li class="mb-2">
+                    <strong>Flexbox: </strong>When I was digging more into layouts using CSS, I came across
+                    <mark>Flexbox and how it
+                        can make creating responsive layouts</mark> very easy. As it was not covered in the module, I learned it using the below resources:
+                    <ul>
+                        <li>CSS Grids and Flexbox for Responsive Web Design (course by Frontendmasters): <a target="_blank" href="https://frontendmasters.com/courses/css-grids-flexbox/">View the course here</a>
+                        </li>
+                        <li>A complete guide to Flexbox (CSS-TRICKS): <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Here</a></li>
+                    </ul>
+                </li>
+                <li class="mb-2">
+                    <strong>CSS Custom Variables: </strong> When I wanted to theme my website, i.e., <mark>set a
+                        different
+                        theme color for each page using JavaScript</mark>, the requirement was to set a primary color and change it based on the URL the user is currently on. I came across the concept of CSS Custom Properties (a.k.a. CSS Variables). I
+                    learned it using <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">this</a> article on MDN. I have used 3 variables to control the color for a page:
+
+                    <ol class="mt-2 mb-2">
+                        <li><code>--primary-color</code></li>
+                        <li><code>--primary-backdrop-color</code></li>
+                        <li><code>--secondary-color</code></li>
+                    </ol>
+                    Now, if I want to change the primary color of a page, I <mark>can change it in just one place</mark> and every other occurence of the color changes automatically. I have used JavaScript to <mark>change the value associated with the variables</mark>                    based on the URL (relative path to be precise). For example, see the code snippet below:
+                    <br><br><code>
+                        if (location.pathname === "/pages/shorts.html") {<br>
+                            root.style.setProperty('--primary-color', "#ffc93c");<br>
+                            root.style.setProperty('--primary-backdrop-color', "rgba(255, 201, 60, 0.6)");<br>
+                        }
+                    </code><br><br>
+
+                </li>
+                <li class="mb-2">
+                    <strong>Modal: </strong> Modals are <mark>part of many websites</mark> and are a way to display information only when it is required. So, I <mark>searched how to create a modal on Google and found
+                        many articles</mark> that showed how to do it. I learned to create a modal using <a target="_blank" href="https://www.w3schools.com/howto/howto_css_modals.asp">this W3Schools article</a>. I started with the code given on the above
+                    website and changed some CSS to match it with my web page. I also <mark>added show and hide animations</mark> to improve the UX.
+                </li>
+
+                <li class="mb-2">
+                    <strong>Carousel Slider: </strong> <a target="_blank" href="https://css-tricks.com/creating-responsive-touch-friendly-carousels-with-flickity/">CSS
+                        Tricks tutorial</a> and <a target="_blank" href="https://flickity.metafizzy.co/">Flickity</a>
+                </li>
+
+                <li class="mb-2">
+                    <strong>Date Object: </strong> The JavaScript <code>Date</code> object gives us access to many functions and data related to date and time. I used the <mark>MDN reference</mark> to learn about the different methods available on the
+                    Date object. I have used the Date object to get the current year and some DOM manipulation to set the copyright year to the current year. This way, we <mark>don't have to manually update the year next to the &copy; icon</mark> every
+                    year:
+                    <br>
+                    <br>
+                    <code>
+                        // Get current year
+                        <br>
+                        const currentYear = new Date().getFullYear();
+                        <br>
+                        // Update span text
+                        <br>
+                        copyrightYearSpan.innerText = currentYear;
+                        <br>
+                    </code>
+
+                </li>
+                <li class="mb-2">
+                    <strong>Intersection Observer API: </strong> I have seen this cool effect on many websites, where, <mark>some elements animate into the view as we scroll the page</mark>. I wanted to implement this in my website. I looked for possible
+                    methods to do the same. Although, there are<mark> many external JS Libraries available for this task</mark> but using the <code>IntersectionObserver</code> API is native and hence <mark>I decided to implement the effect without the use of any external library</mark>.
+                    This effect can be seen on the home page: the category <code>div</code>s and avatars animate as you scroll to their position.
+                </li>
+            </ol>
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>What aspect(s) of my work do I think worked well and why?</h2>
+            <ul>
+                <li class="mb-2"><strong>Dark Theme:</strong> In my opinion, the <mark>dark theme</mark> worked out very well. The colors make the dark theme shine. This decision turned out well because it looks
+                    <mark>pleasing to the eye and gives a clean and
+                        modern look</mark> to the website.
+                </li>
+
+                <li class="mb-2"><strong>Shorts filtering functionality:</strong>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>What aspect(s) of my work could be improved, and how might I do things differently another time?</h2>
+            <ul class="mt-2">
+                <li class="mb-2">
+                    <strong>Travel Page Gallery Loading</strong>: Currently, the loading time of the travel page is comparatively higher than other pages. I would like to use <mark>lazy loading</mark> for the images and also use the <code>picture</code>tag
+                    with source sets to improve this next time.
+                </li>
+            </ul>
+        </div>
+
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>What resources were used when creating my work?</h2>
+            <ul class="mt-3">
+                <li><a target="_blank" href="https://web.dev/">web.dev Measure</a>: I have used this tool to: <mark>"See how well your
+                        website performs. Then, get tips to improve your user experience." - web.dev</mark><br><br> For example, the above <mark>tool produces a audit
+                        report</mark> shown below (for homepage of my website):
+                    <img class="img-fluid mt-4 mb-5" src="./assets/images/lighthouse-measure.png" alt="Lighthouse Audit Score"> The report also includes various tips to improve the above scores.
+                </li>
+                <li><a target="_blank" href="https://unsplash.com/">Unsplash</a>: Except the SVGs, all the other <mark>images</mark> are downloaded from this website.</li>
+                <li><a target="_blank" href="https://undraw.co/">Undraw</a>: The hero images and the <mark>SVGs</mark> inside the inspiration carousel are downloaded from this site.</li>
+                <li><a target="_blank" href="https://randomuser.me/">RandomUser.Me</a>: The <mark>user photos (avatar images) and random
+                        names</mark> are taken from this website.</li>
+                <li><a target="_blank" href="https://fontawesome.com/icons?d=gallery">Font Awesome 5</a>: All the <mark>icons</mark> are from the FontAwesome 5 icons library.</li>
+                <li><a target="_blank" href="https://compressjpeg.com/">compressjpeg.com</a>: The images taken from unsplash are huge in size and hence need a lot of <mark>compression</mark> to make them suitable for website. Without compression, the load
+                    time of the web pages was very high.
+                </li>
+                <li><a target="_blank" href="https://letsxd.com/getting-started">Adobe XD</a>: I have used it to <mark>create wireframes
+                        and mockups.</mark></li>
+                <li><a target="_blank" href="https://colors.lol/">colors.lol</a>: The <mark>colors</mark> I have used are taken from this website.</li>
+            </ul>
+        </div>
+
+        <!-- Site Map, Wireframes and Mockups  -->
+        <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
+            <h2>Appendices:</h2>
+            <!-- SITEMAP AND PLANNING -->
+            <div>
+                <h2 class="display-5"><strong>A</strong>: Sitemap and Planning</h2>
+            </div>
+
+            <!-- WIREFRAMES -->
+            <div>
+                <h2 class="display-5"><strong>B</strong>: Wireframes</h2>
+                <h4>
+                    1. Desktop Wireframes: <a target="_blank" href="./report/desktop.pdf">PDF</a>
+                </h4>
+                <h4>
+                    2. Mobile Wireframes: <a target="_blank" href="./report/mobile.pdf">PDF</a>
+                </h4>
+            </div>
+
+            <!-- MOCKUPS -->
+            <div>
+                <h2 class="display-5"><strong>C</strong>: Prototype and Mockups</h2>
+                I have created mockups (and wireframes) using <mark>Adobe XD</mark>. Please click <a target="_blank" href="https://xd.adobe.com/view/8c811cbd-ae0c-4ada-acab-76a9d8c61751-d9d2/?fullscreen">this</a> link to view the Design and Prototype
+                (mockup).
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    img {
+        border: 4px solid slateblue;
+        border-radius: 5px;
+    }
+</style>
+
+</html>

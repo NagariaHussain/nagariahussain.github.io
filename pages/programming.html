@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../assets/icons/all.css">
     <!-- Johnsuh's Animated Hamburger Icons: https://github.com/jonsuh/hamburgers -->
     <link rel="stylesheet" href="../assets/icons/hamburgers.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 
 <body>
@@ -22,8 +24,7 @@
 
     <!-- HERO BANNER HEADER -->
     <header>
-        <img class="hero-image" src="../assets/illustrations/undraw_tutorial_video_vtd1.svg"
-            alt="Hero Image: Man working on board">
+        <img class="hero-image" src="../assets/illustrations/undraw_tutorial_video_vtd1.svg" alt="Hero Image: Man working on board">
         <div>
             <h1 class="hero-title">CS and Coding</h1>
             <p class="hero-subtitle">Everything at once.</p>
@@ -37,9 +38,9 @@
             <div class="border-bottom"></div>
         </div>
 
-        <div class="card-list">
+        <div class="card-list prog-tutorials">
             <article>
-                <h2>Create a web app with python usingthe Flask Framework</h2>
+                <h2>Create a web app with python using the Flask Framework</h2>
                 <a href="#">
                     <i class="fas fa-arrow-right"></i>
                 </a>
@@ -66,38 +67,46 @@
             <div class="border-bottom"></div>
         </div>
 
-        <div class="carousel">
-            <figure class="carousel-slide">
+        <div class="main-carousel js-flickity" data-flickity='{ "cellAlign": "left", "contain": true }'>
+            <figure class="carousel-cell">
                 <img src="../assets/images/programming_page/notebook.svg" alt="Illustration from dribble">
-                <h3>The Notebook</h3>
-                <h4>by John Doe</h4>
-                <a href="https://www.dribble.com">
-                    <i class="fab fa-dribbble"></i>
-                </a>
+                <div>
+                    <h3>The Notebook</h3>
+                    <h4>by John Doe</h4>
+                    <a href="https://www.dribble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
             </figure>
-            <figure class="carousel-slide">
+            <figure class="carousel-cell">
                 <img src="../assets/images/programming_page/mobile.svg" alt="Illustration from dribble">
-                <h3>Password Design</h3>
-                <h4>by Harry Potter</h4>
-                <a href="https://www.dribble.com">
-                    <i class="fab fa-dribbble"></i>
-                </a>
+                <div>
+                    <h3>Password Design</h3>
+                    <h4>by Harry Potter</h4>
+                    <a href="https://www.dribble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
             </figure>
-            <figure class="carousel-slide">
+            <figure class="carousel-cell">
                 <img src="../assets/images/programming_page/inbox.svg" alt="Illustration from dribble">
-                <h3>Sleeping Beauty</h3>
-                <h4>by Mary Jane</h4>
-                <a href="https://www.dribble.com">
-                    <i class="fab fa-dribbble"></i>
-                </a>
+                <div>
+                    <h3>Sleeping Beauty</h3>
+                    <h4>by Mary Jane</h4>
+                    <a href="https://www.dribble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
             </figure>
-            <figure class="carousel-slide">
+            <figure class="carousel-cell">
                 <img src="../assets/images/programming_page/marketing.svg" alt="Illustration from dribble">
-                <h3>A manager's dream</h3>
-                <h4>by Peter Parker</h4>
-                <a href="https://www.dribble.com">
-                    <i class="fab fa-dribbble"></i>
-                </a>
+                <div>
+                    <h3>A manager's dream</h3>
+                    <h4>by Peter Parker</h4>
+                    <a href="https://www.dribble.com">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
             </figure>
         </div>
     </section>
@@ -110,7 +119,7 @@
         </div>
 
         <div class="news-articles">
-            <article>
+            <!-- <article>
                 <img src="../assets/images/programming_page/news1.jpg" alt="">
                 <h3>Google goes bank currupt....Oh never!</h3>
                 <p>In this post, we will see how Google's billion dollar bussiness</p>
@@ -133,7 +142,7 @@
                 <h3>Google goes bank currupt....Oh never!</h3>
                 <p>In this post, we will see how Google's billion dollar bussiness</p>
                 <a href="#"><i class="fas fa-chevron-right"></i></a>
-            </article>
+            </article> -->
         </div>
     </section>
     <!-- SITE FOOTER -->
@@ -162,7 +171,7 @@
         </div>
 
         <!-- LOGO -->
-        <a href="/" id="logo">CHORD</a>
+        <a href="../report.html" class="logo">CHORD</a>
 
         <!-- SITEMAP -->
         <div class="site-map">
@@ -181,15 +190,18 @@
         </div>
 
         <!-- current_year will be replaced using JavaScript -->
-        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
-            of them!</p>
+        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All of them!</p>
     </footer>
 
     <!--  HANDLEBARS.JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
-        integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw==" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- MY JS -->
     <script src="../js/index.js"></script>
+    <script src="../js/programming.js"></script>
+
 </body>
 
 </html>
