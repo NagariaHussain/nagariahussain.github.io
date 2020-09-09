@@ -1050,6 +1050,43 @@ footer .logo {
     color: #4b4b4b;
 }
 
+.chef-show-list {
+    justify-content: space-between;
+}
+
+.show-info {
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.show-info h3,
+.show-info p {
+    color: rgb(58, 58, 58);
+    padding: 10px;
+}
+
+
+/* CHEF OF THE MONTH SECTION */
+
+.chef-info {
+    text-align: center;
+}
+
+.chef-info h3 {
+    font-weight: 300;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    text-shadow: var(--primary-color) 5px 2px 0px;
+    margin: 20px 0;
+}
+
+.chef-info p {
+    font-size: 0.9em;
+    color: rgb(156, 156, 156);
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+}
+
 
 /* UTILS */
 
@@ -1237,6 +1274,29 @@ footer .logo {
     }
     .show-info {
         margin-right: 20px;
+    }
+    /* FOOD PAGE */
+    .chef-info {
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+    }
+    .chef-info img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        width: 100%;
+    }
+    .chef-info h3 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: left;
+    }
+    .chef-info p {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        text-align: left;
     }
 }
 
