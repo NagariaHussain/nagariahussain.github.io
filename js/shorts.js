@@ -1,6 +1,3 @@
-// Global variable to enable search
-let currentListElements = [];
-
 // Highlights the search pattern
 // inside the HTML
 function highlightText(match) {
@@ -137,16 +134,13 @@ function getRandomIndex(allShorts) {
     return rIndex;
 }
 
-// Getting shorts of category
-function getShortsOfCategory(allShorts, category) {
-    // All posts where catergory = post.category
-    return allShorts.filter(
-        (post) => post.getCategory() === category
-    );
-}
-
+// Helper to trim the given string to 100 characters
 Handlebars.registerHelper('trim', function(string) {
-    return string.slice(0, 100) + "...";
+    if (string.length > 100) {
+        return string.slice(0, 100) + "...";
+    }
+
+    return string;
 });
 
 // Random card Generation
@@ -170,21 +164,16 @@ randomPostDiv.innerHTML = cardTemplate({
 
 // Render Posts to page 
 // Show all posts if no category is provided
-function showPosts(category) {
+function showPosts() {
     // Container of the list
     const shortsList = document.getElementById("shorts-list");
 
     // Clear the list
     shortsList.innerHTML = "";
-    currentListElements = [];
 
     // Posts to render
     let toRender = shorts;
 
-    // If a particular category is to be rendered
-    if (category != null) {
-        toRender = getShortsOfCategory(shorts, category);
-    }
 
     // Append post to the list
     for (let i = 0; i < toRender.length; i++) {
@@ -200,52 +189,11 @@ function showPosts(category) {
             imageUrl: post.imageUrl
         });
 
-        // Appending post to current posts array
-        currentListElements.push(postHTML);
-
         // Appending post to the DOM
         shortsList.insertAdjacentHTML('beforeend', postHTML);
     }
 }
 
-// Filter the posts based on search string
-function filterPosts(filterString) {
-    if (filterString === "") {
-        if (categorySelect.value === "ALL")
-            showPosts();
-        else
-            showPosts(categorySelect.value);
-    } else {
-        // Create Regular Expression object
-        let searchPattern = new RegExp(filterString, "gi");
-
-        // Filter posts based on search strings
-        let filteredElements = currentListElements.filter((html) => {
-            // Returns `true` if post contains the search strings
-            return searchPattern.test(html);
-        });
-
-
-        // Render the filtered posts
-        const shortsList = document.getElementById("shorts-list");
-        // Clear the list
-        shortsList.innerHTML = "";
-
-        // If no results for query string
-        if (filteredElements.length == 0) {
-            shortsList.innerText = "NO MATCHING RESULTS";
-            return;
-        }
-
-        for (let i = 0; i < filteredElements.length; i++) {
-            // Highlight the search strings in HTML 
-            // of filtered posts
-            let postHTML = filteredElements[i].replace(searchPattern, highlightText);
-            // Appending post to the DOM
-            shortsList.insertAdjacentHTML('beforeend', postHTML);
-        }
-    }
-}
 
 // Show All posts initially
 showPosts();
@@ -263,6 +211,7 @@ const readMoreButtons = document.querySelectorAll("article button");
 
 // Attaching event to every "Read more" button
 // inside the shorts.html page
+// This triggers modal show
 for (let button of readMoreButtons) {
     button.addEventListener('click', function() {
         // Getting the index of post
@@ -297,16 +246,12 @@ for (let button of readMoreButtons) {
     });
 }
 
-
 // Dropdown for category selection
 const categorySelect = document.getElementById("category-selector");
 
 // Listening to category change event
 categorySelect.addEventListener('input', function() {
-    if (this.value === "ALL")
-        showPosts();
-    else
-        showPosts(this.value);
+    filterPosts(postSearchInput.value, this.value);
 });
 
 
@@ -315,6 +260,57 @@ const postSearchInput = document.getElementById('post-search-input');
 
 // Listening to search string change
 postSearchInput.addEventListener('input', function() {
-    // Filter the posts based on input
-    filterPosts(this.value);
+    filterPosts(this.value, categorySelect.value);
 });
+
+// Filter the posts based on
+// search string and category
+function filterPosts(filterString, category) {
+    // Getting all post HTML elements
+    let allCards = document.getElementById('shorts-list').children;
+    let hiddenCardsCount = 0;
+
+    // Create Regular Expression object
+    let searchPattern = new RegExp(filterString, "gi");
+
+    // Iterating through each of the element
+    // in order to apply the filter
+    for (let card of allCards) {
+        // Showing the card initially
+        card.style.display = 'flex';
+
+        // Getting the index from the
+        // button element's id
+        let index = Number(card.children[3].id.slice(6));
+        let currentPost = shorts[index];
+
+        // If category is not ALL
+        if (category !== 'ALL') {
+            // Hide the elements that are not 
+            // in the selected category
+            if (currentPost.getCategory() !== category) {
+                card.style.display = 'none';
+                hiddenCardsCount += 1;
+            }
+        }
+
+        // If search string (input box) is not empty
+        if (filterString !== '') {
+            // Hide the elements that does not satisfy the 
+            // search string
+            if (searchPattern.test(card.children[1].innerHTML) || searchPattern.test(card.children[2].innerHTML)) {} else {
+                card.style.display = 'none';
+                hiddenCardsCount += 1;
+            }
+        }
+    }
+
+    if (hiddenCardsCount === allCards.length) {
+        console.log("no results");
+        // TODO: Show a message to the user
+        document.getElementById("no-result").style.display = 'block';
+    } else {
+        document.getElementById("no-result").style.display = 'none';
+
+    }
+}
