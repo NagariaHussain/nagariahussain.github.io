@@ -1088,6 +1088,52 @@ footer .logo {
 }
 
 
+/* SHORTS PAGE */
+
+#shorts-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    align-items: start;
+}
+
+.short-card {
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+    height: 100%;
+}
+
+.short-card h3,
+.short-card p {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.short-card button {
+    background-color: var(--primary-color);
+    color: rgb(95, 95, 95);
+    margin-top: auto;
+}
+
+.menu {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+.menu input,
+.menu select {
+    margin: 10px 5%;
+    padding: 10px;
+    width: 90%;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+
 /* UTILS */
 
 .mt-2 {
@@ -1298,6 +1344,23 @@ footer .logo {
         grid-row: 2 / 3;
         text-align: left;
     }
+    /* SHORTS PAGE */
+    #shorts-list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+    }
+    .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .menu input,
+    .menu select {
+        margin: 0;
+    }
+    .menu input {
+        margin-right: 50px;
+    }
 }
 
 
@@ -1306,7 +1369,7 @@ footer .logo {
 @media (min-width: 1224px) {
     /* GLOBALS */
     section {
-        padding: 0 20%;
+        padding: 0 10%;
     }
     /* HOME PAGE */
     /* OUR STAFF SECTION */
@@ -1320,5 +1383,9 @@ footer .logo {
     }
     header {
         padding: 50px 5%;
+    }
+    /* SHORTS PAGE */
+    #shorts-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

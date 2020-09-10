@@ -145,6 +145,10 @@ function getShortsOfCategory(allShorts, category) {
     );
 }
 
+Handlebars.registerHelper('trim', function(string) {
+    return string.slice(0, 100) + "...";
+});
+
 // Random card Generation
 let cardDataSource = document.getElementById("post-card-template").innerHTML;
 const cardTemplate = Handlebars.compile(cardDataSource);
@@ -188,13 +192,13 @@ function showPosts(category) {
         let post = toRender[i];
 
         // Generating HTML using handlebars template
-        let postHTML = `<li>${cardTemplate({
+        let postHTML = cardTemplate({
             index: i,
             title: post.heading,
             author: post.author,
             body: post.body,
             imageUrl: post.imageUrl
-        })}</li>`;
+        });
 
         // Appending post to current posts array
         currentListElements.push(postHTML);

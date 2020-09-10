@@ -33,11 +33,11 @@
     </script>
 
     <script id="post-card-template" type="text/x-handlebars-template">
-        <article>
+        <article class="short-card">
             <img style="width: 100%;" src="{{ imageUrl }}" alt="Representive image for post by {{author}}">
             <h3>{{ title }}</h3>
-            <p>{{ body }}</p>
-            <button id="shorts{{index}}">Read more</button>
+            <p>{{ trim body }}</p>
+            <button class="btn" id="shorts{{index}}">Read more</button>
         </article>
     </script>
 
@@ -68,16 +68,18 @@
             <div class="border-bottom"></div>
         </div>
 
-        <!-- Input for searching -->
-        <input type="text" name="search-box" id="post-search-input" placeholder="Search shorts...">
+        <div class="menu">
+            <!-- Input for searching -->
+            <input type="text" name="search-box" id="post-search-input" placeholder="Search...">
 
-        <!-- Select box for category -->
-        <select name="category-select" id="category-selector">
-            <option value="ALL" selected>All</option>
-            <option value="TECHNOLOGY">Technology</option>
-            <option value="BUSSINESS">Bussiness</option>
-            <option value="WORLD">World</option>
-        </select>
+            <!-- Select box for category -->
+            <select name="category-select" id="category-selector">
+                <option value="ALL" selected>All</option>
+                <option value="TECHNOLOGY">Technology</option>
+                <option value="BUSSINESS">Bussiness</option>
+                <option value="WORLD">World</option>
+            </select>
+        </div>
 
         <!-- Injected through JavaScript -->
         <div id="shorts-list"></div>
