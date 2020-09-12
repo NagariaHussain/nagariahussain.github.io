@@ -1,11 +1,13 @@
+<!-- HOME PAGE: index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Home Page</title>
-    
+
     <!-- For SEO -->
     <meta name="description" content="A website for chord newsletter website. Articles on technology, travel and food.">
     <!-- Main Style Sheet -->
@@ -17,46 +19,70 @@
 </head>
 
 <body>
-    <!-- WILL BE INJECTED USING HANDLEBARJS -->
+    <!-- WILL BE INJECTED USING HANDLEBARJS (index.js) -->
     <div id="navigation"></div>
 
     <!-- HERO BANNER HEADER -->
     <header>
-        <img class="hero-image" src="./assets/illustrations/undraw_publish_article_icso.svg"
-            alt="Hero Image: Man working on board">
+        <!-- Hero Image -->
+        <img class="hero-image" src="./assets/illustrations/undraw_publish_article_icso.svg" alt="Hero Image: Man working on board">
+        <!-- Hero content -->
         <div>
+            <!-- Page title -->
             <h1 class="hero-title">Chord</h1>
+            <!-- Page subtitle -->
             <p class="hero-subtitle">Connecting people to themselves.</p>
         </div>
     </header>
 
     <!-- CATEGORIES SECTION -->
     <section id="cat-section">
+        <!-- Section Heading -->
         <div class="section-title">
             <h2>Categories</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
 
+        <!-- List of category cards -->
         <div class="card-list categories">
+            <!-- Technology Category card -->
             <div class="category-card">
+                <!-- Category Icon -->
                 <i class="category-icon fas fa-microchip"></i>
+                <!-- Category title -->
                 <h3 class="icon-title">Technology</h3>
+                <!-- Description of the category -->
                 <p class="category-description">Latest news from the geeks around the world.</p>
             </div>
+
+            <!-- Bussiness category card -->
             <div class="category-card">
+                <!-- Category Icon -->
                 <i class="category-icon fas fa-coins"></i>
+                <!-- Category title -->
                 <h3 class="icon-title">Bussiness</h3>
+                <!-- Description of the category -->
                 <p class="category-description">From fortune 50 to promising startups, we have got you covered!</p>
             </div>
+
+            <!-- Travel category card -->
             <div class="category-card">
+                <!-- Category Icon -->
                 <i class="category-icon fas fa-passport"></i>
+                <!-- Category title -->
                 <h3 class="icon-title">Travel</h3>
-                <p class="category-description">Places you want to visit and food you will want to eat. From the chefs
-                    and travellers!</p>
+                <!-- Description on the category -->
+                <p class="category-description">Places you want to visit and food you will want to eat. From the chefs and travellers!</p>
             </div>
+
+            <!-- Art category card -->
             <div class="category-card">
+                <!-- Category Icon -->
                 <i class="category-icon fas fa-palette"></i>
+                <!-- Category title -->
                 <h3 class="icon-title">Art</h3>
+                <!-- Description on the category -->
                 <p class="category-description">Popular news from best sources and creators.</p>
             </div>
         </div>
@@ -64,20 +90,29 @@
 
     <!-- OUR STAFF SECTION -->
     <section>
+        <!-- Section title -->
         <div class="section-title">
             <h2>Our Staff</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
+        <!-- Note for the user -->
         <p class="section-body-text">Click photo to view more</p>
+
+        <!-- Modal template HTML -->
         <div class="modal">
             <script id="staff-modal-template" type="text/x-handlebars-template">
+                <!-- Close button -->
                 <i class="close far fa-times-circle"></i>
+                <!-- Staff Image -->
                 <img src="{{img_url}}" alt="Staff Bust">
+                <!-- Staff Bio-data -->
                 <h2>{{name}}</h2>
                 <h3>{{role}}</h3>
                 <p class="bio">
                     {{Bio}}
                 </p>
+                <!-- Staff twitter handle -->
                 <div>
                     <i class="fab fa-twitter"></i>
                     <span>/ {{twitter}}</span>
@@ -85,55 +120,61 @@
             </script>
 
             <!-- Will be injected through JS -->
-            <div class="modal-content">
-                <i class="close far fa-times-circle"></i>
-            </div>
+            <div class="modal-content"></div>
         </div>
 
+        <!-- Grid of avatar images -->
+        <!-- Can be clicked to view full Bio -->
         <div class="avatar-grid">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/01.jpg" alt="Deann Hayes">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/02.jpg" alt="Lonnie Welch">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/03.jpg" alt="Irene Walker">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/04.jpg" alt="Daisy Kelly">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/05.jpg" alt="Fernando Taylor">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/06.jpg" alt="Zack Williams">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/07.jpg" alt="Pearl Welch">
-            <img class="circle-avatar circular" title="Click to show more about {name}"
-                src="./assets/images/staff/08.jpg" alt="Donald Cruz">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/01.jpg" alt="Deann Hayes">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/02.jpg" alt="Lonnie Welch">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/03.jpg" alt="Irene Walker">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/04.jpg" alt="Daisy Kelly">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/05.jpg" alt="Fernando Taylor">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/06.jpg" alt="Zack Williams">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/07.jpg" alt="Pearl Welch">
+            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/08.jpg" alt="Donald Cruz">
         </div>
     </section>
 
     <!-- FEATURED ARTICLE SECTION -->
     <section>
+        <!-- Section title -->
         <div class="section-title">
             <h2>Article of the month</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
+
+        <!-- Featured Blog article -->
         <article class="featured-article">
-            <img class="article-banner-img" src="./assets/images/feat_article_banner_image.jpg"
-                alt="Old Apple mac computer sitting on a table">
+            <!-- Blog banner image -->
+            <img class="article-banner-img" src="./assets/images/feat_article_banner_image.jpg" alt="Old Apple mac computer sitting on a table">
+
+            <!-- Other post details -->
             <div class="article-details">
                 <h3 class="article-title">Living with a century old Apple computer</h3>
                 <h4 class="article-subtitle">Believe me, its easier than you think</h4>
-                <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis
-                    qui, doloremque repellendus ducimus consequatur aperiam dolorum sequi laboriosam et incidunt porro
-                    recusandae, consequuntur nostrum, esse minus itaque laudantium omnis.</p>
+                <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis qui, doloremque repellendus ducimus consequatur aperiam dolorum sequi laboriosam et incidunt porro recusandae, consequuntur nostrum, esse minus itaque laudantium
+                    omnis.
+                </p>
+
+                <!-- Author Information -->
                 <div class="author-line">
                     <figure>
+                        <!-- Photo of the author -->
                         <img class="circular" src="./assets/images/staff/04.jpg" alt="Daisy Kelly's photo">
+                        <!-- Name of the author -->
                         <figcaption>Daisy Kelly</figcaption>
                     </figure>
+
+                    <!-- Post view count -->
                     <div class="view-count">
                         <i class="fas fa-eye"></i>
                         <span class="count">100K</span>
                     </div>
+
+                    <!-- Call to action button -->
                     <button class="btn btn-filled">Read More</button>
                 </div>
             </div>
@@ -142,8 +183,10 @@
 
     <!-- CONTACT US SECTION -->
     <section>
+        <!-- Section title -->
         <div class="section-title">
             <h2>Contact Us</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
         <!-- Contact Form -->
@@ -158,7 +201,8 @@
 
             <!-- SUBSCRIBE TO UPDATES -->
             <div class="form-group">
-                <input type="checkbox" name="signUp" id="signUp">
+                <!-- Checkbox: initially checked -->
+                <input type="checkbox" name="signUp" id="signUp" checked>
                 <label for="signUp">Sign Up for updates</label>
             </div>
 
@@ -171,6 +215,7 @@
     <footer>
         <!-- LOGO -->
         <a href="/" class="logo">CHORD</a>
+        <!-- List of Social Media Handles -->
         <div class="social-media-list">
             <div class="social-media">
                 <i class="fab fa-facebook-f"></i>
@@ -210,16 +255,19 @@
             <a href="#">events</a>
         </div>
 
-        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
-            of them!</p>
+        <!-- Copyright information -->
+        <!-- current_year will be replaced through JS (index.js) -->
+        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All of them!</p>
     </footer>
 
     <!--  HANDLEBARS.JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
-        integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
-        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw==" crossorigin="anonymous"></script>
+    <!-- Global JS file -->
     <script src="js/index.js"></script>
+    <!-- Page specific JS file -->
     <script src="js/home.js"></script>
 </body>
 
 </html>
+
+<!-- END OF FILE -->
