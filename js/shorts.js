@@ -1,21 +1,49 @@
+// ======================================
+// JavaScript specific to shorts.html page
+// ======================================
+
 // Highlights the search pattern
 // inside the HTML
 function highlightText(match) {
     return `<span class="highlight">${match}</span>`;
 }
 
-// (ES6 Class) Modal for Post object
+// Getting random index 
+// in range [0, length of allShorts]
+function getRandomIndex(allShorts) {
+    // A random number between 0 and len(allShorts)
+    let rIndex = Math.floor(Math.random() * allShorts.length);
+    // returning the random index
+    return rIndex;
+}
+
+// (ES6 Class) Model for Post object
 class Post {
+    // Object constructor
     constructor(heading, author, creationDate, body, category, imageUrl) {
+        // Set object properties
+
+        // Set the heading (title) of the post 
         this.heading = heading;
+
+        // Set the author of the post
         this.author = author;
+
+        // Set creation date to given creationDate
+        // Set to current date if none provided
         this.creationDate = creationDate || new Date();
+
+        // Set the body of the post
         this.body = body;
+
+        // Set the category of the post
         this.category = category;
+
+        // Set the image url related to the post
         this.imageUrl = imageUrl;
     }
 
-    // return the category of the post
+    // Return the category of the post
     getCategory() {
         return this.category;
     }
@@ -24,6 +52,7 @@ class Post {
 // Posts from bussinessnewsdaily.com and fonearena.com
 // unless otherwise stated.
 // Can come as JSON from a backend
+// An array of `Post` objects
 const shorts = [
     new Post(
         "The Best Receipt-Tracking Tools for Professionals",
@@ -126,32 +155,39 @@ const shorts = [
     )
 ];
 
-// Getting random post
-function getRandomIndex(allShorts) {
-    // A random number between 0 and len(allShorts)
-    let rIndex = Math.floor(Math.random() * allShorts.length);
-    // returning post at random index
-    return rIndex;
-}
 
-// Helper to trim the given string to 100 characters
+
+// Register with Handlebars a helper function
+// to trim the given string to 100 characters
 Handlebars.registerHelper('trim', function(string) {
+    // if the given string has more 
+    // than 100 characters
     if (string.length > 100) {
+        // return the first 100 characters
         return string.slice(0, 100) + "...";
     }
-
+    // else return the string as is
     return string;
 });
 
 // Random card Generation
+// Get card template string source
 let cardDataSource = document.getElementById("post-card-template").innerHTML;
+
+// Compile the source using Handlebars
 const cardTemplate = Handlebars.compile(cardDataSource);
+
+// Get the div that will hold the random post
 const randomPostDiv = document.getElementById("random-post");
 
 // Picking a random post from all posts
+// Generating a random index
 const randomPostIndex = getRandomIndex(shorts);
+
+// Get a random post using the random index
 const randomPost = shorts[randomPostIndex];
 
+// Generate HTML using template function
 // Updating HTML for random post
 randomPostDiv.innerHTML = cardTemplate({
     index: randomPostIndex,
@@ -206,21 +242,22 @@ const modalDiv = document.querySelector(".modal");
 let dataSource = document.getElementById("modal-template").innerHTML;
 const template = Handlebars.compile(dataSource);
 
-// Attaching event listeners to buttons
+// Access all the buttons inside posts
 const readMoreButtons = document.querySelectorAll("article button");
 
-// Attaching event to every "Read more" button
-// inside the shorts.html page
-// This triggers modal show
+// Iterate over each of the read more buttons
 for (let button of readMoreButtons) {
+    // Add event listener ot this `button`
     button.addEventListener('click', function() {
-        // Getting the index of post
-        // from the id of the button
+        // Getting the index (e.g. 0) of post
+        // from the id ("shorts0") of the button
         let index = Number(this.id.slice(6));
+
+        // Get the post using the index
         let currentPost = shorts[index];
 
-        console.log(this.id.slice(6));
         // Generating modal content
+        // using the template function
         let modalContent = template({
             "title": currentPost.heading,
             "author": currentPost.author,
@@ -232,34 +269,43 @@ for (let button of readMoreButtons) {
         modalDiv.innerHTML = modalContent;
 
         // Displaying the modal
+        // Trigger show animation
         document.querySelector(".modal-content").style.animationName = "showModal";
+
+        // Show the modal
         modalDiv.style.display = "block";
 
         // Handeling modal close
+        // Access the close button of the modal
         let closeButton = document.getElementsByClassName("close")[0];
+
+        // Listen to click on close button
         closeButton.addEventListener('click', function() {
-            // Hiding the modal after an animation
+            // Trigger the hide modal animation
             document.querySelector(".modal-content").style.animationName = "hideModal";
-            // Adding delay to enable hiding animation
+            // Wait for 200ms
+            // Then hide the modal from the DOM 
             setTimeout(() => modalDiv.style.display = "none", 200);
         });
     });
 }
 
-// Dropdown for category selection
+// Access dropdown for category selection
 const categorySelect = document.getElementById("category-selector");
 
 // Listening to category change event
 categorySelect.addEventListener('input', function() {
+    // Trigger post filtering
     filterPosts(postSearchInput.value, this.value);
 });
 
 
-// Search box
+// Access search text input
 const postSearchInput = document.getElementById('post-search-input');
 
 // Listening to search string change
 postSearchInput.addEventListener('input', function() {
+    // Trigger post filtering 
     filterPosts(this.value, categorySelect.value);
 });
 
@@ -268,9 +314,12 @@ postSearchInput.addEventListener('input', function() {
 function filterPosts(filterString, category) {
     // Getting all post HTML elements
     let allCards = document.getElementById('shorts-list').children;
+
+    // To track the number of hidden cards
     let hiddenCardsCount = 0;
 
     // Create Regular Expression object
+    // with global "g" and case-insensitive "i"
     let searchPattern = new RegExp(filterString, "gi");
 
     // Iterating through each of the element
@@ -279,17 +328,21 @@ function filterPosts(filterString, category) {
         // Showing the card initially
         card.style.display = 'flex';
 
-        // Getting the index from the
+        // Get the index from the
         // button element's id
         let index = Number(card.children[3].id.slice(6));
+
+        // Get the post at the index
         let currentPost = shorts[index];
 
         // If category is not ALL
         if (category !== 'ALL') {
-            // Hide the elements that are not 
+            // Hide the elements that are NOT 
             // in the selected category
             if (currentPost.getCategory() !== category) {
+                // Hide the `card` from the DOM
                 card.style.display = 'none';
+                // Increment hidden card count
                 hiddenCardsCount += 1;
             }
         }
@@ -299,18 +352,25 @@ function filterPosts(filterString, category) {
             // Hide the elements that does not satisfy the 
             // search string
             if (searchPattern.test(card.children[1].innerHTML) || searchPattern.test(card.children[2].innerHTML)) {} else {
+                // Hide the `card` from the DOM
                 card.style.display = 'none';
+                // Increment the hidden card count
                 hiddenCardsCount += 1;
             }
         }
     }
 
+    // If all the cards are hidden
+    // i.e. No result for current filter
     if (hiddenCardsCount === allCards.length) {
-        console.log("no results");
-        // TODO: Show a message to the user
+        // Show a message to the user
         document.getElementById("no-result").style.display = 'block';
     } else {
+        // Hide the message from the DOM
         document.getElementById("no-result").style.display = 'none';
-
     }
 }
+
+// ======================================
+// END OF FILE
+// ======================================

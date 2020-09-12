@@ -1,3 +1,7 @@
+// ======================================
+// JavaScript common to all HTML pages
+// ======================================
+
 // Automatic insertion of current year in copyright info
 const copyrightYearSpan = document.getElementById("copy-year-span");
 // Get current year
@@ -6,7 +10,7 @@ const currentYear = new Date().getFullYear();
 copyrightYearSpan.innerText = currentYear;
 
 
-// NAVIGATION BAR/PAGE TEMPLATE
+// NAVIGATION TEMPLATE
 const source = `
 <!-- DESKTOP NAVIGATION -->
     <nav class="desktop-nav">
@@ -40,17 +44,25 @@ const source = `
     </nav>
 `;
 
+// Compile the template using handlebars
 const navTemplate = Handlebars.compile(source);
+
+// Generate HTML using the template function
 const navHTML = navTemplate();
+
+// Get access to the `navigation` div
 const navDiv = document.getElementById('navigation');
 
-// Insert in HTML
+// Insert the navigation HTML
 navDiv.innerHTML = navHTML;
 
 
+// Activating Mobile navigation
 
-// Mobile naviagtion
+// Access the nav-button from the DOM
 const navButton = document.getElementsByClassName("nav-button")[0];
+
+// Access the mobile-nav page from the DOM
 const mobileNavPage = document.getElementsByClassName("mobile-nav")[0];
 
 // Handle Nav Button click
@@ -66,35 +78,51 @@ navButton.addEventListener('click', function() {
 // navigation link
 const navLinks = Array.from(document.querySelectorAll("nav ul li a"));
 
+// Iterate over all the navigation links
 for (let link of navLinks) {
+    // If the link points to current page
     if (link.href === location.href) {
+        // Highlight the link using `active-link` class
         link.parentElement.classList.add("active-link");
+        // Make the link point to current page
         link.href = "#";
     }
 }
 
-// EXPERIMENTAL
 // Theming each page differently
-// by changing the CSS Variable: --primary-color
-// window.addEventListener("load", function() {
 // Getting access to the global root scope (pseudo element)
 let root = document.documentElement;
 
 // Change primary theme color based on window location
+
+// If the user is on shorts.html page
 if (location.pathname === "/pages/shorts.html") {
+    // Update the primary colors
     root.style.setProperty('--primary-color', "#ffc93c");
     root.style.setProperty('--primary-backdrop-color', "rgba(255, 201, 60, 0.6)");
-} else if (location.pathname === "/pages/programming.html") {
+}
+
+// If the user is on programming.html page
+else if (location.pathname === "/pages/programming.html") {
+    // Update the primary colors
     root.style.setProperty('--primary-color', "#a3d2ca");
     root.style.setProperty('--primary-backdrop-color', "rgba(163, 210, 202, 0.6)");
+}
 
-} else if (location.pathname === "/pages/travel.html") {
+// If the user is on travel.html page
+else if (location.pathname === "/pages/travel.html") {
+    // Update the primary colors
     root.style.setProperty('--primary-color', "#ffc1f3");
     root.style.setProperty('--primary-backdrop-color', "rgba(255, 193, 243, 0.6)");
+}
 
-} else if (location.pathname === "/pages/food.html") {
+// If the user is on food.html page
+else if (location.pathname === "/pages/food.html") {
+    // Update the primary colors
     root.style.setProperty('--primary-color', "#ee6f57");
     root.style.setProperty('--primary-backdrop-color', "rgba(238, 111, 87, 0.6)");
-
 }
-// });
+
+// ======================================
+// END OF FILE
+// ======================================

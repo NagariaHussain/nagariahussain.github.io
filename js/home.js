@@ -1,3 +1,7 @@
+// ======================================
+// JavaScript specific to index.html page
+// ======================================
+
 // STAFF DATA (May come from a backend)
 const staff = {
     "Deann Hayes": {
@@ -129,3 +133,7 @@ function showAvatar(entries) {
         }
     });
 }
+
+// ======================================
+// END OF FILE
+// ======================================
