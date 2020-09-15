@@ -20,51 +20,88 @@
 
 /* =================== */
 
+
+/* Modal backdrop */
+
 .modal {
+    /* Not displayed initially */
     display: none;
+    /* Position is fixed */
     position: fixed;
+    /* Show on top of everything */
     z-index: 10;
+    /* Align to top-left corner */
     top: 0;
     left: 0;
+    /* Set background to color to primary bc */
     background-color: var(--primary-backdrop-color);
     overflow: auto;
+    /* Align the contents to center */
     text-align: center;
+    /* Take the full width and height */
     height: 100%;
     width: 100%;
+    /* Set animation parameters */
     animation-duration: 300ms;
     animation-timing-function: ease-in-out;
 }
 
+
+/* Modal content in the modal */
+
 .modal-content {
+    /* Rounded corners */
     border-radius: 10px;
+    /* Light background color */
     background-color: #fefefe;
-    margin: 10% auto;
     /* 10% from the top and centered */
+    margin: 10% auto;
     padding: 20px;
+    /* Border color */
     border: 1px solid #888;
     width: 80%;
+    /* Set animation parameters */
     animation-duration: 500ms;
 }
+
+
+/* Every element inside modal-content */
 
 .modal-content * {
     color: #252525;
 }
 
+
+/* Round the img inside the modal */
+
 .modal-content img {
     border-radius: 1em;
 }
 
+
+/* Style close icon */
+
 .close {
+    /* Position the button */
     right: 12%;
     position: absolute;
+    /* Change the mouse pointer */
     cursor: pointer;
+    /* Make it perfect circular */
     border-radius: 50%;
+    /* Set the font size */
     font-size: 2em;
+    /* Add transition animation */
     transition: background-color 300ms ease-in;
+    /* Set icon color */
     color: #252525;
 }
 
+
+/* Change on hover */
+
 .close:hover {
+    /* Swap the color and background color */
     background-color: #222;
     color: #fff;
 }
@@ -73,12 +110,15 @@
 /* MODAL OPEN ANIMATION */
 
 @keyframes showModal {
+    /* Start transparent and 0 size */
     0% {
         opacity: 0;
         transform: scale(0);
     }
+    /* End with full opacity and scale to full */
     100% {
         opacity: 1;
+        /* Display block */
         display: block;
         transform: scale(1);
     }
@@ -88,11 +128,14 @@
 /* MODAL CLOSE ANIMATION */
 
 @keyframes hideModal {
+    /* Start at full opacity and full scale */
     0% {
         opacity: 1;
+        /* Displayed on the screen */
         display: block;
         transform: scale(1);
     }
+    /* End at 0 opacity and scale 0 */
     100% {
         opacity: 0;
         transform: scale(0);
@@ -108,22 +151,41 @@
 
 /* ================ */
 
+
+/* Pseudo :root element 
+define to global scope */
+
 :root {
+    /* Variables to store primary colors */
     --primary-color: rgb(152, 255, 143);
     --primary-backdrop-color: rgba(152, 255, 143, 0.6);
     --secondary-color: #03719C;
 }
 
+
+/* Root HTML element */
+
 html {
+    /* Set box-sizing to border box */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
+/* HTML body element */
+
 body {
+    /* Set dark background color */
     background-color: #252525;
+    /* Set HTML wide font-family */
     font-family: 'Open Sans', sans-serif;
 }
+
+
+/* Set every element's (and pseudo elements) 
+box-sizing to inherit from its parent
+*/
 
 *,
 *:before,
@@ -131,37 +193,28 @@ body {
     box-sizing: inherit;
 }
 
+
+/* Every video element */
+
 video {
+    /* Take 100% of the parent */
     width: 100%;
+    /* Set margin from the top */
     margin-top: 20px;
 }
+
+
+/* Set site wide text element styles */
 
 h1,
 h2,
 h3,
 h4,
 p {
+    /* Set to white color */
     color: white;
+    /* Remove any default margins */
     margin: 0;
-}
-
-
-/* Show a pdf icon for any link */
-
-
-/* that points to a pdf file */
-
-a[href$=".pdf"] {
-    position: relative;
-    margin-right: 15px;
-    color: #FF6163;
-}
-
-a[href$=".pdf"]::after {
-    /* position: absolute; */
-    content: " (.pdf)";
-    /* content: url(../assets/icons/pdf-icon.svg); */
-    width: 15px;
 }
 
 
@@ -173,18 +226,33 @@ a[href$=".pdf"]::after {
 
 /* ========================= */
 
+
+/* Remove default link styles  */
+
 a {
     text-decoration: none;
 }
+
+
+/* Set max width for img and iframe 
+   No more than parent's width */
 
 img,
 iframe {
     max-width: 100%;
 }
 
+
+/* Set text color for text inside 
+   sections to be darker than the main headings */
+
 .section-body-text {
     color: #969696;
 }
+
+
+/* Utility class to highlight elements
+   using blue background color */
 
 .highlight {
     background-color: rgb(53, 208, 255);
@@ -194,24 +262,64 @@ iframe {
 /* ================== */
 
 
-/* HERO HEADER */
+/* HERO HEADER 
+   Common to all the pages */
 
 
 /* ================== */
 
+
+/* Header styling */
+
 header {
+    /* Display using flexbox */
     display: flex;
+    /* Set main axis to column 
+       and flex wrap to nowrap */
     flex-flow: column nowrap;
+    /* Align elements to the center */
     align-items: center;
+    /* Add some whitespace */
     margin: 50px 10%;
 }
+
+
+/* Hero SVG illustration inside the header */
 
 header .hero-image {
     width: 80%;
 }
 
+
+/* Hero title text inside the header */
+
 header .hero-title {
     margin-top: 50px;
+}
+
+
+/* Change hero title and subtitle font styles */
+
+.hero-title,
+.hero-subtitle {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+
+/* Make the title font lighter */
+
+.hero-title {
+    font-weight: 300;
+}
+
+
+/* Style the subtitle text */
+
+.hero-subtitle {
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    margin-top: 10px;
 }
 
 
@@ -223,38 +331,67 @@ header .hero-title {
 
 /* ================== */
 
+
+/* Reusable button styles */
+
 .btn {
+    /* No background color */
     background-color: transparent;
+    /* Add some padding to all 4 sides */
     padding: 0.9em;
+    /* Set text color to white */
     color: rgb(236, 236, 236);
     font-size: 1.1em;
+    /* Make the corners a little rounded */
     border-radius: 5px;
+    /* Change the defualt mouse cursor */
     cursor: pointer;
+    /* Add border, with primary color */
     border: 2px solid var(--primary-color);
+    /* Add transition animation */
     transition: background-color, color 250ms ease-in;
 }
 
+
+/* Button on hover animation */
+
 .btn:hover {
+    /* Animate background and text color */
     background-color: var(--primary-color);
     color: rgb(32, 32, 32);
 }
+
+
+/* Special styles for filled buttons */
 
 .btn-filled {
     color: rgb(32, 32, 32);
     background-color: var(--primary-color);
 }
 
+
+/* Animate filled buttons on hover */
+
 .btn-filled:hover {
     border: 2px solid white;
 }
+
+
+/* Utility class to change bc to primary color */
 
 .primary {
     background-color: var(--primary-color);
 }
 
+
+/* Utility class to change bc to secondary color */
+
 .secondary {
     background-color: #016795;
 }
+
+
+/* Change style when button has been clicked */
 
 .btn:visited {
     border: 2px solid #fff;
@@ -272,15 +409,27 @@ header .hero-title {
 
 /* LOGO STYLE AND ANIMATION */
 
+
+/* A custom logo for the website */
+
 .logo {
+    /* Increase the space b/w the letters */
     letter-spacing: 4px;
+    /* Add transition animation */
     transition: letter-spacing 200ms ease-in-out;
+    /* Set font size */
     font-size: 1.2em;
+    /* Set text color */
     color: rgb(221, 221, 221);
+    /* Set width */
     width: fit-content;
 }
 
+
+/* Animate on hover */
+
 .logo:hover {
+    /* Shrink the space b/w the letters */
     letter-spacing: 1px;
 }
 
@@ -288,48 +437,76 @@ header .hero-title {
 /* Hide Desktop Navigation: Mobile Size */
 
 .desktop-nav {
+    /* Hidden initially */
+    /* Will be displayed using media queries */
     display: none;
 }
 
 
 /* NAVIGATION STYLES */
 
+
+/* Every a tag chide of the nav element */
+
 nav>a {
     color: #ffffff;
     padding: 20px;
 }
 
+
+/* Remove default ul list styles */
+
 nav ul {
     list-style: none;
 }
 
+
+/* Style link element's li */
+
 nav ul li {
+    /* Adding space */
     margin: 0 20px;
     padding: 10px;
+    /* Rounding the corners */
     border-radius: 4%;
+    /* Adding a transparent border */
     border: 2px solid transparent;
+    /* Align self to the left hand side */
     align-self: flex-end;
+    /* Add transition animation */
     transition: border 200ms ease-in;
 }
 
+
+/* Style the anchor elements */
+
 nav ul li a {
+    /* Color of nav links */
     color: rgb(221, 221, 221);
+    /* Letter spacing for nav link text */
     letter-spacing: 1px;
+    /* Set font size for link text */
     font-size: 1.1em;
 }
 
 
-/* Desktop navigation specific */
+/* Desktop navigation specific styles */
 
 .desktop-nav {
+    /* Take the full width */
     width: 100%;
+    /* Adds space between the logo and the nav links */
     justify-content: space-between;
+    /* Aligns items to the center vertically */
     align-content: center;
 }
 
 .desktop-nav ul {
+    /* Style nav link's ul using flexbox */
     display: flex;
+    /* Set main axis to row and wrap if necessary */
     flex-flow: row wrap;
+    /* Center the content */
     justify-content: center;
 }
 
@@ -337,8 +514,12 @@ nav ul li a {
 /* Highlight active links */
 
 .active-link {
+    /* Set bc to the this page's primary color */
     background-color: var(--primary-color);
 }
+
+
+/* Change active link's `a` text color */
 
 .active-link a {
     color: rgb(34, 34, 34) !important;
@@ -347,10 +528,18 @@ nav ul li a {
 
 /* Highlight non-active links on hover */
 
+
+/* Only animate those links which are not active */
+
 nav ul li:hover:not(.active-link) {
+    /* Show a border on the top */
     border-bottom: 2px solid var(--primary-color);
+    /* Show a border on the bottom */
     border-top: 2px solid var(--primary-color);
 }
+
+
+/* Only change link text color of non active links */
 
 nav ul li:hover:not(.active-link) a {
     color: rgb(255, 255, 255);
@@ -360,46 +549,75 @@ nav ul li:hover:not(.active-link) a {
 /* Mobile Navigation Specific */
 
 .mobile-nav {
+    /* Hidden initially */
     display: none;
+    /* Take fill viewport height */
     height: 100vh;
+    /* Take fill viewport width */
     width: 100vw;
+    /* Set the position to be fixed */
     position: fixed;
+    /* Align to top left corner */
     top: 0;
     left: 0;
+    /* Set background color */
     background-color: rgba(19, 19, 19, 0.9);
     /* To show on top of everything except nav button */
     z-index: 99;
 }
 
+
+/* Style mobile navigation's list */
+
 .mobile-nav ul {
+    /* Take full height of the parent */
     height: 100%;
+    /* Use flexbox */
     display: flex;
+    /* Set main axis to column and wrap to nowrap */
     flex-flow: column nowrap;
+    /* Align items to the start of the flex container.
+       Here, top of the screen  */
     justify-content: flex-start;
+    /* Add some margin to the right */
     margin-right: 10px;
 }
+
+
+/* Add margin to the bottom of each link */
 
 .mobile-nav ul li {
     margin-bottom: 20px;
 }
 
+
+/* Set font size for link text */
+
 .mobile-nav ul li a {
     font-size: 1.2em;
 }
 
+
+/* Styling the nav FAB (Floating Action Button) */
+
 .nav-button {
-    z-index: 9;
+    /* Position is fixed to the bottom of the screen */
     position: fixed;
     bottom: 30px;
     right: 30px;
     background-color: #fff !important;
+    /* Remove any border */
     border: none;
     padding: 10px;
+    /* Change default mouse pointer */
     cursor: pointer;
+    /* Make the container a square */
     width: 70px;
     height: 70px;
+    /* Make the container circular */
     border-radius: 50%;
-    cursor: pointer;
+    /* Align hamburger icon to the center 
+       of the nav button container */
     text-align: center;
     /* To show on top of everything */
     z-index: 100;
@@ -408,18 +626,31 @@ nav ul li:hover:not(.active-link) a {
 
 /* NAVIGATION ANIMATION */
 
+
+/* Added when mobile navigation is shown */
+
 .show-nav {
+    /* Trigger show animation */
     animation-name: showIn;
+    /* Set animation properties */
     animation-timing-function: ease-in-out;
     animation-duration: 400ms;
+    /* Display the navigation on the screen */
     display: block;
 }
 
+
+/* Mobile navigation show animation */
+
 @keyframes showIn {
+    /* Start with complete transparency 
+       and bottom of the viewport */
     0% {
         opacity: 0;
         transform: translateY(100%);
     }
+    /* End with complete opacity
+       and taking the full viewport */
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -429,54 +660,73 @@ nav ul li:hover:not(.active-link) a {
 
 /* SECTION TITLE */
 
+
+/* Common to all the sections on all the pages */
+
+
+/* Style section title container  */
+
 .section-title {
+    /* Add some spacing to the bottom */
     margin-bottom: 30px;
+    /* Take no more than required width */
     width: fit-content;
+    /* Style using flexbox */
     display: flex;
+    /* Set main axis to column and wrap to nowrap */
     flex-flow: column nowrap;
+    /* Center items along cross and main axis */
     justify-content: center;
     align-items: center;
 }
 
+
+/* Style section title text */
+
 .section-title h2 {
+    /* Add some bottom spacing */
     margin-bottom: 8px;
+    /* Tranform letters to uppercase */
     text-transform: uppercase;
+    /* Make the font light weight */
     font-weight: 300;
+    /* Adjust font size */
     font-size: 1.3em;
+    /* Increase the space b/w letters */
     letter-spacing: 2px;
 }
+
+
+/* Adding a bottom border to the section title */
 
 .border-bottom {
     border-bottom: 2px solid var(--primary-color);
     width: 40%;
 }
 
+
+/* Generic section element styling */
+
 section {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column wrap;
+    /* Center items */
     align-items: center;
+    /* Add some margin to the bottom of section */
     margin-bottom: 40px;
 }
 
-.hero-title,
-.hero-subtitle {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-}
 
-.hero-title {
-    font-weight: 300;
-}
-
-.hero-subtitle {
-    font-weight: 400;
-    color: rgb(153, 153, 153);
-    margin-top: 10px;
-}
+/* Utility class to make a paragraph of text dimmer */
 
 p.dim {
+    /* Set a dimmer color */
     color: rgb(153, 153, 153);
+    /* Set font family */
     font-family: 'Raleway' sans-serif;
+    /* Center align the text */
     text-align: center;
 }
 
