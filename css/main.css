@@ -739,32 +739,59 @@ p.dim {
 
 /* ==================== */
 
+
+/* Staff Images List Styles */
+
 .avatar-grid {
+    /* Style using flex */
     display: flex;
+    /* Show the list as a column */
     flex-flow: column nowrap;
+    /* Take full width and height of the parent */
     width: 100%;
     height: 100%;
 }
 
+
+/* Every avatar inside the grid */
+
 .avatar-grid>* {
+    /* Add space between each of the photos */
     margin-bottom: 20px;
 }
+
+
+/* Helper class to make the element circular */
 
 .circular {
     border-radius: 50%;
 }
 
+
+/* Single avatar image styles */
+
 .circle-avatar {
+    /* Add spacing */
     margin: 10%;
     width: 80%;
+    /* Initial Opcaity is 0 */
+    /* Will be faded on through JS */
     opacity: 0;
+    /* Add a dashed border */
     border: 2px dashed var(--primary-color);
+    /* Change the default mouse pointer */
     cursor: pointer;
+    /* Add transition animation */
     transition: all 300ms ease-in-out;
 }
 
+
+/* Animate avatar on hover */
+
 .circle-avatar:hover {
+    /* Grow in size a little */
     transform: scale(1.1);
+    /* Change the border from dashed to solid */
     border: 2px solid var(--primary-color);
 }
 
@@ -777,39 +804,76 @@ p.dim {
 
 /* ==================== */
 
+
+/* Generic class to display 
+   list items using flexbox */
+
 .card-list {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set Main axis to column */
     flex-flow: column nowrap;
+    /* Center items in the flex container */
     justify-content: center;
 }
 
+
+/* Each category inside the category list */
+
 .categories>* {
+    /* Add spacing */
     padding: 10px;
     margin: 15px;
+    /* Add some rounded corners */
     border-radius: 10px;
+    /* Align text content to the center */
     text-align: center;
 }
 
+
+/* Style individual category card */
+
 .category-card {
+    /* Initially hidden */
+    /* Will be shown based on scroll position */
     opacity: 0;
+    /* Add transition animation */
     transition: opacity 300ms ease-in;
 }
+
+
+/* Adding different color to each category card */
+
+
+/* 1st Card */
 
 .categories> :nth-child(1) {
     background-color: #ff4e50;
 }
 
+
+/* 2nd Card */
+
 .categories> :nth-child(2) {
     background-color: #9900FA;
 }
+
+
+/* 3rd Card */
 
 .categories> :nth-child(3) {
     background-color: #338d5c;
 }
 
+
+/* 4th Card */
+
 .categories> :nth-child(4) {
     background-color: #3E82FC;
 }
+
+
+/* Style each icon inside a card */
 
 .card-list i {
     color: white;
@@ -817,9 +881,15 @@ p.dim {
     margin: 17px 0;
 }
 
+
+/* Category description */
+
 .category-card>p {
     font-size: 0.8em;
 }
+
+
+/* Category title */
 
 .category-card p {
     color: rgb(252, 252, 252);
@@ -834,83 +904,158 @@ p.dim {
 
 /* ==================== */
 
+
+/* Article of the month styles */
+
 .featured-article {
+    /* Add spacing */
     width: 98%;
     margin: 1%;
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Center items horizontally */
     align-items: center;
 }
 
+
+/* Article banner image */
+
 .article-banner-img {
+    /* Take parent's full width */
     width: 100%;
 }
 
+
+/* Style article details */
+
 .article-details {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Center items horizontally */
     align-items: center;
 }
 
+
+/* Style title and subtitle text */
+
 .article-title,
 .article-subtitle {
+    /* Setup font family and weight */
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    /* Add top spacing */
     margin-top: 10px;
+    /* Make this the first item in the flexbox */
     order: -1;
-    letter-spacing: 1px;
 }
 
+
+/* Article title specific styles */
+
 .article-title {
+    /* Increase space between the letters */
+    letter-spacing: 1px;
+    /* Align title to center */
     text-align: center;
+    /* Increase the font size */
     font-size: 1.3em;
 }
 
+
+/* Article subtitle specific styles */
+
 .article-subtitle {
+    /* Make the color a little darker */
     color: #ccc;
+    /* Add spacing to the bottom */
     margin-bottom: 10px;
-    letter-spacing: 0;
 }
 
+
+/* Article body specific styles */
+
 .article-body {
+    /* Decrease the font size */
     font-size: 0.9em;
+    /* Align the text to center */
     text-align: center;
+    /* Add spacing to the top */
     margin-top: 13px;
+    /* Set text color */
     color: rgb(230, 230, 230);
 }
 
+
+/* Author information styles */
+
 .author-line {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to row */
     flex-flow: row wrap;
+    /* Center things vertically */
     justify-content: center;
+    /* Add spacing */
     width: 92%;
     margin: 15px 4%;
 }
+
+
+/* Remove margins from everything 
+   inside author line */
 
 .author-line>* {
     margin: 0;
 }
 
+
+/* Set height for author image */
+
 .author-line figure img {
     height: 2em;
 }
 
+
+/* Style the read more button */
+
 .author-line button {
+    /* Decrease the font size */
     font-size: 0.8em;
+    /* Add spacing to the top */
     margin-top: 20px;
+    /* Take full width of the flex space */
     flex-basis: 100%;
 }
 
+
+/* Style article figure element */
+
 .featured-article figure {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to row */
     flex-flow: row nowrap;
+    /* Center items vertically */
     align-items: center;
+    /* Align self to start of 
+       parent flex container */
     align-self: flex-start;
+    /* Take all available space 
+       as margin to the right */
     margin-right: auto;
 }
 
+
+/* Style figcaption element of the article */
+
 .featured-article figcaption {
+    /* Add space to the left */
     margin-left: 10px;
+    /* Set text color */
     color: rgb(230, 230, 230);
 }
 
@@ -918,13 +1063,21 @@ p.dim {
 /* View Count (EYE ICON + COUNT) */
 
 .featured-article .view-count * {
+    /* Set a dimmer color */
     color: #ccc;
+    /* Decrease the font size */
     font-size: 0.95em;
+    /* Add transition animation */
     transition: color, transform 100ms ease-out;
 }
 
+
+/* Animate view count icon on hover */
+
 .featured-article .view-count i:hover {
+    /* Change color */
     color: #f1f1f1;
+    /* Scale the icon by a small percentage */
     transform: scale(1.05);
 }
 
@@ -937,29 +1090,51 @@ p.dim {
 
 /* ==================== */
 
+
+/* Style form element */
+
 .contact-form {
+    /* Style using flexbox */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Add spacing */
     width: 96%;
     margin: 0 2%;
 }
 
+
+/* Style label elements */
+
 .contact-form label {
     color: rgb(230, 230, 230);
+    /* Add spacing */
     margin: 10px 0;
 }
 
+
+/* Style text and email type inputs */
+
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
+    /* Add spacing */
     padding: 20px;
+    /* Take full width of parent */
     width: 100%;
+    /* Make the corner rounded */
     border-radius: 10px;
 }
+
+
+/* Style `submit` type input element */
 
 .contact-form input[type="submit"] {
     width: 80%;
     align-self: center;
 }
+
+
+/* Add spacing b/w each form group */
 
 .form-group {
     margin: 20px 0;
@@ -969,71 +1144,130 @@ p.dim {
 /* ========================= */
 
 
-/* FOOTER */
+/* FOOTER: Same for all the pages */
 
 
 /* ========================= */
 
+
+/* Set footer element styles */
+
 footer {
+    /* Set background color */
     background-color: #f0f0f0;
+    /* Add spacing */
     padding: 2em 1em;
+    /* Style using GRID system */
     display: grid;
 }
 
+
+/* Style every icon inside the footer */
+
 footer i {
+    /* Set icon color */
     color: rgb(94, 94, 94);
+    /* Change default mouse pointer */
     cursor: pointer;
+    /* Add transition animation */
     transition: transform 300ms ease-in;
+    /* Set icon width */
     width: 20px;
 }
 
+
+/* Style social media list item */
+
 .social-media {
+    /* Add transition animation */
     transition: color 300ms ease-in;
+    /* Change default mouse cursor */
     cursor: pointer;
 }
+
+
+/* Animate social media item on hover */
 
 .social-media:hover {
     color: var(--secondary-color);
 }
+
+
+/* Style the logo in the footer */
 
 footer .logo {
     color: rgb(0, 0, 0);
     margin-bottom: 1.5em;
 }
 
+
+/* Style social media list */
+
 .social-media-list {
     margin-bottom: 20px;
 }
 
+
+/* Style site map */
+
 .site-map {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column wrap;
+    /* Center items vertically */
     justify-content: center;
+    /* Place the items at the 
+       start of flex container */
     align-items: flex-start;
+    /* Add some space to the bottom */
     margin-bottom: 20px;
 }
 
+
+/* Style each link inside the site map */
+
 .site-map a {
+    /* Add spacing */
     margin-right: 10px;
     margin-bottom: 5px;
     padding-left: 10px;
+    /* Set color */
     color: rgb(34, 34, 34);
+    /* Uppercase each letter */
     text-transform: uppercase;
+    /* Override default box-sizing */
     box-sizing: border-box !important;
+    /* Add transition animation */
     transition: border 200ms ease-in;
+    /* Add a transparent border, 
+       will become opaque on hover */
     border-left: 3px solid transparent;
 }
 
+
+/* Animate sitemap link on hover */
+
 .site-map a:hover {
+    /* Add a thin border to the left */
     border-left: 3px solid var(--secondary-color);
 }
 
+
+/* Style the copyright info */
+
 .copyright {
+    /* Align text to the center */
     text-align: center;
+    /* Set text color */
     color: #f5f5f5;
+    /* Set bc color */
     background-color: var(--secondary-color);
+    /* Add spacing */
     padding: 5px;
+    /* Round the corners */
     border-radius: 5px;
+    /* Set font-family and weight */
     font-family: 'Open Sans' sans-serif;
     font-weight: 300;
 }
