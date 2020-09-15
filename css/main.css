@@ -1281,8 +1281,12 @@ footer .logo {
 
 /* ========================== */
 
+
+/* Style the shorts list */
+
 #shorts-list {
     color: #fff;
+    /* Add spacing to the top */
     margin-top: 30px;
 }
 
@@ -1295,37 +1299,70 @@ footer .logo {
 
 /* ========================== */
 
+
+/* Style individual travel guide image */
+
 .travel-guide img {
+    /* Make the top-left and top-right corners round */
     border-radius: 20px 20px 0 0;
+    /* Take full width of the parent */
     width: 100%;
 }
 
+
+/* Style the travel guide caption */
+
 .travel-guide figcaption {
+    /* Set background color */
     background-color: #fff;
+    /* Add spacing */
     padding: 20px;
 }
 
-.travel-guide figcaption i {
-    color: rgb(24, 24, 24);
-    display: block;
-    text-align: center;
-}
 
-.travel-guide figcaption i:hover {
+/* Style the arrow icon */
+
+.travel-guide figcaption i {
+    /* Set color to dark */
+    color: rgb(24, 24, 24);
+    /* Make it a block element */
+    display: block;
+    /* Cenetr align the body text */
+    text-align: center;
+    /* Change default mouse cursor */
     cursor: pointer;
 }
 
+
+/* Style the gallery */
+
 .gallery-grid {
+    /* Use flexbox for styling */
+    /* Will be switched to GRID on desktop */
     display: flex;
+    /* Set the main axis to column */
     flex-flow: column nowrap;
 }
 
+
+/* Style each image inside the gallery */
+
 .gallery-grid div {
+    /* Make the height a fixed value */
     height: 300px;
+    /* Round the corners */
     border-radius: 0.5em;
+    /* Add spacing */
     margin: 20px 0;
     width: 80vw;
 }
+
+
+/* Set background images for 
+   each div inside the gallery */
+
+
+/* 1st Image */
 
 .gallery-grid a:nth-child(1) div {
     background: url("../assets/images/travel_page/photo1.jpg");
@@ -1333,11 +1370,17 @@ footer .logo {
     background-position-x: center;
 }
 
+
+/* 2nd Image */
+
 .gallery-grid a:nth-child(2) div {
     background: url("../assets/images/travel_page/photo2.jpg");
     background-size: cover;
     background-position-y: bottom;
 }
+
+
+/* 3rd Image */
 
 .gallery-grid a:nth-child(3) div {
     background: url("../assets/images/travel_page/photo3.jpg");
@@ -1345,15 +1388,24 @@ footer .logo {
     background-position-y: bottom;
 }
 
+
+/* 4th Image */
+
 .gallery-grid a:nth-child(4) div {
     background: url("../assets/images/travel_page/photo4.jpg");
     background-size: cover;
 }
 
+
+/* 5th Image */
+
 .gallery-grid a:nth-child(5) div {
     background: url("../assets/images/travel_page/photo5.jpg");
     background-size: cover;
 }
+
+
+/* 6th Image */
 
 .gallery-grid a:nth-child(6) div {
     background: url("../assets/images/travel_page/photo6.jpg");
@@ -1364,20 +1416,37 @@ footer .logo {
 
 /* Style Photographers Grid */
 
+
+/* Style the photographer's grid */
+
 .photographers-grid {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Take half of the parent width */
     width: 50%;
 }
 
+
+/* Style individual photographer image */
+
 .photographers-grid img {
+    /* Add space to the bottom */
     margin-bottom: 20px;
+    /* Add a border with the primary color */
     border: 2px solid var(--primary-color);
+    /* Take full width of the parent */
     width: 100%;
+    /* Add transition animation */
     transition: transform 200ms ease-out;
 }
 
+
+/* Animate photographer image on hover */
+
 .photographers-grid img:hover {
+    /* Increase the size a little */
     transform: scale(1.1);
 }
 
@@ -1393,70 +1462,129 @@ footer .logo {
 
 /* Tutorials Section */
 
+
+/* Style individual article inside 
+   tutorials section */
+
 .prog-tutorials article {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Equally distribute space b/w the items */
     justify-content: space-between;
+    /* Center items in both axes */
     align-items: center;
     text-align: center;
+    /* Set background color */
     background-color: rgb(224, 224, 224);
+    /* Set spacing */
     margin-left: 20px;
     margin-bottom: 20px;
+    /* Set minimum width */
     min-width: 220px;
 }
 
+
+/* Style tutorial title */
+
 .prog-tutorials h2 {
+    /* Set color */
     color: #414141;
+    /* Add spacing */
     padding: 20px;
+    /* Set font styles */
     font-family: 'Open Sans' sans-serif;
     font-weight: 300;
 }
 
+
+/* Style tutorial link */
+
 .prog-tutorials a {
+    /* Make this a tag a block element */
     display: block;
+    /* Set bacground color */
     background-color: #414141;
+    /* Take full width of the parent */
     width: 100%;
+    /* Add spacing to the top */
     margin-top: 10px;
 }
 
 
 /* Inspiration Gallery */
 
+
+/* Style carousel container */
+
 .main-carousel {
     width: 80%;
 }
 
+
+/* Style individual carousel slide */
+
 .carousel-cell {
+    /* Use flex box for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Center items vertically */
     align-items: center;
+    /* Set bc to primary color */
     background-color: var(--primary-color);
+    /* Add spacing */
     padding: 20px;
+    /* Center the text */
     text-align: center;
+    /* Take full width of the parent */
     width: 100%;
 }
 
+
+/* Style slide image */
+
 .carousel-cell img {
+    /* Take max width upto 100% */
     max-width: 100%;
+    /* Take max height upto 300px */
     max-height: 300px;
 }
 
+
+/* Style slide heading */
+
 .carousel-cell h3 {
+    /* Add spacing */
     margin-top: 80px;
+    /* Set text color */
     color: #252525;
+    /* Uppercase all letters */
     text-transform: uppercase;
+    /* Add font styles */
     font-weight: 300;
-    letter-spacing: 2px;
     font-size: 2em;
+    /* Increase letter spacing */
+    letter-spacing: 2px;
 }
+
+
+/* Style slide subtitle and icon */
 
 .carousel-cell h4,
 .carousel-cell i {
+    /* Set the color to a dimmer color */
     color: #4b4b4b;
 }
 
+
+/* Slide icon specific styles */
+
 .carousel-cell i {
+    /* Increase icon size */
     font-size: 1.5em;
+    /* Add spacing to the top */
     margin-top: 10px;
 }
 
@@ -1469,134 +1597,258 @@ footer .logo {
 
 /* ========================= */
 
+
+/* Style individual recipe card */
+
 .recipe-list figure {
+    /* Style using flexbox */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Center items horizontally */
     align-items: center;
+    /* Set bc to white */
     background-color: #fff;
+    /* Add spacing */
     margin-right: 20px;
+    /* Change default mouse cursor */
     cursor: pointer;
+    /* Add transition animation */
     transition: border 300ms ease-out;
+    /* Add a white border around the card */
     border: 4px solid white;
 }
 
+
+/* Style recipe representative image */
+
 .recipe-list img {
+    /* Take full width of the parent */
     width: 100%;
 }
 
+
+/* Style recipe caption */
+
 .recipe-list figcaption {
+    /* Capitalize the text */
     text-transform: capitalize;
+    /* Set font styles */
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    /* Add spacing */
     margin: 20px 0;
 }
 
+
+/* Style arrow icon */
+
 .recipe-list i {
+    /* Make icon a block element */
     display: block;
+    /* Set icon color */
     color: #181818;
+    /* Center the text */
     text-align: center;
+    /* Add top spacing automatically */
     margin-top: auto;
 }
 
+
+/* Style selected card */
+
 .recipe-list .selected {
+    /* Change border's color to primary color */
     border: 4px solid var(--primary-color);
 }
 
+
+/* Style recipe view section */
+
 #recipe-view {
+    /* Set bc to white */
     background-color: #fff;
+    /* Add spacing */
     padding: 20px;
     width: 100%;
 }
 
+
+/* Style recipe header */
+
 .recipe-header {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to row */
     flex-flow: row nowrap;
+    /* Use all the remaining space 
+       to set a gap between the items */
     justify-content: space-between;
 }
 
+
+/* Style recipe title text */
+
 .recipe-title {
+    /* Set text color */
     color: #666;
+    /* Style fonts */
     font-weight: 300;
-    text-transform: uppercase;
     font-size: 2em;
+    /* Uppercase all the letters */
+    text-transform: uppercase;
 }
 
+
+/* Style recipe body heading */
+
 .body-heading {
+    /* Set text color */
     color: #313131;
+    /* Add font styles */
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
+    /* Increase space b/w the letters */
     letter-spacing: 2px;
+    /* Add spacing */
     margin: 20px 0;
+    /* Add an underline to the text */
     text-decoration: underline;
 }
+
+
+/* Style recipe normal text */
 
 #recipe-view p {
     color: #4b4b4b;
 }
 
+
+/* Style chef show section */
+
 .chef-show-list {
+    /* Distribute remaining space b/w iframes */
     justify-content: space-between;
 }
 
+
+/* Style show information div */
+
 .show-info {
     background-color: #fff;
+    /* Add spacing to the top */
     margin-top: 30px;
 }
 
+
+/* Style show information text */
+
 .show-info h3,
 .show-info p {
+    /* Set text color */
     color: rgb(58, 58, 58);
+    /* Add spacing */
     padding: 10px;
 }
 
 
 /* CHEF OF THE MONTH SECTION */
 
+
+/* Style chef info text */
+
 .chef-info {
+    /* Center the text content */
     text-align: center;
 }
 
+
+/* Style Chef Name */
+
 .chef-info h3 {
+    /* Add font styles */
     font-weight: 300;
     font-size: 2.5em;
+    /* Increase letter spacing */
     letter-spacing: 1.5px;
+    /* Add text shadow */
     text-shadow: var(--primary-color) 5px 2px 0px;
+    /* Add spacing */
     margin: 20px 0;
 }
 
+
+/* Style chef description */
+
 .chef-info p {
+    /* Decrease font size */
     font-size: 0.9em;
-    color: rgb(156, 156, 156);
     font-family: 'Raleway', sans-serif;
+    /* Set text color */
+    color: rgb(156, 156, 156);
+    /* Increase letter spacing */
     letter-spacing: 1px;
 }
 
 
+/* =========== */
+
+
 /* SHORTS PAGE */
 
+
+/* =========== */
+
+
+/* Style the shorts list */
+
 #shorts-list {
+    /* Use GRID system */
     display: grid;
+    /* Create a single column */
+    /* Takes all the space */
     grid-template-columns: 1fr;
+    /* Add a gap b/w the rows */
     row-gap: 30px;
+    /* Align items to the 
+       start of GRID container */
     align-items: start;
 }
 
+
+/* Style individual shorts card */
+
 .short-card {
+    /* Set bc to white */
     background-color: #fff;
+    /* Style using flexbox */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Add spacing */
     padding: 20px;
+    /* Take full height of the container */
     height: 100%;
 }
 
+
+/* Style card text elements */
+
 .short-card h3,
 .short-card p {
+    /* Set text color to black */
     color: #000;
+    /* Center align the text */
     text-align: center;
+    /* Add space at the bottom */
     margin-bottom: 20px;
 }
 
+
+/* Style read more button */
+
 .short-card button {
+    /* Set bc to primary color */
     background-color: var(--primary-color);
     color: rgb(95, 95, 95);
     margin-top: auto;
