@@ -1782,9 +1782,9 @@ footer .logo {
         /* Change from column to row */
         flex-flow: row nowrap;
         /* Distribute space equally b/w items */
-        justify-content: space-between;
         /* Add spacing */
-        padding: 50px 5%;
+        /* padding: 50px 5%; */
+        padding: 20px 10%;
         margin-bottom: 3em;
         /* Set background color to a darker grey */
         background-color: rgb(32, 32, 32);

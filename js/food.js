@@ -32,19 +32,49 @@ const recipes = [{
         title: "Aloo Paratha",
         min_req: 45,
         ingredients: [
-            "ing 1",
-            "ing 2"
+            "Potato",
+            "Wheat floor",
+            "Chilli",
+            "Corriander",
+            "Water",
+            "Salt to taste",
+            "Sunflower Oil"
         ],
-        procedure: `I don't know`
+        procedure: `Allo paratha is basically a fried chapati with potato stuffed in it. 
+        Actually, potato means aloo. Aloo paratha is a whole wheat flatbread 
+        which is stuffed with spicy mashed potatoes. It's usually enjoyed with 
+        butter, yogurt or pickle. My aloo paratha is nothing fancy, it's a basic 
+        simple recipe which is made in every household in India. The potato is a root 
+        vegetable native to the Americas, a starchy tuber of the plant Solanum tuberosum, 
+        and the plant itself is a perennial in the nightshade family, Solanaceae
+        `
     },
     {
         title: "Paneer 65",
         min_req: 60,
         ingredients: [
-            "ing 1",
-            "ing 2"
+            "Paneer",
+            "Garlic Paste",
+            "Salt",
+            "Chilli Powder",
+            "Garam Masala",
+            "Corn Flour",
+            "Cumin",
+            "Capsicum",
+            "Yogurt",
+            "Onion"
         ],
-        procedure: `I don't know`
+        procedure: `Paneer (pronounced [pəniːr]) is a fresh cheese common 
+        in the Indian subcontinent. It is an unaged, non-melting soft cheese 
+        made by curdling milk with a fruit- or vegetable-derived acid, such 
+        as lemon juice. Its acid-set form, (cheese curd) before pressing, is 
+        called chhena. - Wikipedia Paneer is prepared by adding food acid, 
+        such as lemon juice, vinegar, citric acid or dahi (yogurt),[15] to 
+        hot milk to separate the curds from the whey. The curds are drained 
+        in muslin or cheesecloth and the excess water is pressed out. The 
+        resulting paneer is dipped in chilled water for 2–3 hours to improve 
+        its texture and appearance. From this point, the preparation of paneer 
+        diverges based on its use and regional tradition.`
     }
 ];
 
