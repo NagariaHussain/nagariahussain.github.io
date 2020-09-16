@@ -1,28 +1,24 @@
+/* MAIN CSS STYLESHEET */
+
 /* =================== */
-
-
 /* IMPORT FONTS */
-
-
 /* =================== */
 
 
 /* OpenSans */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+/* Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
-/* =================== */
 
+
+/* ========================= */
+/* GLOBAL STYLES */
+/* Common to all pages */
+/* ========================= */
 
 /* MODAL WINDOW STYLES */
-
-
-/* =================== */
-
-
 /* Modal backdrop */
-
 .modal {
     /* Not displayed initially */
     display: none;
@@ -48,7 +44,6 @@
 
 
 /* Modal content in the modal */
-
 .modal-content {
     /* Rounded corners */
     border-radius: 10px;
@@ -66,21 +61,18 @@
 
 
 /* Every element inside modal-content */
-
 .modal-content * {
     color: #252525;
 }
 
 
 /* Round the img inside the modal */
-
 .modal-content img {
     border-radius: 1em;
 }
 
 
 /* Style close icon */
-
 .close {
     /* Position the button */
     right: 12%;
@@ -99,7 +91,6 @@
 
 
 /* Change on hover */
-
 .close:hover {
     /* Swap the color and background color */
     background-color: #222;
@@ -108,13 +99,13 @@
 
 
 /* MODAL OPEN ANIMATION */
-
 @keyframes showModal {
     /* Start transparent and 0 size */
     0% {
         opacity: 0;
         transform: scale(0);
     }
+
     /* End with full opacity and scale to full */
     100% {
         opacity: 1;
@@ -126,7 +117,6 @@
 
 
 /* MODAL CLOSE ANIMATION */
-
 @keyframes hideModal {
     /* Start at full opacity and full scale */
     0% {
@@ -135,6 +125,7 @@
         display: block;
         transform: scale(1);
     }
+
     /* End at 0 opacity and scale 0 */
     100% {
         opacity: 0;
@@ -142,19 +133,12 @@
     }
 }
 
-
 /* ================ */
-
-
 /* GLOBAL VARIABLES */
-
-
 /* ================ */
-
 
 /* Pseudo :root element 
-define to global scope */
-
+   to define to global scope */
 :root {
     /* Variables to store primary colors */
     --primary-color: rgb(152, 255, 143);
@@ -164,7 +148,6 @@ define to global scope */
 
 
 /* Root HTML element */
-
 html {
     /* Set box-sizing to border box */
     box-sizing: border-box;
@@ -174,7 +157,6 @@ html {
 
 
 /* HTML body element */
-
 body {
     /* Set dark background color */
     background-color: #252525;
@@ -186,7 +168,6 @@ body {
 /* Set every element's (and pseudo elements) 
 box-sizing to inherit from its parent
 */
-
 *,
 *:before,
 *:after {
@@ -195,7 +176,6 @@ box-sizing to inherit from its parent
 
 
 /* Every video element */
-
 video {
     /* Take 100% of the parent */
     width: 100%;
@@ -205,7 +185,6 @@ video {
 
 
 /* Set site wide text element styles */
-
 h1,
 h2,
 h3,
@@ -217,18 +196,7 @@ p {
     margin: 0;
 }
 
-
-/* ========================= */
-
-
-/* GLOBAL STYLES */
-
-
-/* ========================= */
-
-
 /* Remove default link styles  */
-
 a {
     text-decoration: none;
 }
@@ -236,7 +204,6 @@ a {
 
 /* Set max width for img and iframe 
    No more than parent's width */
-
 img,
 iframe {
     max-width: 100%;
@@ -245,7 +212,6 @@ iframe {
 
 /* Set text color for text inside 
    sections to be darker than the main headings */
-
 .section-body-text {
     color: #969696;
 }
@@ -253,24 +219,17 @@ iframe {
 
 /* Utility class to highlight elements
    using blue background color */
-
 .highlight {
     background-color: rgb(53, 208, 255);
 }
 
 
 /* ================== */
-
-
 /* HERO HEADER 
    Common to all the pages */
-
-
 /* ================== */
 
-
 /* Header styling */
-
 header {
     /* Display using flexbox */
     display: flex;
@@ -285,21 +244,18 @@ header {
 
 
 /* Hero SVG illustration inside the header */
-
 header .hero-image {
     width: 80%;
 }
 
 
 /* Hero title text inside the header */
-
 header .hero-title {
     margin-top: 50px;
 }
 
 
 /* Change hero title and subtitle font styles */
-
 .hero-title,
 .hero-subtitle {
     font-family: 'Raleway', sans-serif;
@@ -308,14 +264,12 @@ header .hero-title {
 
 
 /* Make the title font lighter */
-
 .hero-title {
     font-weight: 300;
 }
 
 
 /* Style the subtitle text */
-
 .hero-subtitle {
     font-weight: 400;
     color: rgb(153, 153, 153);
@@ -324,16 +278,10 @@ header .hero-title {
 
 
 /* ================== */
-
-
 /* BUTTON STYLES */
-
-
 /* ================== */
 
-
 /* Reusable button styles */
-
 .btn {
     /* No background color */
     background-color: transparent;
@@ -354,64 +302,40 @@ header .hero-title {
 
 
 /* Button on hover animation */
-
 .btn:hover {
     /* Animate background and text color */
     background-color: var(--primary-color);
     color: rgb(32, 32, 32);
 }
 
-
 /* Special styles for filled buttons */
-
 .btn-filled {
     color: rgb(32, 32, 32);
     background-color: var(--primary-color);
 }
 
-
 /* Animate filled buttons on hover */
-
 .btn-filled:hover {
     border: 2px solid white;
 }
 
-
 /* Utility class to change bc to primary color */
-
 .primary {
     background-color: var(--primary-color);
 }
 
-
 /* Utility class to change bc to secondary color */
-
 .secondary {
     background-color: #016795;
 }
 
-
 /* Change style when button has been clicked */
-
 .btn:visited {
     border: 2px solid #fff;
 }
 
-
-/* ================= */
-
-
-/* END BUTTON STYLES */
-
-
-/* ================= */
-
-
 /* LOGO STYLE AND ANIMATION */
-
-
 /* A custom logo for the website */
-
 .logo {
     /* Increase the space b/w the letters */
     letter-spacing: 4px;
@@ -427,7 +351,6 @@ header .hero-title {
 
 
 /* Animate on hover */
-
 .logo:hover {
     /* Shrink the space b/w the letters */
     letter-spacing: 1px;
@@ -435,7 +358,6 @@ header .hero-title {
 
 
 /* Hide Desktop Navigation: Mobile Size */
-
 .desktop-nav {
     /* Hidden initially */
     /* Will be displayed using media queries */
@@ -444,10 +366,7 @@ header .hero-title {
 
 
 /* NAVIGATION STYLES */
-
-
 /* Every a tag chide of the nav element */
-
 nav>a {
     color: #ffffff;
     padding: 20px;
@@ -455,14 +374,12 @@ nav>a {
 
 
 /* Remove default ul list styles */
-
 nav ul {
     list-style: none;
 }
 
 
 /* Style link element's li */
-
 nav ul li {
     /* Adding space */
     margin: 0 20px;
@@ -479,7 +396,6 @@ nav ul li {
 
 
 /* Style the anchor elements */
-
 nav ul li a {
     /* Color of nav links */
     color: rgb(221, 221, 221);
@@ -491,7 +407,6 @@ nav ul li a {
 
 
 /* Desktop navigation specific styles */
-
 .desktop-nav {
     /* Take the full width */
     width: 100%;
@@ -512,7 +427,6 @@ nav ul li a {
 
 
 /* Highlight active links */
-
 .active-link {
     /* Set bc to the this page's primary color */
     background-color: var(--primary-color);
@@ -520,17 +434,13 @@ nav ul li a {
 
 
 /* Change active link's `a` text color */
-
 .active-link a {
     color: rgb(34, 34, 34) !important;
 }
 
 
 /* Highlight non-active links on hover */
-
-
 /* Only animate those links which are not active */
-
 nav ul li:hover:not(.active-link) {
     /* Show a border on the top */
     border-bottom: 2px solid var(--primary-color);
@@ -540,14 +450,12 @@ nav ul li:hover:not(.active-link) {
 
 
 /* Only change link text color of non active links */
-
 nav ul li:hover:not(.active-link) a {
     color: rgb(255, 255, 255);
 }
 
 
 /* Mobile Navigation Specific */
-
 .mobile-nav {
     /* Hidden initially */
     display: none;
@@ -568,7 +476,6 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* Style mobile navigation's list */
-
 .mobile-nav ul {
     /* Take full height of the parent */
     height: 100%;
@@ -585,21 +492,18 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* Add margin to the bottom of each link */
-
 .mobile-nav ul li {
     margin-bottom: 20px;
 }
 
 
 /* Set font size for link text */
-
 .mobile-nav ul li a {
     font-size: 1.2em;
 }
 
 
 /* Styling the nav FAB (Floating Action Button) */
-
 .nav-button {
     /* Position is fixed to the bottom of the screen */
     position: fixed;
@@ -625,10 +529,7 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* NAVIGATION ANIMATION */
-
-
 /* Added when mobile navigation is shown */
-
 .show-nav {
     /* Trigger show animation */
     animation-name: showIn;
@@ -641,14 +542,15 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* Mobile navigation show animation */
-
 @keyframes showIn {
+
     /* Start with complete transparency 
        and bottom of the viewport */
     0% {
         opacity: 0;
         transform: translateY(100%);
     }
+
     /* End with complete opacity
        and taking the full viewport */
     100% {
@@ -659,13 +561,9 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* SECTION TITLE */
-
-
 /* Common to all the sections on all the pages */
 
-
 /* Style section title container  */
-
 .section-title {
     /* Add some spacing to the bottom */
     margin-bottom: 30px;
@@ -682,7 +580,6 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* Style section title text */
-
 .section-title h2 {
     /* Add some bottom spacing */
     margin-bottom: 8px;
@@ -698,7 +595,6 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* Adding a bottom border to the section title */
-
 .border-bottom {
     border-bottom: 2px solid var(--primary-color);
     width: 40%;
@@ -706,7 +602,6 @@ nav ul li:hover:not(.active-link) a {
 
 
 /* Generic section element styling */
-
 section {
     /* Use flexbox for styling */
     display: flex;
@@ -720,28 +615,22 @@ section {
 
 
 /* Utility class to make a paragraph of text dimmer */
-
 p.dim {
     /* Set a dimmer color */
     color: rgb(153, 153, 153);
     /* Set font family */
-    font-family: 'Raleway' sans-serif;
+    font-family: 'Raleway'sans-serif;
     /* Center align the text */
     text-align: center;
 }
 
 
-/* ==================== */
-
-
-/* HOME PAGE SPECIFIC STYLES */
-
-
-/* ==================== */
+/* ------------------------- */
+/* HOME PAGE */
+/* ------------------------- */
 
 
 /* Staff Images List Styles */
-
 .avatar-grid {
     /* Style using flex */
     display: flex;
@@ -754,22 +643,13 @@ p.dim {
 
 
 /* Every avatar inside the grid */
-
 .avatar-grid>* {
     /* Add space between each of the photos */
     margin-bottom: 20px;
 }
 
 
-/* Helper class to make the element circular */
-
-.circular {
-    border-radius: 50%;
-}
-
-
 /* Single avatar image styles */
-
 .circle-avatar {
     /* Add spacing */
     margin: 10%;
@@ -787,7 +667,6 @@ p.dim {
 
 
 /* Animate avatar on hover */
-
 .circle-avatar:hover {
     /* Grow in size a little */
     transform: scale(1.1);
@@ -797,17 +676,12 @@ p.dim {
 
 
 /* ==================== */
-
-
 /* CATEGORIES LIST SECTION */
-
-
 /* ==================== */
 
 
 /* Generic class to display 
    list items using flexbox */
-
 .card-list {
     /* Use flexbox for styling */
     display: flex;
@@ -819,7 +693,6 @@ p.dim {
 
 
 /* Each category inside the category list */
-
 .categories>* {
     /* Add spacing */
     padding: 10px;
@@ -832,7 +705,6 @@ p.dim {
 
 
 /* Style individual category card */
-
 .category-card {
     /* Initially hidden */
     /* Will be shown based on scroll position */
@@ -844,37 +716,31 @@ p.dim {
 
 /* Adding different color to each category card */
 
-
 /* 1st Card */
-
 .categories> :nth-child(1) {
     background-color: #ff4e50;
 }
 
 
 /* 2nd Card */
-
 .categories> :nth-child(2) {
     background-color: #9900FA;
 }
 
 
 /* 3rd Card */
-
 .categories> :nth-child(3) {
     background-color: #338d5c;
 }
 
 
 /* 4th Card */
-
 .categories> :nth-child(4) {
     background-color: #3E82FC;
 }
 
 
 /* Style each icon inside a card */
-
 .card-list i {
     color: white;
     font-size: 1.4em;
@@ -883,30 +749,23 @@ p.dim {
 
 
 /* Category description */
-
 .category-card>p {
     font-size: 0.8em;
 }
 
 
 /* Category title */
-
 .category-card p {
     color: rgb(252, 252, 252);
 }
 
 
 /* ==================== */
-
-
 /* FEATURED ARTICLE SECTION */
-
-
 /* ==================== */
 
 
 /* Article of the month styles */
-
 .featured-article {
     /* Add spacing */
     width: 98%;
@@ -921,7 +780,6 @@ p.dim {
 
 
 /* Article banner image */
-
 .article-banner-img {
     /* Take parent's full width */
     width: 100%;
@@ -929,7 +787,6 @@ p.dim {
 
 
 /* Style article details */
-
 .article-details {
     /* Use flexbox for styling */
     display: flex;
@@ -941,7 +798,6 @@ p.dim {
 
 
 /* Style title and subtitle text */
-
 .article-title,
 .article-subtitle {
     /* Setup font family and weight */
@@ -955,7 +811,6 @@ p.dim {
 
 
 /* Article title specific styles */
-
 .article-title {
     /* Increase space between the letters */
     letter-spacing: 1px;
@@ -967,7 +822,6 @@ p.dim {
 
 
 /* Article subtitle specific styles */
-
 .article-subtitle {
     /* Make the color a little darker */
     color: #ccc;
@@ -977,7 +831,6 @@ p.dim {
 
 
 /* Article body specific styles */
-
 .article-body {
     /* Decrease the font size */
     font-size: 0.9em;
@@ -991,7 +844,6 @@ p.dim {
 
 
 /* Author information styles */
-
 .author-line {
     /* Use flexbox for styling */
     display: flex;
@@ -1007,21 +859,18 @@ p.dim {
 
 /* Remove margins from everything 
    inside author line */
-
 .author-line>* {
     margin: 0;
 }
 
 
 /* Set height for author image */
-
 .author-line figure img {
     height: 2em;
 }
 
 
 /* Style the read more button */
-
 .author-line button {
     /* Decrease the font size */
     font-size: 0.8em;
@@ -1033,7 +882,6 @@ p.dim {
 
 
 /* Style article figure element */
-
 .featured-article figure {
     /* Use flexbox for styling */
     display: flex;
@@ -1051,7 +899,6 @@ p.dim {
 
 
 /* Style figcaption element of the article */
-
 .featured-article figcaption {
     /* Add space to the left */
     margin-left: 10px;
@@ -1061,7 +908,6 @@ p.dim {
 
 
 /* View Count (EYE ICON + COUNT) */
-
 .featured-article .view-count * {
     /* Set a dimmer color */
     color: #ccc;
@@ -1073,7 +919,6 @@ p.dim {
 
 
 /* Animate view count icon on hover */
-
 .featured-article .view-count i:hover {
     /* Change color */
     color: #f1f1f1;
@@ -1083,16 +928,11 @@ p.dim {
 
 
 /* ==================== */
-
-
 /* CONTACT US SECTION */
-
-
 /* ==================== */
 
 
 /* Style form element */
-
 .contact-form {
     /* Style using flexbox */
     display: flex;
@@ -1105,7 +945,6 @@ p.dim {
 
 
 /* Style label elements */
-
 .contact-form label {
     color: rgb(230, 230, 230);
     /* Add spacing */
@@ -1114,7 +953,6 @@ p.dim {
 
 
 /* Style text and email type inputs */
-
 .contact-form input[type="text"],
 .contact-form input[type="email"] {
     /* Add spacing */
@@ -1127,7 +965,6 @@ p.dim {
 
 
 /* Style `submit` type input element */
-
 .contact-form input[type="submit"] {
     width: 80%;
     align-self: center;
@@ -1135,23 +972,17 @@ p.dim {
 
 
 /* Add spacing b/w each form group */
-
 .form-group {
     margin: 20px 0;
 }
 
 
 /* ========================= */
-
-
 /* FOOTER: Same for all the pages */
-
-
 /* ========================= */
 
 
 /* Set footer element styles */
-
 footer {
     /* Set background color */
     background-color: #f0f0f0;
@@ -1163,7 +994,6 @@ footer {
 
 
 /* Style every icon inside the footer */
-
 footer i {
     /* Set icon color */
     color: rgb(94, 94, 94);
@@ -1177,7 +1007,6 @@ footer i {
 
 
 /* Style social media list item */
-
 .social-media {
     /* Add transition animation */
     transition: color 300ms ease-in;
@@ -1187,14 +1016,12 @@ footer i {
 
 
 /* Animate social media item on hover */
-
 .social-media:hover {
     color: var(--secondary-color);
 }
 
 
 /* Style the logo in the footer */
-
 footer .logo {
     color: rgb(0, 0, 0);
     margin-bottom: 1.5em;
@@ -1202,14 +1029,12 @@ footer .logo {
 
 
 /* Style social media list */
-
 .social-media-list {
     margin-bottom: 20px;
 }
 
 
 /* Style site map */
-
 .site-map {
     /* Use flexbox for styling */
     display: flex;
@@ -1226,7 +1051,6 @@ footer .logo {
 
 
 /* Style each link inside the site map */
-
 .site-map a {
     /* Add spacing */
     margin-right: 10px;
@@ -1247,7 +1071,6 @@ footer .logo {
 
 
 /* Animate sitemap link on hover */
-
 .site-map a:hover {
     /* Add a thin border to the left */
     border-left: 3px solid var(--secondary-color);
@@ -1268,17 +1091,13 @@ footer .logo {
     /* Round the corners */
     border-radius: 5px;
     /* Set font-family and weight */
-    font-family: 'Open Sans' sans-serif;
+    font-family: 'Open Sans'sans-serif;
     font-weight: 300;
 }
 
 
 /* ========================== */
-
-
 /* SHORTS PAGE */
-
-
 /* ========================== */
 
 
@@ -1292,11 +1111,7 @@ footer .logo {
 
 
 /* ========================== */
-
-
 /* TRAVEL PAGE */
-
-
 /* ========================== */
 
 
@@ -1361,7 +1176,6 @@ footer .logo {
 /* Set background images for 
    each div inside the gallery */
 
-
 /* 1st Image */
 
 .gallery-grid a:nth-child(1) div {
@@ -1415,10 +1229,6 @@ footer .logo {
 
 
 /* Style Photographers Grid */
-
-
-/* Style the photographer's grid */
-
 .photographers-grid {
     /* Use flexbox for styling */
     display: flex;
@@ -1452,11 +1262,7 @@ footer .logo {
 
 
 /* ========================== */
-
-
 /* PROGRAMMING PAGE */
-
-
 /* ========================== */
 
 
@@ -1494,7 +1300,7 @@ footer .logo {
     /* Add spacing */
     padding: 20px;
     /* Set font styles */
-    font-family: 'Open Sans' sans-serif;
+    font-family: 'Open Sans'sans-serif;
     font-weight: 300;
 }
 
@@ -1590,11 +1396,7 @@ footer .logo {
 
 
 /* ========================= */
-
-
 /* FOOD PAGE */
-
-
 /* ========================= */
 
 
@@ -1792,11 +1594,7 @@ footer .logo {
 
 
 /* =========== */
-
-
 /* SHORTS PAGE */
-
-
 /* =========== */
 
 
@@ -1850,278 +1648,503 @@ footer .logo {
 .short-card button {
     /* Set bc to primary color */
     background-color: var(--primary-color);
+    /* Set button text color to grey */
     color: rgb(95, 95, 95);
+    /* Add automatic margin to the top */
     margin-top: auto;
 }
 
+
+/* Style the post filtering menu */
+
 .menu {
+    /* Use flexbox for styling */
     display: flex;
+    /* Set main axis to column */
     flex-flow: column nowrap;
+    /* Take full width of parent */
     width: 100%;
 }
 
+
+/* Style the filtering input elements */
+
 .menu input,
 .menu select {
+    /* Add spacing */
     margin: 10px 5%;
     padding: 10px;
     width: 90%;
+    /* Set font styles */
     font-size: 1.1em;
+    /* Add rounded corners */
     border-radius: 5px;
 }
 
 
+/* ------ */
 /* UTILS */
+/* ------ */
+
+
+/* Helper class to add top margin */
 
 .mt-2 {
     margin-top: 2em;
 }
 
 
+/* Helper class to make the element circular */
+
+.circular {
+    border-radius: 50%;
+}
+
+
 /* ========================= */
-
-
 /* MEDIA QUERIES */
-
-
 /* ========================= */
 
 
-/* TABLET SIZE */
+/* ------------------ */
+/* TABLET SIZE AND UP */
+/* ------------------ */
+
+
+/* Applied for width of 768px and more */
 
 @media (min-width: 768px) {
+    /* ------------------- */
+    /* Common to all pages */
+    /* ------------------- */
+
     /* Hide Mobile Navigation */
     .mobile-nav,
     .nav-button {
         display: none !important;
     }
+
     /* Show desktop Navigation */
     .desktop-nav {
+        /* Use flexbox for styling */
         display: flex;
     }
-    /* Hero Section */
-    header {
-        margin: 0;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        padding: 50px 5%;
-        margin-bottom: 3em;
-        background-color: rgb(32, 32, 32);
-        align-items: center;
-    }
-    .hero-image {
-        order: 2;
-        height: 40vh;
-    }
-    .hero-title,
-    .hero-subtitle {
-        text-align: left;
-    }
-    /* HOME PAGE */
-    /* CATEGORIES LIST */
+
+    /* Style card list (generic) */
     .card-list {
         flex-flow: row wrap;
     }
+
+    /* Hero Section */
+    /* Hero header Styles */
+    header {
+        /* Remove any margin */
+        margin: 0;
+        /* Change from column to row */
+        flex-flow: row nowrap;
+        /* Distribute space equally b/w items */
+        justify-content: space-between;
+        /* Add spacing */
+        padding: 50px 5%;
+        margin-bottom: 3em;
+        /* Set background color to a darker grey */
+        background-color: rgb(32, 32, 32);
+        /* Center align things vertically */
+        align-items: center;
+    }
+
+    /* Style hero image (SVG)*/
+    .hero-image {
+        /* Change the order of image */
+        order: 2;
+        /* Set height to 40% of viewport height */
+        height: 40vh;
+    }
+
+    /* Style hero text */
+    .hero-title,
+    .hero-subtitle {
+        /* Align text to the left */
+        text-align: left;
+    }
+
+    /* --------- */
+    /* HOME PAGE */
+    /* --------- */
+
+    /* Style Categories list */
+
+    /* Each card takes equal width */
     .card-list>* {
+        /* Take 20% of the flex container width */
         flex-basis: 20%;
     }
-    /* OUR STAFF SECTION */
+
+    /* Our Staff section Styles */
     .avatar-grid {
+        /* Change main axis to row and 
+           turn on wrapping */
         flex-flow: row wrap;
+        /* Add spacing */
         margin: 4% 0;
+        /* Center content */
         justify-content: center;
     }
+
+    /* Everything inside the avatar grid */
     .avatar-grid>* {
+        /* Add spacing */
         margin: 30px 20px;
+        /* Make equal widths */
         flex-basis: 22%;
+        /* Take full width and height of parent */
         width: 100%;
         height: 100%;
     }
-    /* FEATURED ARTICLE SECTION */
+
+    /* Featured Article Section' */
     .featured-article {
+        /* Change main axis to row */
         flex-flow: row nowrap;
     }
+
+    /* Style article title */
     .featured-article .article-title {
+        /* Increase font size */
         font-size: 2em;
     }
+
+    /* Style read more button */
     .author-line button {
+        /* Remove any margins */
         margin: 0;
+        /* Do automatic width calculation */
         flex-basis: auto;
     }
+
+    /* Style author info figure */
     .author-line figure {
+        /* Remove any margins */
         margin: 0;
     }
+
+    /* Style author info container */
     .author-line {
+        /* Center align items */
         align-items: center;
+        /* Distribute space equally as gap */
         justify-content: space-between;
+        /* Add spacing to the top */
         margin-top: 50px;
     }
+
+    /* Style article text content */
     .article-title,
     .article-subtitle,
     .article-body {
+        /* Place to the start of container */
         order: 0;
+        /* Align text to the left */
         text-align: left;
     }
+
+    /* Style article banner image */
     .article-banner-img {
+        /* Take nearly 30% of flex container */
         flex-basis: 30%;
-        border-radius: 5px;
         width: 30%;
+        /* Make corners rounded */
+        border-radius: 5px;
     }
+
+    /* Style article body */
     .article-details {
+        /* Add left margin */
         margin-left: 20px;
+        /* Align items to the start 
+           of the flexbox container */
         align-items: flex-start;
     }
-    /* FOOTER */
+
+    /* Footer */
     footer {
         /* 3 Equal width columns */
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* Copyright Info */
     .copyright {
         /* Take full width */
         grid-column: 1/4;
     }
+
+    /* Style social media list */
     .social-media-list {
+        /* Use flexbox for styling */
         display: flex;
+        /* Set main axis to column */
         flex-flow: column nowrap;
+        /* Distribute empty space 
+           between items equally. */
         justify-content: space-between;
+        /* Add spacing to the bottom */
         padding-bottom: 8em;
     }
-    /* =========== */
+
+    /* ----------- */
     /* TRAVEL PAGE */
     /* =========== */
+
+    /* Style travel gallery */
     /* Create a 4 by 3 grid */
     .gallery-grid {
+        /* Use GRID system for layout */
         display: grid;
+        /* Create 3 equal width columns */
         grid-template-columns: 20vw 20vw 20vw;
+        /* Create 4 rows */
         grid-template-rows: 250px 250px 150px 300px;
+        /* Put a 10px gap b/w rows */
         row-gap: 10px;
+        /* Put a 30px gap b/w columns */
         column-gap: 30px;
     }
+
+    /* Each image inside gallery */
     .gallery-grid a div {
+        /* Take full space of container */
         width: 100%;
         height: 100%;
+        /* Add spacing */
         margin: 20px;
     }
+
     /* Place children on the Gallery Grid */
+    /* 1st Child */
     .gallery-grid a:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 4;
     }
+
+    /* 2nd Child */
     .gallery-grid a:nth-child(2) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
+    /* 3rd Child */
     .gallery-grid a:nth-child(3) {
         grid-column: 2 / 3;
         grid-row: 2 / 4;
     }
+
+    /* 4th Child */
     .gallery-grid a:nth-child(4) {
         grid-column: 3 / 4;
         grid-row: 3 / 4;
     }
+
+    /* 5th Child */
     .gallery-grid a:nth-child(5) {
         grid-column: 3 / 4;
         grid-row: 1 / 3;
     }
+
+    /* 6th Child */
     .gallery-grid a:nth-child(6) {
         grid-column: 1 / 4;
         grid-row: 4 / 5;
     }
+
     /* Create a 3-column grid */
     .photographers-grid {
+        /* Use GRID system for layout */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        /* Create 3 equal width columns */
+        grid-template-columns: repeat(3, 1fr);
+        /* Add a gap of 20px b/w 
+           each row and column */
         gap: 20px;
+        /* Calculate width automatically */
         width: auto;
     }
+
     /* Place all the images on the second row */
     .photographers-grid img {
+        /* Row 2 */
         grid-row: 2 / 3;
     }
+
     /* Placing one image on the top row */
     /* and center column */
     .photographers-grid img:nth-child(1) {
+        /* Row 1 */
         grid-row: 1 / 2;
+        /* Column 2 */
         grid-column: 2 / 3;
     }
-    /*  */
+
+    /* ---------------- */
+    /* PROGRAMMING PAGE */
+    /* ---------------- */
+
+    /* Each carousel slide */
     .carousel-cell {
+        /* Set flexbox main 
+           axis to row */
         flex-flow: row nowrap;
     }
+
+    /* Style carousel image */
     .carousel-cell img {
         width: 38%;
     }
+
+    /* --------- */
     /* FOOD PAGE */
+    /* --------- */
+
+    /* Style recipe list figure */
     .recipe-list figure {
+        /* Take 1/4th of flex container */
         flex-basis: 25%;
     }
+
+    /* Style youtube show info */
     .show-info {
+        /* Add spacing to the right */
         margin-right: 20px;
     }
-    /* FOOD PAGE */
+
+    /* Style chef of the month info */
     .chef-info {
+        /* Use GRID for layout */
         display: grid;
+        /* Create 2 columns */
         grid-template-columns: 3fr 5fr;
+        /* Center align items on both axes */
         justify-content: center;
         align-items: center;
+        /* Add column gap of 30px */
         column-gap: 30px;
     }
+
+    /* Style chef image */
     .chef-info img {
+        /* Place in column 1 and span 1 column */
         grid-column: 1 / 2;
+        /* Place in row 1 and span 3 rows */
         grid-row: 1 / 3;
+        /* Take full width of the parent */
         width: 100%;
     }
+
+    /* Style chef name */
     .chef-info h3 {
+        /* Place in column 2 */
         grid-column: 2 / 3;
+        /* Place in row 1 */
         grid-row: 1 / 2;
+        /* Align the text to left */
         text-align: left;
     }
+
+    /* Style chef bio */
     .chef-info p {
+        /* Place in column 2 */
         grid-column: 2 / 3;
+        /* Place in row 2 */
         grid-row: 2 / 3;
+        /* Align text to the left */
         text-align: left;
     }
+
+    /* ----------- */
     /* SHORTS PAGE */
+    /* ----------- */
+
+    /* Style shorts list */
     #shorts-list {
+        /* Create 2 equal width columns */
+        /* Will be increased to 3 for 
+           larger screens */
         grid-template-columns: repeat(2, 1fr);
+        /* Add 10px b/w columns */
         column-gap: 10px;
     }
+
+    /* Style filtering menu */
     .menu {
+        /* Use FLEXBOX for layout */
         display: flex;
+        /* Change main axis to row */
         flex-flow: row nowrap;
+        /* Distribute empty space equally b/w items */
         justify-content: space-between;
     }
+
+    /* Style filtering inputs */
     .menu input,
     .menu select {
+        /* Remove any margins */
         margin: 0;
     }
+
+    /* Style search box */
     .menu input {
+        /* Add space to the right */
         margin-right: 50px;
     }
 }
 
-
+/* ------------ */
 /* DESKTOP SIZE */
+/* ------------ */
 
+/* Applied for width of 1224px and more */
 @media (min-width: 1224px) {
-    /* GLOBALS */
+
+    /* Common to all pages */
     section {
+        /* Add padding to left and right */
         padding: 0 10%;
     }
+
+    /* --------- */
     /* HOME PAGE */
-    /* OUR STAFF SECTION */
+    /* --------- */
+
+    /* Our Staff Section */
     .avatar-grid>* {
+        /* Add spacing */
         margin: 30px 20px;
+        /* Define width of avatar */
         flex-basis: 20%;
         width: 100%;
     }
+
+    /* Style a div inside header */
     header div {
         flex-basis: 40%;
     }
+
+    /* Style header */
     header {
+        /* Add spacing */
         padding: 50px 5%;
     }
+
+    /* ----------- */
     /* SHORTS PAGE */
+    /* ----------- */
+
+    /* Style shorts list */
     #shorts-list {
+        /* Increase the columns to 3 */
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ---------------- */
+/* END OF CSS */
+/* ---------------- */
