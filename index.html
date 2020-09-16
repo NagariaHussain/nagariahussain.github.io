@@ -107,20 +107,22 @@
                 <!-- Staff Image -->
                 <img src="{{img_url}}" alt="Staff Bust">
                 <!-- Staff Bio-data -->
-                <h2>{{name}}</h2>
-                <h3>{{role}}</h3>
-                <p class="bio">
-                    {{Bio}}
-                </p>
+                <div class="staff-info">
+                    <h2>{{name}}</h2>
+                    <h3>{{role}}</h3>
+                    <p class="bio">
+                        {{Bio}}
+                    </p>
+                </div>
                 <!-- Staff twitter handle -->
-                <div>
+                <div class="staff-twitter">
                     <i class="fab fa-twitter"></i>
                     <span>/ {{twitter}}</span>
                 </div>
             </script>
 
             <!-- Will be injected through JS -->
-            <div class="modal-content"></div>
+            <div class="modal-content staff-modal"></div>
         </div>
 
         <!-- Grid of avatar images -->

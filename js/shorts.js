@@ -261,7 +261,7 @@ for (let button of readMoreButtons) {
         let modalContent = template({
             "title": currentPost.heading,
             "author": currentPost.author,
-            "date": currentPost.creationDate,
+            "date": currentPost.creationDate.toDateString(),
             "body": currentPost.body
         });
 

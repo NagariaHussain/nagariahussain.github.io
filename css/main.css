@@ -100,6 +100,7 @@
 
 /* MODAL OPEN ANIMATION */
 @keyframes showModal {
+
     /* Start transparent and 0 size */
     0% {
         opacity: 0;
@@ -118,6 +119,7 @@
 
 /* MODAL CLOSE ANIMATION */
 @keyframes hideModal {
+
     /* Start at full opacity and full scale */
     0% {
         opacity: 1;
@@ -288,7 +290,7 @@ header .hero-title {
     /* Add some padding to all 4 sides */
     padding: 0.9em;
     /* Set text color to white */
-    color: rgb(236, 236, 236);
+    color: rgb(248, 248, 248);
     font-size: 1.1em;
     /* Make the corners a little rounded */
     border-radius: 5px;
@@ -674,6 +676,30 @@ p.dim {
     border: 2px solid var(--primary-color);
 }
 
+/* Style staff information modal content */
+/* Style staff name */
+.staff-modal h2 {
+    /* Set font style */
+    font-weight: 300;
+    /* Increase space b/w letters */
+    letter-spacing: 2px;
+}
+
+/* Style staff designation */
+.staff-modal h3 {
+    /* Set text color */
+    color: rgb(114, 114, 114);
+    /* Add spacing */
+    padding: 5px 0;
+}
+
+/* Style staff biography */
+.staff-modal .bio {
+    /* Set font styles */
+    font-family: 'Raleway', sans-serif;
+    /* Add spacing to the bottom */
+    margin-bottom: 20px;
+}
 
 /* ==================== */
 /* CATEGORIES LIST SECTION */
@@ -1094,21 +1120,6 @@ footer .logo {
     font-family: 'Open Sans'sans-serif;
     font-weight: 300;
 }
-
-
-/* ========================== */
-/* SHORTS PAGE */
-/* ========================== */
-
-
-/* Style the shorts list */
-
-#shorts-list {
-    color: #fff;
-    /* Add spacing to the top */
-    margin-top: 30px;
-}
-
 
 /* ========================== */
 /* TRAVEL PAGE */
@@ -1614,6 +1625,34 @@ footer .logo {
 }
 
 
+/* Style the shorts list */
+
+#shorts-list {
+    color: #fff;
+    /* Add spacing to the top */
+    margin-top: 30px;
+}
+
+/* Style short title */
+.shorts-modal h2 {
+    font-weight: 300;
+    font-size: 1.8em;
+    width: 90%;
+    text-align: center;
+}
+
+/* Style short author name */
+.shorts-modal h3 {
+    color: rgb(56, 56, 56);
+    margin-top: 10px;
+}
+
+/* Style short body */
+.shorts-modal p {
+    margin-top: 20px;
+}
+
+
 /* Style individual shorts card */
 
 .short-card {
@@ -1649,7 +1688,7 @@ footer .logo {
     /* Set bc to primary color */
     background-color: var(--primary-color);
     /* Set button text color to grey */
-    color: rgb(95, 95, 95);
+    color: rgb(49, 49, 49);
     /* Add automatic margin to the top */
     margin-top: auto;
 }
@@ -2073,6 +2112,15 @@ footer .logo {
         column-gap: 10px;
     }
 
+    /* Style the post's body */
+    .shorts-modal p {
+        /* Add spacing on large screens */
+        padding: 20px 80px;
+        /* Remove any margins */
+        margin: 0;
+    }
+
+
     /* Style filtering menu */
     .menu {
         /* Use FLEXBOX for layout */
@@ -2121,6 +2169,46 @@ footer .logo {
         /* Define width of avatar */
         flex-basis: 20%;
         width: 100%;
+    }
+
+    /* Changing staff modal layout for large screens */
+    .staff-modal {
+        /* Use GRID for layout */
+        display: grid;
+        /* Create 3 columns */
+        grid-template-columns: 1fr 3fr 20px;
+        /* Align items to center vertically */
+        align-items: center;
+    }
+
+    /* Style staff image */
+    .staff-modal img {
+        /* Place in first column */
+        grid-column: 1 / 2;
+        /* Take 100% of available parent space */
+        width: 100%;
+        /* Create  a border */
+        border: 3px solid #474747;
+    }
+
+    /* Style staff information */
+    .staff-modal .staff-info {
+        /* Place in 2nd column */
+        grid-column: 2 / 3;
+    }   
+
+    /* Style modal close button */
+    .staff-modal .close {
+        /* Place in 3rd column */
+        grid-column: 3 / 4;
+    }
+
+    /* Style staff twitter handle */
+    .staff-modal .staff-twitter {
+        /* Place in 1st column and span 3 cols */
+        grid-column: 1 / 4;
+        /* Place in second row */
+        grid-row: 2 / 3;
     }
 
     /* Style a div inside header */
