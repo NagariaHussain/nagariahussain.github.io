@@ -28,7 +28,7 @@
                 <li>Food</li>
                 <li>News: Short Articles</li>
             </ol>
-            I chose to implement it as <mark>5 page website</mark> which has a home page and one page for each of the above topics. The goal was to create a responsive website that provides its user with information in an organized and beautiful manner.
+            I chose to implement it as a <mark>5 page website</mark> which has a home page and one page for each of the above topics. The goal was to create a responsive website that provides its user with information in an organized and beautiful manner.
         </div>
 
         <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
@@ -44,7 +44,7 @@
                 </li>
                 <li class="mb-2">
                     <strong>Talk on accessibility by Léonie Watson</strong>
-                    <br> This talk has really made me thinking about <mark>how important accessibility is</mark> for the web. You can find the <a href="https://www.youtube.com/watch?v=qdB8SRhqvFc" target="_blank">YouTube Video here</a>
+                    <br> This talk has really made me think about <mark>how important accessibility is</mark> for the web. You can find the <a href="https://www.youtube.com/watch?v=qdB8SRhqvFc" target="_blank">YouTube Video here</a>
                 </li>
             </ol>
         </div>
@@ -54,7 +54,7 @@
             <ol class="mt-3">
                 <li class="mb-2">The <code> alt </code> tags of all the image elements contain a description of the image to
                     <mark>help
-                        users with disability to visualize</mark> the image.
+                        users with disabilities to visualize</mark> the image.
                 </li>
                 <li class="mb-2">
                     I have used <mark>proper semantic and element tags</mark> to make the different parts of the website more accessible. For instance, use of <code>article</code> and <code>figure</code> tags are used instead of plan
@@ -75,17 +75,20 @@
             <h2>3 ways in which I have considered usability in my site</h2>
             <ol class="mt-3">
                 <li class="mb-2">
-                    <strong>Mobile Hamburger Navigation:</strong>
+                    <strong>Mobile Hamburger Navigation:</strong> Most websites have hamburger navigation for mobile screen sizes. 
+                    But the hamburger button is positioned at the top left corner of the screen (like many android apps), this <mark>makes reaching to the button a little hard</mark> for people with small hands or large smartphones. I have positioned the hamburger button <mark>at the bottom of the screen, which makes it more reachable and user friendly</mark>. 
                     <br>
-                    <img src="./assets/images/mobile_nav.png" alt="Mobile Navigation Screenshot" class="img-fluid mt-5 mb-5"><br> Desktop Naviagtion:
+                    <img src="./assets/images/mobile_nav.png" alt="Mobile Navigation Screenshot" class="img-fluid mt-5 mb-5"><br> Desktop Navigation:
                     <img src="./assets/images/desktop_nav.png" alt="Mobile Navigation Screenshot" class="img-fluid">
                 </li>
                 <li class="mb-2">
-                    <strong>Touch enabled carousel slider:</strong><br>
-                    <img src="./assets/images/slider.png" alt="Slider Screenshot" class="img-fluid">
+                    <strong>Touch enabled carousel slider:</strong><br> The inspiration gallery section of the <a target="_blank" href="./pages/programming.html">programming</a> page has a slider gallery. I have used flickity in to create a <mark>responsive carousel slider</mark>. This slider is also <mark>touch friendly, so, it makes the user experience better</mark>.
+                    <img src="./assets/images/slider.png" alt="Slider Screenshot" class="img-fluid m-4">
                 </li>
-                <li>
-                    ...
+                <li class="mb-2">
+                    <strong>Image Light Box:</strong> The images in the gallery section of the <a target="_blank" href="./pages/travel.html">travel</a> page are <mark>high quality images</mark>. So, I have used <strong>lightbox 2</strong> (and customized it) in order to create a image slideshow. This makes it easier for the user to <mark>enjoy viewing individual images</mark>.
+                    <br>
+                    <img src="./report/travel_gallery.png" alt="Screenshot of travel gallery" class="img-fluid mb-4 mt-4">
                 </li>
             </ol>
         </div>
@@ -93,16 +96,6 @@
         <div class="shadow-lg p-4 mt-5 mb-5 bg-white rounded">
             <h2>3 things I had to learn/find out by myself when creating my site, and describe how I did that</h2>
             <ol class="mt-3">
-                <!-- <li class="mb-2">
-                    <strong>Flexbox: </strong>When I was digging more into layouts using CSS, I came across
-                    <mark>Flexbox and how it
-                        can make creating responsive layouts</mark> very easy. As it was not covered in the module, I learned it using the below resources:
-                    <ul>
-                        <li>CSS Grids and Flexbox for Responsive Web Design (course by Frontendmasters): <a target="_blank" href="https://frontendmasters.com/courses/css-grids-flexbox/">View the course here</a>
-                        </li>
-                        <li>A complete guide to Flexbox (CSS-TRICKS): <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Here</a></li>
-                    </ul>
-                </li> -->
                 <li class="mb-2">
                     <strong>CSS Custom Variables: </strong> When I wanted to theme my website, i.e., <mark>set a
                         different
@@ -114,7 +107,7 @@
                         <li><code>--primary-backdrop-color</code></li>
                         <li><code>--secondary-color</code></li>
                     </ol>
-                    Now, if I want to change the primary color of a page, I <mark>can change it in just one place</mark> and every other occurence of the color changes automatically. I have used JavaScript to <mark>change the value associated with the variables</mark>                    based on the URL (relative path to be precise). For example, see the code snippet below:
+                    Now, if I want to change the primary color of a page, I <mark>can change it in just one place</mark> and every other occurrence of the color changes automatically. I have used JavaScript to <mark>change the value associated with the variables</mark>                    based on the URL (relative path to be precise). For example, see the code snippet below:
                     <br><br><code>
                         if (location.pathname === "/pages/shorts.html") {<br>
                             root.style.setProperty('--primary-color', "#ffc93c");<br>
@@ -128,6 +121,14 @@
                         many articles</mark> that showed how to do it. I learned to create a modal using <a target="_blank" href="https://www.w3schools.com/howto/howto_css_modals.asp">this W3Schools article</a>. I started with the code given on the above
                     website and changed some CSS to match it with my web page. I also <mark>added show and hide animations</mark> to improve the UX.
                 </li>
+                <li class="mb-2">
+                    <strong>Intersection Observer API: </strong> I have seen this cool effect on many websites, where <mark>some elements animate into the view as we scroll the page</mark>. I wanted to implement this on my website. I looked for possible
+                    methods to do the same. Although, there are<mark> many external JS Libraries available for this task</mark> but using the <code>IntersectionObserver</code> API is native and hence <mark>I decided to implement the effect without the use of any external library</mark>.
+                    This effect can be seen on the home page: the category <code>div</code>s and avatars animate as you scroll to their position.
+                </li>
+
+                I have learned <mark>many more new things</mark>, I have written some of them as comment in the report.html file.
+                <!-- MORE THINGS I HAVE LEARNED -->
                 <!-- <li class="mb-2">
                     <strong>Carousel Slider: </strong> <a target="_blank" href="https://css-tricks.com/creating-responsive-touch-friendly-carousels-with-flickity/">CSS
                         Tricks tutorial</a> and <a target="_blank" href="https://flickity.metafizzy.co/">Flickity</a>
@@ -150,11 +151,17 @@
                     </code>
 
                 </li> -->
-                <li class="mb-2">
-                    <strong>Intersection Observer API: </strong> I have seen this cool effect on many websites, where, <mark>some elements animate into the view as we scroll the page</mark>. I wanted to implement this in my website. I looked for possible
-                    methods to do the same. Although, there are<mark> many external JS Libraries available for this task</mark> but using the <code>IntersectionObserver</code> API is native and hence <mark>I decided to implement the effect without the use of any external library</mark>.
-                    This effect can be seen on the home page: the category <code>div</code>s and avatars animate as you scroll to their position.
-                </li>
+                <!-- <li class="mb-2">
+                    <strong>Flexbox: </strong>When I was digging more into layouts using CSS, I came across
+                    <mark>Flexbox and how it
+                        can make creating responsive layouts</mark> very easy. As it was not covered in the module, I learned it using the below resources:
+                    <ul>
+                        <li>CSS Grids and Flexbox for Responsive Web Design (course by Frontendmasters): <a target="_blank" href="https://frontendmasters.com/courses/css-grids-flexbox/">View the course here</a>
+                        </li>
+                        <li>A complete guide to Flexbox (CSS-TRICKS): <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Here</a></li>
+                    </ul>
+                </li> -->
+             
             </ol>
         </div>
 
@@ -166,9 +173,11 @@
                         modern look</mark> to the website.
                 </li>
 
-                <li class="mb-2"><strong>Shorts filtering functionality:</strong> I wanted to <mark>implement a search and filter by category functionality</mark> in order to make getting to the interested article easily. The function <code>filterPosts(...)</code> does
+                <li class="mb-2"><strong>Shorts filtering functionality:</strong> I wanted to <mark>implement a search and filter by category functionality</mark> in order to make getting to the interested article easy. The function <code>filterPosts(...)</code> does
                     the heavy lifting here. The function takes two arguments: a search string and a category. After some <mark>iteration and conditioning, it filters the list of posts, as the user is applying the filters</mark>.
                 </li>
+                <br>
+                <img src="./report/shorts_filter.gif" alt="GIF showing shorts filtering functionality" class="img-fluid mt-4 mb-5">
 
                 <li class="mb-2"><strong>Recipe Viewing:</strong> The user can <mark>browse through the recipes</mark> just by clicking the card. The <mark>arrow icon and highlights update to give the user a visual feedback, which in my opinion, improves the user experience.</mark></li>
                 <img src="./report/recipe.png" alt="Recipe view screen shot" class="img-fluid mt-4 mb-5">
@@ -188,12 +197,12 @@
                 </li>
 
                 <li class="mb-2">
-                    <strong>SVG Animations: </strong> I really love SVGs. They have very small size and are infinitely scalable. I learned how to create simple vector graphics using SVG but could not use it in this website. Adding <mark>micro interactions</mark> 
+                    <strong>SVG Animations: </strong> I really love SVGs. They have very small size and are infinitely scalable. I learned how to create simple vector graphics using SVG but could not use it on this website. Adding <mark>micro interactions</mark> 
                     and <mark>animated SVG loaders</mark> will definitely make my website better.
                 </li>
 
                 <li class="mb-2">
-                    <strong>More use of space on very large display sizes: </strong> I have not considered very <mark>large and retina displays</mark> in this website. But it could be a good addition to the website.
+                    <strong>More use of space on very large display sizes: </strong> I have not considered very <mark>large and retina displays</mark> on this website. But it could be a good addition to the website.
                 </li>
             </ul>
         </div>
@@ -211,7 +220,7 @@
                 <li><a target="_blank" href="https://randomuser.me/">RandomUser.Me</a>: The <mark>user photos (avatar images) and random
                         names</mark> are taken from this website.</li>
                 <li><a target="_blank" href="https://fontawesome.com/icons?d=gallery">Font Awesome 5</a>: All the <mark>icons</mark> are from the FontAwesome 5 icons library.</li>
-                <li><a target="_blank" href="https://compressjpeg.com/">compressjpeg.com</a>: The images taken from unsplash are huge in size and hence need a lot of <mark>compression</mark> to make them suitable for website. Without compression, the load
+                <li><a target="_blank" href="https://compressjpeg.com/">compressjpeg.com</a>: The images taken from unsplash are huge in size and hence need a lot of <mark>compression</mark> to make them suitable for websites. Without compression, the load
                     time of the web pages was very high.
                 </li>
                 <li><a target="_blank" href="https://letsxd.com/getting-started">Adobe XD</a>: I have used it to <mark>create wireframes
