@@ -20,8 +20,10 @@
 
     <!-- HERO BANNER HEADER -->
     <header>
-        <img class="hero-image" src="../assets/illustrations/food_hero.svg" alt="A plate of food, glass of cold dring and a bottle of milk.">
+        <img class="hero-image" src="../assets/illustrations/food_hero.svg"
+            alt="A plate of food, glass of cold dring and a bottle of milk.">
         <div>
+            <!-- Banner title and subtitle text -->
             <h1 class="hero-title">FOOD</h1>
             <p class="hero-subtitle">Time to say Yum Yum!</p>
         </div>
@@ -30,45 +32,64 @@
     <!-- LATEST RECIPES SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title -->
             <h2>Latest Recipes</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
 
+        <!-- List of recipe cards -->
         <div class="card-list recipe-list">
+            <!-- Individual Recipe card -->
             <figure class="selected" id="recipe0">
+                <!-- Representative image for the recipe -->
                 <img src="../assets/images/food_page/chicken-chilli.jpg" alt="Photo of chicken wing on a plate">
+                <!-- Name of the recipe -->
                 <figcaption>Chicken Wing</figcaption>
+                <!-- Arrow icon -->
                 <i class="fas fa-chevron-up"></i>
             </figure>
 
+            <!-- Individual Recipe card -->
             <figure id="recipe1">
+                <!-- Representative image for the recipe -->
                 <img src="../assets/images/food_page/paratha.jpg" alt="Photo of chapati and curry in a plate">
+                <!-- Name of the recipe -->
                 <figcaption>Aloo Paratha</figcaption>
+                <!-- Arrow icon -->
                 <i class="fas fa-chevron-down"></i>
             </figure>
 
             <figure id="recipe2">
+                <!-- Representative image for the recipe -->
                 <img src="../assets/images/food_page/paneer.jpg" alt="Representative image of paneer chilli">
+                <!-- Name of the recipe -->
                 <figcaption>Paneer 65</figcaption>
+                <!-- Arrow icon -->
                 <i class="fas fa-chevron-down"></i>
             </figure>
-
         </div>
 
+        <!-- Template to render recipe -->
+        <!-- Will be used by Handlebars to render recipe -->
         <script id="recipe-template" type="text/x-handlebars-template">
             <div class="recipe-header">
+                <!-- Title of the recipe -->
                 <h2 class="recipe-title">{{title}}</h2>
                 <div class="recipe-time">
                     <i class="fas fa-clock"></i>
+                    <!-- Time required in minutes -->
                     <span>{{min_req}} Min</span>
                 </div>
             </div>
             <div class="recipe-body">
                 <div class="body-section">
+                    <!-- Ingredients for the recipe -->
                     <h2 class="body-heading">Ingredients</h2>
                     <ol>
-                        <!-- Render each ingredient as li -->
+                        <!-- Iterate over the ingredients list -->
                         {{#each ingredients}}
+                        <!-- Render each ingredient as li -->
                         <li>{{this}}</li>
                         {{/each}}
                     </ol>
@@ -76,6 +97,7 @@
 
                 <div class="body-section">
                     <h2 class="body-heading">Procedure</h2>
+                    <!-- Render the procedure for the recipe -->
                     <p>
                         {{procedure}}
                     </p>
@@ -90,30 +112,47 @@
     <!-- THE COOL CHEF SHOW SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title text -->
             <h2>The cool chef show</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
+        <!-- List of youtube iframes -->
+        <!-- With episode number and description -->
         <div class="card-list chef-show-list">
             <div class="show-info">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/R-eYI6KZ848" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- YouTube Iframe -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/R-eYI6KZ848" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <!-- Episode name -->
                 <h3 class="episode-name">Episode 787</h3>
+                <!-- Description of the episode -->
                 <p class="episode-description">In this episode of the cool chef show, we try to make a world record.</p>
             </div>
             <div class="show-info">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/49edFdjw920" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/49edFdjw920" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 <h3 class="episode-name">Episode 786</h3>
                 <p class="episode-description">In this episode of the cool chef show, we have a knife show off battle!
                 </p>
             </div>
             <div class="show-info">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4cSiiYa6_w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Q4cSiiYa6_w" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 <h3 class="episode-name">Episode 785</h3>
-                <p class="episode-description">In this episode of the cool chef show, we learn to make a very popular indian dish: Malai Kofta!</p>
+                <p class="episode-description">In this episode of the cool chef show, we learn to make a very popular
+                    indian dish: Malai Kofta!</p>
             </div>
             <div class="show-info">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GrbBivpUwXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GrbBivpUwXA" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 <h3 class="episode-name">Episode 784</h3>
-                <p class="episode-description">In this episode of the cool chef show, we welcome a special guest from India, who will help us cook Parsian food!</p>
+                <p class="episode-description">In this episode of the cool chef show, we welcome a special guest from
+                    India, who will help us cook Parsian food!</p>
             </div>
         </div>
     </section>
@@ -121,16 +160,30 @@
     <!-- CHEF OF THE MONTH SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title -->
             <h2>chef of the month</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
         <div class="chef-info">
-            <img class="circular" src="../assets/images/food_page/ripu-daman.jpg" alt="Photo of Ripu Daman Handa standing in his kitchen">
+            <!-- Chef's image -->
+            <img class="circular" src="../assets/images/food_page/ripu-daman.jpg"
+                alt="Photo of Ripu Daman Handa standing in his kitchen">
+            <!-- Chef's image -->
             <h3>Ripu Daman Handa</h3>
-            <p>A chef is a trained professional cook and tradesman who is proficient in all aspects of food preparation, often focusing on a particular cuisine. The word "chef" is derived from the term chef de cuisine (French pronunciation: ​[ʃɛf.də.kɥi.zin]),
-                the director or head of a kitchen. Chefs can receive formal training from an institution, as well as by apprenticing with an experienced chef. There are different terms that use the word chef in their titles, and deal with specific areas
-                of food preparation. Examples include a sous-chef, who acts as the second-in-command in a kitchen, a chef de partie, who handles a specific area of production. The kitchen brigade system is a hierarchy found in restaurants and hotels employing
-                extensive staff, many of which use the word "chef" in their titles. Underneath the chefs are the kitchen assistants. A chef's standard uniform includes a hat (called a toque), neckerchief, double-breasted jacket, apron and sturdy shoes
+            <!-- Biography of the Chef -->
+            <p>A chef is a trained professional cook and tradesman who is proficient in all aspects of food preparation,
+                often focusing on a particular cuisine. The word "chef" is derived from the term chef de cuisine (French
+                pronunciation: ​[ʃɛf.də.kɥi.zin]),
+                the director or head of a kitchen. Chefs can receive formal training from an institution, as well as by
+                apprenticing with an experienced chef. There are different terms that use the word chef in their titles,
+                and deal with specific areas
+                of food preparation. Examples include a sous-chef, who acts as the second-in-command in a kitchen, a
+                chef de partie, who handles a specific area of production. The kitchen brigade system is a hierarchy
+                found in restaurants and hotels employing
+                extensive staff, many of which use the word "chef" in their titles. Underneath the chefs are the kitchen
+                assistants. A chef's standard uniform includes a hat (called a toque), neckerchief, double-breasted
+                jacket, apron and sturdy shoes
                 (that may include steel or plastic toe-caps).</p>
         </div>
     </section>
@@ -179,12 +232,16 @@
             <a href="#">events</a>
         </div>
 
-        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All of them!</p>
+        <!-- Copyright information -->
+        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
+            of them!</p>
     </footer>
 
 
     <!--  HANDLEBARS.JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
+        integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
+        crossorigin="anonymous"></script>
     <script src="../js/index.js"></script>
     <script src="../js/food.js"></script>
 </body>

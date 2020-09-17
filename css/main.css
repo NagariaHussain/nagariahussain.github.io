@@ -1276,10 +1276,7 @@ footer .logo {
 /* PROGRAMMING PAGE */
 /* ========================== */
 
-
 /* Tutorials Section */
-
-
 /* Style individual article inside 
    tutorials section */
 
@@ -1311,13 +1308,12 @@ footer .logo {
     /* Add spacing */
     padding: 20px;
     /* Set font styles */
-    font-family: 'Open Sans'sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
 
 
 /* Style tutorial link */
-
 .prog-tutorials a {
     /* Make this a tag a block element */
     display: block;
@@ -1405,6 +1401,40 @@ footer .logo {
     margin-top: 10px;
 }
 
+.article-list article {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.article-list article div {
+    padding: 10px 20px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.article-list article img {
+    width: 20%;
+    border-radius: 10px 0 0 10px;
+}
+
+.article-list h3, 
+.article-list p {
+    color: #666;
+}
+
+.article-list a {
+    background-color: var(--primary-color);
+    align-self: center;
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    border-radius: 2px;
+}
+
+.article-list i {
+    font-size: 3em;
+}
 
 /* ========================= */
 /* FOOD PAGE */

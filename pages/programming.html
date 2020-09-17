@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming</title>
+    <!-- Main style sheet -->
     <link rel="stylesheet" href="../css/main.css">
 
     <!-- Font Awesome 5 Free Icons -->
@@ -16,16 +17,17 @@
 </head>
 
 <body>
-
     <!-- Will be injected via JavaScript (Handlebars) -->
     <div id="navigation">
     </div>
 
-
     <!-- HERO BANNER HEADER -->
     <header>
-        <img class="hero-image" src="../assets/illustrations/undraw_tutorial_video_vtd1.svg" alt="Hero Image: Man working on board">
+        <!-- Hero SVG Image -->
+        <img class="hero-image" src="../assets/illustrations/undraw_tutorial_video_vtd1.svg"
+            alt="Hero Image: Man working on board">
         <div>
+            <!-- Banner title and subtitle -->
             <h1 class="hero-title">CS and Coding</h1>
             <p class="hero-subtitle">Everything at once.</p>
         </div>
@@ -34,25 +36,39 @@
     <!-- TUTORIALS SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section Heading -->
             <h2>Latest Tutorials</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
 
+        <!-- List of tutorials -->
         <div class="card-list prog-tutorials">
+            <!-- Individual Article card -->
             <article>
+                <!-- Title of the article -->
                 <h2>Create a web app with python using the Flask Framework</h2>
                 <a href="#">
+                    <!-- Read more icon -->
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </article>
+
+            <!-- Individual Article card -->
             <article>
+                <!-- Title of the article -->
                 <h2>Getting started with Haskell!</h2>
                 <a href="#">
+                    <!-- Read more icon -->
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </article>
+
+            <!-- Individual Article card -->
             <article>
+                <!-- Title of the article -->
                 <h2>How to ruin JavaScript Apps?</h2>
+                <!-- Read more icon -->
                 <a href="#">
                     <i class="fas fa-arrow-right"></i>
                 </a>
@@ -63,13 +79,19 @@
     <!-- INSPIRATION SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title -->
             <h2>Inspiration Gallery</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
 
+        <!-- Carousel Slider -->
         <div class="main-carousel js-flickity" data-flickity='{ "cellAlign": "left", "contain": true }'>
+            <!-- Individual Carousel Slide -->
             <figure class="carousel-cell">
+                <!-- Inspiration Illustration -->
                 <img src="../assets/images/programming_page/notebook.svg" alt="Illustration from dribble">
+                <!-- Illustration information -->
                 <div>
                     <h3>The Notebook</h3>
                     <h4>by John Doe</h4>
@@ -78,8 +100,13 @@
                     </a>
                 </div>
             </figure>
+
+            <!-- Individual Carousel Slide -->
             <figure class="carousel-cell">
+                <!-- Inspiration Illustration -->
                 <img src="../assets/images/programming_page/mobile.svg" alt="Illustration from dribble">
+
+                <!-- Illustration information -->
                 <div>
                     <h3>Password Design</h3>
                     <h4>by Harry Potter</h4>
@@ -88,8 +115,13 @@
                     </a>
                 </div>
             </figure>
+
+            <!-- Individual Carousel Slide -->
             <figure class="carousel-cell">
+                <!-- Inspiration Illustration -->
                 <img src="../assets/images/programming_page/inbox.svg" alt="Illustration from dribble">
+
+                <!-- Illustration information -->
                 <div>
                     <h3>Sleeping Beauty</h3>
                     <h4>by Mary Jane</h4>
@@ -98,8 +130,13 @@
                     </a>
                 </div>
             </figure>
+
+            <!-- Individual Carousel Slide -->
             <figure class="carousel-cell">
+                <!-- Inspiration Illustration -->
                 <img src="../assets/images/programming_page/marketing.svg" alt="Illustration from dribble">
+
+                <!-- Illustration information -->
                 <div>
                     <h3>A manager's dream</h3>
                     <h4>by Peter Parker</h4>
@@ -112,40 +149,63 @@
     </section>
 
     <!-- NEWS SECTION -->
+    <!-- This section contains a list view of 
+        articles made up by me (😀) -->
     <section>
         <div class="section-title">
+            <!-- Section title text -->
             <h2>In the news</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
 
-        <div class="news-articles">
-            <!-- <article>
-                <img src="../assets/images/programming_page/news1.jpg" alt="">
-                <h3>Google goes bank currupt....Oh never!</h3>
-                <p>In this post, we will see how Google's billion dollar bussiness</p>
+        <!-- List of news articles -->
+        <div class="news-articles article-list">
+            <!-- Individual Article -->
+            <article>
+                <!-- News banner image -->
+                <img src="../assets/images/programming_page/news1.jpg"
+                    alt="Close up photo of an Integrated Circut Device">
+                <div>
+                    <h3>Google goes bank currupt....Oh never!</h3>
+                    <p>In this post, we will see how Google's billion dollar bussiness will become a trillion dollar
+                        bussiness and beyond.</p>
+                </div>
+                <!-- Read more icon -->
                 <a href="#"><i class="fas fa-chevron-right"></i></a>
             </article>
+
+            <!-- Individual Article -->
             <article>
-                <img src="../assets/images/programming_page/news2.jpg" alt="">
-                <h3>Google goes bank currupt....Oh never!</h3>
-                <p>In this post, we will see how Google's billion dollar bussiness</p>
+                <!-- News banner image -->
+                <img src="../assets/images/programming_page/news2.jpg"
+                    alt="Photo of sky view of a city with lots of lights">
+                <div>
+                    <h3>A new planat is discovered and no, its not pluto!</h3>
+                    <p>All aboard, we are going to take a look at the super secret research going on at CalTech. And
+                        spoiler alert, its no secret now!</p>
+                </div>
+                <!-- Read more icon -->
                 <a href="#"><i class="fas fa-chevron-right"></i></a>
             </article>
+
+            <!-- Individual Article -->
             <article>
-                <img src="../assets/images/programming_page/news3.jpg" alt="">
-                <h3>Google goes bank currupt....Oh never!</h3>
-                <p>In this post, we will see how Google's billion dollar bussiness</p>
+                <!-- News banner image -->
+                <img src="../assets/images/programming_page/news3.jpg"
+                    alt="Photo of laptop and notebooks on a table top">
+                <div>
+                    <h3>The whole Work From Home thingy: Explained.</h3>
+                    <p>Ok, so now everyone is sitting at home and doing WFH. But, is there any loss in doing so.</p>
+                </div>
+                <!-- Read more icon -->
                 <a href="#"><i class="fas fa-chevron-right"></i></a>
             </article>
-            <article>
-                <img src="../assets/images/programming_page/news4.jpg" alt="">
-                <h3>Google goes bank currupt....Oh never!</h3>
-                <p>In this post, we will see how Google's billion dollar bussiness</p>
-                <a href="#"><i class="fas fa-chevron-right"></i></a>
-            </article> -->
         </div>
     </section>
+
     <!-- SITE FOOTER -->
+    <!-- Same for all pages -->
     <footer>
         <div class="social-media-list">
             <div class="social-media">
@@ -190,11 +250,14 @@
         </div>
 
         <!-- current_year will be replaced using JavaScript -->
-        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All of them!</p>
+        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
+            of them!</p>
     </footer>
 
     <!--  HANDLEBARS.JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
+        integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
+        crossorigin="anonymous"></script>
 
     <!-- JavaScript -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
