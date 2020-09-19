@@ -12,9 +12,11 @@
     <meta name="description" content="A website for chord newsletter website. Articles on technology, travel and food.">
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- Font Awesome 5 Free Icons -->
+
+    <!-- [1] fontawesome, ‘Font Awesome 5’, 2017. [Online]. Available: https://fontawesome.com/icons?d=gallery [Accessed: 15-Aug-2020] -->
     <link rel="stylesheet" href="assets/icons/all.css">
-    <!-- Johnsuh's Animated Hamburger Icons: https://github.com/jonsuh/hamburgers -->
+
+    <!-- [1] Jonathan, Suh, ‘Hamburgers’ (commit c9adb72), 2016. [Animated Icon Library]. https://github.com/jonsuh/hamburgers/releases -->
     <link rel="stylesheet" href="assets/icons/hamburgers.min.css">
 </head>
 
@@ -25,7 +27,9 @@
     <!-- HERO BANNER HEADER -->
     <header>
         <!-- Hero Image -->
-        <img class="hero-image" src="./assets/illustrations/undraw_publish_article_icso.svg" alt="Hero Image: Man working on board">
+        <!-- [4] Limpitsouni, Katerina, ‘Undraw’, 2018, [Online], Available: https://undraw.co/illustrations [Accessed: 20-July-2020] -->
+        <img class="hero-image" src="./assets/illustrations/undraw_publish_article_icso.svg"
+            alt="Hero Image: Man working on board">
         <!-- Hero content -->
         <div>
             <!-- Page title -->
@@ -73,7 +77,8 @@
                 <!-- Category title -->
                 <h3 class="icon-title">Travel</h3>
                 <!-- Description on the category -->
-                <p class="category-description">Places you want to visit and food you will want to eat. From the chefs and travellers!</p>
+                <p class="category-description">Places you want to visit and food you will want to eat. From the chefs
+                    and travellers!</p>
             </div>
 
             <!-- Art category card -->
@@ -103,25 +108,25 @@
         <div class="modal">
             <script id="staff-modal-template" type="text/x-handlebars-template">
                 <!-- Close button -->
-                <i class="close far fa-times-circle"></i>
-                <!-- Staff Image -->
-                <img src="{{img_url}}" alt="Staff Bust">
-                <!-- Staff Bio-data -->
-                <div class="staff-info">
-                    <!-- Staff name -->
-                    <h2>{{name}}</h2>
-                    <!-- Staff designation -->
-                    <h3>{{role}}</h3>
-                    <p class="bio">
-                        {{Bio}}
-                    </p>
-                </div>
-                <!-- Staff twitter handle -->
-                <div class="staff-twitter">
-                    <i class="fab fa-twitter"></i>
-                    <!-- Twitter handle goes here -->
-                    <span>/ {{twitter}}</span>
-                </div>
+            <i class="close far fa-times-circle"></i>
+            <!-- Staff Image -->
+            <img src="{{img_url}}" alt="Staff Bust">
+            <!-- Staff Bio-data -->
+            <div class="staff-info">
+                <!-- Staff name -->
+                <h2>{{name}}</h2>
+                <!-- Staff designation -->
+                <h3>{{role}}</h3>
+                <p class="bio">
+                    {{Bio}}
+                </p>
+            </div>
+            <!-- Staff twitter handle -->
+            <div class="staff-twitter">
+                <i class="fab fa-twitter"></i>
+                <!-- Twitter handle goes here -->
+                <span>/ {{twitter}}</span>
+            </div>
             </script>
 
             <!-- Will be injected through JS -->
@@ -130,15 +135,25 @@
 
         <!-- Grid of avatar images -->
         <!-- Can be clicked to view full Bio -->
+        <!-- Images and Names taken from resource below -->
+        <!-- [3] randomuser.me, ‘Random User Generator’, 2015, [Online], Available: https://randomuser.me/ [Accessed: 20-July-2020] -->
         <div class="avatar-grid">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/01.jpg" alt="Deann Hayes">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/02.jpg" alt="Lonnie Welch">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/03.jpg" alt="Irene Walker">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/04.jpg" alt="Daisy Kelly">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/05.jpg" alt="Fernando Taylor">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/06.jpg" alt="Zack Williams">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/07.jpg" alt="Pearl Welch">
-            <img class="circle-avatar circular" title="Click to show more about this person" src="./assets/images/staff/08.jpg" alt="Donald Cruz">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/01.jpg" alt="Deann Hayes">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/02.jpg" alt="Lonnie Welch">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/03.jpg" alt="Irene Walker">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/04.jpg" alt="Daisy Kelly">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/05.jpg" alt="Fernando Taylor">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/06.jpg" alt="Zack Williams">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/07.jpg" alt="Pearl Welch">
+            <img class="circle-avatar circular" title="Click to show more about this person"
+                src="./assets/images/staff/08.jpg" alt="Donald Cruz">
         </div>
     </section>
 
@@ -154,7 +169,8 @@
         <!-- Featured Blog article -->
         <article class="featured-article">
             <!-- Blog banner image -->
-            <img class="article-banner-img" src="./assets/images/feat_article_banner_image.jpg" alt="Old Apple mac computer sitting on a table">
+            <img class="article-banner-img" src="./assets/images/feat_article_banner_image.jpg"
+                alt="Old Apple mac computer sitting on a table">
 
             <!-- Other post details -->
             <div class="article-details">
@@ -163,7 +179,9 @@
                 <!-- Subtitle of the article -->
                 <h4 class="article-subtitle">Believe me, its easier than you think</h4>
                 <!-- Article body -->
-                <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis qui, doloremque repellendus ducimus consequatur aperiam dolorum sequi laboriosam et incidunt porro recusandae, consequuntur nostrum, esse minus itaque laudantium
+                <p class="article-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam reiciendis
+                    qui, doloremque repellendus ducimus consequatur aperiam dolorum sequi laboriosam et incidunt porro
+                    recusandae, consequuntur nostrum, esse minus itaque laudantium
                     omnis.
                 </p>
 
@@ -265,11 +283,14 @@
 
         <!-- Copyright information -->
         <!-- current_year will be replaced through JS (index.js) -->
-        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All of them!</p>
+        <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
+            of them!</p>
     </footer>
 
-    <!--  HANDLEBARS.JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js" integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw==" crossorigin="anonymous"></script>
+    <!--  [2] Handlebarsjs.com, 'Handlebars Reference', 2016. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2020]  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
+        integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
+        crossorigin="anonymous"></script>
     <!-- Global JS file -->
     <script src="js/index.js"></script>
     <!-- Page specific JS file -->

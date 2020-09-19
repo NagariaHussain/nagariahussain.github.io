@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
     <title>Travel</title>
 
-    <!-- External Library for lightbox: https://lokeshdhakar.com/projects/lightbox2/ -->
+    <!-- [2] Lokesh, Dhakar, ‘lightbox2’ (commit 56b06ac), 2015. [JavaScript + CSS Library]. https://github.com/lokesh/lightbox2 -->
     <link rel="stylesheet" href="../css/lightbox.min.css">
 
+    <!-- My CSS -->
     <link rel="stylesheet" href="../css/main.css">
 
-    <!-- Font Awesome 5 Free Icons -->
+    <!-- [1] fontawesome, ‘Font Awesome 5’, 2017. [Online]. Available: https://fontawesome.com/icons?d=gallery [Accessed: 15-Aug-2020] -->
     <link rel="stylesheet" href="../assets/icons/all.css">
 
-    <!-- Johnsuh's Animated Hamburger Icons: https://github.com/jonsuh/hamburgers -->
+    <!-- [1] Jonathan, Suh, ‘Hamburgers’ (commit c9adb72), 2016. [Animated Icon Library]. https://github.com/jonsuh/hamburgers/releases -->
     <link rel="stylesheet" href="../assets/icons/hamburgers.min.css">
 </head>
 
@@ -26,9 +29,11 @@
 
     <!-- HERO BANNER HEADER -->
     <header>
+        <!-- [4] Limpitsouni, Katerina, ‘Undraw’, 2018, [Online], Available: https://undraw.co/illustrations [Accessed: 20-July-2020] -->
         <img class="hero-image" src="../assets/illustrations/undraw_adventure_4hum.svg"
             alt="Illustration of a man standing near a globe with a bag">
         <div>
+            <!-- Hero banner title and subtitle -->
             <h1 class="hero-title">TRAVEL AND TOURISM</h1>
             <p class="hero-subtitle">Let us take a world tour.</p>
         </div>
@@ -37,20 +42,33 @@
     <!-- TRAVEL GUIDES SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title text -->
             <h2>Travel Guides</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
+
+        <!-- List of travel guides -->
         <div class="card-list travel-guide">
+            <!-- Individual guide figure -->
             <figure>
-                <img src="../assets/images/travel_page/guidepic1.jpg" alt="">
+                <!-- Representative Image -->
+                <img src="../assets/images/travel_page/guidepic1.jpg"
+                    alt="Blurred city with binoculars in the foreground">
+                <!-- Guide title text with arrow icon -->
                 <figcaption>The city of dreams<i class="fas fa-arrow-right"></i></figcaption>
             </figure>
             <figure>
-                <img src="../assets/images/travel_page/guidepic2.jpg" alt="">
+                <!-- Representative Image -->
+                <img src="../assets/images/travel_page/guidepic2.jpg" alt="Clothes and footwear hanging on a wall">
+                <!-- Guide title text with arrow icon -->
                 <figcaption>The high peak mountains<i class="fas fa-arrow-right"></i></figcaption>
             </figure>
             <figure>
-                <img src="../assets/images/travel_page/guidepic3.jpg" alt="">
+                <!-- Representative Image -->
+                <img src="../assets/images/travel_page/guidepic3.jpg"
+                    alt="One blue and one red colored building side by side">
+                <!-- Guide title text with arrow icon -->
                 <figcaption>The city of Agra <i class="fas fa-arrow-right"></i></figcaption>
             </figure>
         </div>
@@ -59,32 +77,56 @@
     <!-- GALLERY SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title -->
             <h2>Gallery</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
+        
+        <!-- Note for the user -->
         <p class="section-body-text">Click photo to view full image</p>
+
+        <!-- Column of photos on Mobile Devices -->
+        <!-- Grid of photos on Desktop Devices -->
         <div class="gallery-grid">
+            <!-- Clickable Image for lightbox -->
             <a href="../assets/images/travel_page/photo1.jpg" data-lightbox="image">
+                <!-- Image will be set using CSS background -->
                 <div
                     aria-label="Fruits and vegetables in a cycle basket. Cycle standing on a lane with lots of parked cars">
                 </div>
             </a>
+
+            <!-- Clickable Image for lightbox -->
             <a href="../assets/images/travel_page/photo2.jpg" data-lightbox="image">
+                <!-- Image will be set using CSS background -->
                 <div aria-label="Night photo of a street with lots of cars stopped near the zebra crossing">
                 </div>
             </a>
+
+            <!-- Clickable Image for lightbox -->
             <a href="../assets/images/travel_page/photo3.jpg" data-lightbox="image">
+                <!-- Image will be set using CSS background -->
                 <div aria-label="Sky view of a high tech city with lots of tall buildings"></div>
             </a>
+
+            <!-- Clickable Image for lightbox -->
             <a href="../assets/images/travel_page/photo4.jpg" data-lightbox="image">
+                <!-- Image will be set using CSS background -->
                 <div aria-label="Far away view of a city with blurred buildings"></div>
             </a>
+
+            <!-- Clickable Image for lightbox -->
             <a href="../assets/images/travel_page/photo5.jpg" data-lightbox="image">
+                <!-- Image will be set using CSS background -->
                 <div
                     aria-label="View showing a top-side view of a street and some tall buildings. Also, people walking on the footpath.">
                 </div>
             </a>
+
+            <!-- Clickable Image for lightbox -->
             <a href="../assets/images/travel_page/photo6.jpg" data-lightbox="image">
+                <!-- Image will be set using CSS background -->
                 <div
                     aria-label="Far away view of a city near a water reservior with a number of buildings containing reflective materials.">
                 </div>
@@ -95,12 +137,18 @@
     <!-- PHOTOGRAPHERS OF THE WEEK SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title text -->
             <h2>Photographers of the week</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
+        <!-- Grid of photographers -->
         <div class="photographers-grid">
+            <!-- Avatar Image of Top photographers -->
             <img class="circular" src="../assets/images/travel_page/photographers/01.jpg"
                 alt="Bust of a lady photographer">
+            
+            <!-- Avatar Images of Secondary photographers -->
             <img class="circular" src="../assets/images/travel_page/photographers/02.jpg"
                 alt="Bust of a male photographer">
             <img class="circular" src="../assets/images/travel_page/photographers/03.jpg"
@@ -113,10 +161,13 @@
     <!-- SPONSORED SECTION -->
     <section>
         <div class="section-title">
+            <!-- Section title text -->
             <h2>Sponsored: Indian Tourism</h2>
+            <!-- Colored underline -->
             <div class="border-bottom"></div>
         </div>
         <!-- From WikiPedia -->
+        <!-- Description of Sponsored content -->
         <p class="dim">
             The Taj Mahal (/ˌtɑːdʒ məˈhɑːl, ˌtɑːʒ-/;[4] lit. 'Crown of the Palace' is an ivory-white marble mausoleum on
             the southern bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal
@@ -125,14 +176,15 @@
             which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a
             crenellated wall.
         </p>
+
         <!-- Video taken from: -->
-        <!-- https://www.videvo.net/video/side-view-of-the-taj-mahal/6968/ -->
-        <!-- Author: Videvo -->
+        <!-- videvo.net, 'Videvo', 2019. [Online], Available: https://www.videvo.net/video/side-view-of-the-taj-mahal/6968/ -->
         <video src="../assets/video/taj_mahel_agra.mp4" type="video/mp4"
             poster="../assets/images/travel_page/taj-mahal.jpg" controls></video>
     </section>
 
     <!-- SITE FOOTER -->
+    <!-- Same to all the pages -->
     <footer>
         <div class="social-media-list">
             <div class="social-media">
@@ -176,16 +228,21 @@
             <a href="#">events</a>
         </div>
 
+        <!-- Copyright Info -->
         <p class="copyright">&copy; <span id="copy-year-span">current_year</span> Hussain. All rights reserved. Yes, All
             of them!</p>
     </footer>
 
 
-    <!--  HANDLEBARS.JS  -->
+    <!--  [2] Handlebarsjs.com, 'Handlebars Reference', 2016. [Online]. Available: http://handlebarsjs.com/reference.html. [Accessed: 20- Aug- 2020]  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.7/handlebars.min.js"
         integrity="sha512-MoMXY6pEwNysVvd7G+oB2Aop/ifl9Ib289GX8oQEkRB19DqnWQhgYtOyi4ypkOFLwvaChg1+EvDBvMq+kueEjw=="
         crossorigin="anonymous"></script>
+
+    <!-- [2] Lokesh, Dhakar, ‘lightbox2’ (commit 56b06ac), 2015. [JavaScript Library]. https://github.com/lokesh/lightbox2 -->
     <script src="../js/lightbox-plus-jquery.js"></script>
+
+    <!-- MY JS -->
     <script src="../js/index.js"></script>
 </body>
 
